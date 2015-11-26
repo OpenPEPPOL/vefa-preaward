@@ -4,7 +4,7 @@
         	UBL syntax binding to the T90   
             Schematron rules generated automatically by Validex Generator Midran ltd
             Abstract business rules for transaction T90
-            Timestamp: 2015-11-25 09:41:11 +0100
+            Timestamp: 2015-11-25 14:13:44 +0100
      -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:UBL="urn:oasis:names:specification:ubl:schema:xsd:Tender-2" queryBinding="xslt2">
   <title>BIIRULES  T90 bound to UBL</title>

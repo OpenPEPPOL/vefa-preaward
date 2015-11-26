@@ -1,6 +1,6 @@
 <!-- Schematron rules generated automatically by Validex Generator Midran ltd -->
 <!-- Abstract rules for T90 -->
-<!-- Timestamp: 2015-11-25 09:41:11 +0100 -->
+<!-- Timestamp: 2015-11-25 14:13:44 +0100 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="T90">
   <rule context="$Tender">
     <assert test="$BII3-T90-R001" flag="Fatal" id="BII3-T90-R001">[BII3-T90-R001]-A Submit Tender MUST have a customization identifier</assert>

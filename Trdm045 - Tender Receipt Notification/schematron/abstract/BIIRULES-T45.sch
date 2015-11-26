@@ -1,6 +1,6 @@
 <!-- Schematron rules generated automatically by Validex Generator Midran ltd -->
 <!-- Abstract rules for T45 -->
-<!-- Timestamp: 2015-11-25 09:40:22 +0100 -->
+<!-- Timestamp: 2015-11-25 14:12:58 +0100 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" abstract="true" id="T45">
   <rule context="$tender_reception_notification">
     <assert test="$BII3-T45-R001" flag="fatal" id="BII3-T45-R001">[BII3-T45-R001]-A Tender Receipt Notification MUST have an identifer</assert>
@@ -15,6 +15,7 @@
     <assert test="$BII3-T45-R010" flag="fatal" id="BII3-T45-R010">[BII3-T45-R010]-A Tender Receipt Notification MUST have a profile identifier</assert>
     <assert test="$BII3-T45-R011" flag="fatal" id="BII3-T45-R011">[BII3-T45-R011]-A Tender Receipt Notification MUST state the date the Tender was received</assert>
     <assert test="$BII3-T45-R012" flag="fatal" id="BII3-T45-R012">[BII3-T45-R012]-A Tender Receipt Notification MUST state the time the Tender was received</assert>
+    <assert test="$BII3-T45-R017" flag="fatal" id="BII3-T45-R017">[BII3-T45-R017]-Reception of tender time MUST include timezone information</assert>
   </rule>
   <rule context="$Document_Reference">
     <assert test="$BII3-T45-R013" flag="fatal" id="BII3-T45-R013">[BII3-T45-R013]-A document reference MUST have a document identifier</assert>
