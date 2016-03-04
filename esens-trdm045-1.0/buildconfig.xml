@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+	<package>e-SENS Transaction 045</package>
+
+	<configuration>
+        <identifier>esens-t45-base-1.0</identifier>
+        <title>s-SENS Transaction 045</title>
+		<inherit>cenbii-t45-base-3.0</inherit>
+        <file source="ESENS-UBL-T45.sch" path="xsl/ESENS-UBL-T45.xsl" />
+	</configuration>
+	<configuration>
+        <identifier>esens-t45-54-3.0</identifier>
+        <title>s-SENS Transaction 045 (Profile 54)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii54:ver3.0</profileId>
+		<customizationId>urn:www.cenbii.eu:transaction:biitrdm045:ver3.0:extended:urn:www.peppol.eu:bis:peppol54a:ver1.0</customizationId>
+        <inherit>esens-t45-base-1.0</inherit>
+	</configuration>
+
+</buildConfigurations>
