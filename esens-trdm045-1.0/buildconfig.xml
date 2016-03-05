@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0" capabilities="ubl">
 
 	<package>e-SENS Transaction 045</package>
 
