@@ -9,7 +9,7 @@
         <identifier>cenbii-t90-base-3.0</identifier>
         <title>CEN/BII Transaction 090</title>
 		<inherit>ubl-tender-2.1</inherit>
-        <file source="schematron/BIIRULES-UBL-T90.sch" path="xsl/BIIRULES-UBL-T90.xsl" />
+        <file source="schematron/BIIRULES-UBL-T90.sch" path="xsl/BIIRULES-UBL-T90.svrl.xslt" />
 	</configuration>
 	<configuration>
         <identifier>cenbii-t90-12-3.0</identifier>

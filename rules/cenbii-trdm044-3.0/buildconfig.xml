@@ -9,7 +9,7 @@
         <identifier>cenbii-t44-base-3.0</identifier>
         <title>CEN/BII Transaction 044 (Base)</title>
 		<inherit>ubl-tender-2.1</inherit>
-        <file source="schematron/BIIRULES-UBL-T44.sch" path="xsl/BIIRULES-UBL-T44.xsl" />
+        <file source="schematron/BIIRULES-UBL-T44.sch" path="xsl/BIIRULES-UBL-T44.svrl.xslt" />
 	</configuration>
 	<configuration>
         <identifier>cenbii-t44-12-3.0</identifier>

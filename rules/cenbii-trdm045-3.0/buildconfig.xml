@@ -9,7 +9,7 @@
         <identifier>cenbii-t45-base-3.0</identifier>
         <title>CEN/BII Transaction 045</title>
 		<inherit>ubl-tenderreceipt-2.1</inherit>
-        <file source="schematron/BIIRULES-UBL-T45.sch" path="xsl/BIIRULES-UBL-T45.xsl" />
+        <file source="schematron/BIIRULES-UBL-T45.sch" path="xsl/BIIRULES-UBL-T45.svrl.xslt" />
 	</configuration>
 	<configuration>
         <identifier>cenbii-t45-12-3.0</identifier>
