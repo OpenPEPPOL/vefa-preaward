@@ -4,7 +4,7 @@
 	<package>e-SENS Transaction 090</package>
 
 	<configuration>
-        <identifier>seens-t90-base-1.0</identifier>
+        <identifier>esens-t90-base-1.0</identifier>
         <title>s-SENS Transaction 090</title>
 		<inherit>cenbii-t90-base-3.0</inherit>
         <file source="ESENS-UBL-T90.sch" path="xsl/ESENS-UBL-T90.svrl.xslt" />
