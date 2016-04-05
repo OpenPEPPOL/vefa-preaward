@@ -7,11 +7,11 @@
         <identifier>esens-t68-base-1.0</identifier>
         <title>s-SENS Transaction 068</title>
 		<inherit>cenbii-t68-base-3.0</inherit>
-        <file source="ESENS-UBL-T68.sch" path="xsl/ESENS-UBL-T68.svrl.xslt" />
+		<file source="UBL-T68-ESENS.sch" path="xsl/UBL-T68-ESENS.svrl.xslt" />
 	</configuration>
 	<configuration>
         <identifier>esens-t68-54-3.0</identifier>
-        <title>s-SENS Transaction 068 (Profile 54x)</title>
+        <title>e-SENS Transaction 068 (Profile 54x)</title>
         <profileId>urn:www.cenbii.eu:profile:bii54x:ver1.0</profileId>
 		<customizationId>urn:www.cenbii.eu:transaction:biitrdm068:ver3.0:extended:urn:www.peppol.eu:bis:peppol54x:ver1.0</customizationId>
         <inherit>esens-t68-base-1.0</inherit>
