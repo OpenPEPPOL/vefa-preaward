@@ -6,7 +6,7 @@
     <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
     <pattern>
         <rule context="/ubl:Tender">
-            <assert test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)" flag="fatal" id="ESENS-T68-R001">A tender MUST not contain empty elements.</assert>
+            <assert test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)" flag="fatal" id="ESENS-T68-R001">A pre award catalogue MUST not contain empty elements.</assert>
             <assert test="(cbc:UBLVersionID)" flag="fatal" id="ESENS-T68-R003">A tender MUST have a syntax identifier.</assert>
         </rule>
         <rule context="cbc:UBLVersionID">
@@ -56,6 +56,19 @@
         </rule>
         <rule context="//cac:CallForTendersLineReference">
             <assert test="(cbc:LineID)" flag="fatal" id="ESENS-T68-R018">If Call for Tenders Line Reference is used, requested deliverable identifier MUST be sent</assert>
+        </rule>
+        <rule context="//cbc:MinimumOrderQuantity">
+            <assert test="(@unitCode)" flag="fatal" id="ESENS-T68-R019">Minimum order quantity MUST have a unitCode</assert>
+        </rule>
+        <rule context="//cbc:MaximumOrderQuantity">
+            <assert test="(@unitCode)" flag="fatal" id="ESENS-T68-R020">Maximum order quantity MUST have a unitCode</assert>
+        </rule>
+        <rule context="//cac:CatalogueLine">
+            <assert test="(cbc:OrderableIndicator)" flag="fatal" id="ESENS-T68-R021">A Catalogue line MUST have an orderable indicator</assert>
+            <assert test="((normalize-space(cbc:OrderableIndicator) = 'true') and (cbc:OrderableUnit)) or (string(cbc:OrderableIndicator) != 'true')" flag="fatal" id="ESENS-T68-R022">If orderable indicator is true, orderable unit must be present</assert>
+            <assert test="not(cbc:MaximumOrderQuantity) or not(cbc:MinimumOrderQuantity) or number(cbc:MaximumOrderQuantity) &gt;= number(cbc:MinimumOrderQuantity)" flag="fatal" id="ESENS-T68-R023">The Minimum order quantity MUST be smaller than or equal to the Maximum order quantity.</assert>
+            <assert test="not(cbc:MinimumOrderQuantity) or number(cbc:MinimumOrderQuantity) &gt;= 0" flag="fatal" id="ESENS-T68-R024">Minimum orderable quantities MUST be greater than zero</assert>
+            <assert test="not(cbc:MaximumOrderQuantity) or number(cbc:MaximumOrderQuantity) &gt;= 0" flag="fatal" id="ESENS-T68-R025">Maximum orderable quantities MUST be greater than zero</assert>
         </rule>
     </pattern>
 </schema>

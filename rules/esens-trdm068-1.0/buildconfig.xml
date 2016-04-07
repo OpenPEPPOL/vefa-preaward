@@ -8,6 +8,7 @@
         <title>s-SENS Transaction 068</title>
 		<inherit>cenbii-t68-base-3.0</inherit>
 		<file source="UBL-T68-ESENS.sch" path="xsl/UBL-T68-ESENS.svrl.xslt" />
+		<rule identifier="BII3-T68-R022" action="suppress" />
 	</configuration>
 	<configuration>
         <identifier>esens-t68-54-3.0</identifier>
