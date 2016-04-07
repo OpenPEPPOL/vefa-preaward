@@ -67,8 +67,6 @@
             <assert test="(cbc:OrderableIndicator)" flag="fatal" id="ESENS-T68-R021">A Catalogue line MUST have an orderable indicator</assert>
             <assert test="((normalize-space(cbc:OrderableIndicator) = 'true') and (cbc:OrderableUnit)) or (string(cbc:OrderableIndicator) != 'true')" flag="fatal" id="ESENS-T68-R022">If orderable indicator is true, orderable unit must be present</assert>
             <assert test="not(cbc:MaximumOrderQuantity) or not(cbc:MinimumOrderQuantity) or number(cbc:MaximumOrderQuantity) &gt;= number(cbc:MinimumOrderQuantity)" flag="fatal" id="ESENS-T68-R023">The Minimum order quantity MUST be smaller than or equal to the Maximum order quantity.</assert>
-            <assert test="not(cbc:MinimumOrderQuantity) or number(cbc:MinimumOrderQuantity) &gt;= 0" flag="fatal" id="ESENS-T68-R024">Minimum orderable quantities MUST be greater than zero</assert>
-            <assert test="not(cbc:MaximumOrderQuantity) or number(cbc:MaximumOrderQuantity) &gt;= 0" flag="fatal" id="ESENS-T68-R025">Maximum orderable quantities MUST be greater than zero</assert>
         </rule>
     </pattern>
 </schema>
