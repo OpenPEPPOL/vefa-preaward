@@ -32,7 +32,7 @@ Version 0.3
   <assert test="( ( not(contains(normalize-space(.),' ')) and contains( ' ADR ADS ADT ADU ADV AGS ANR ARD CFR COM GVE GVS ICA IMD RGE RID UI ZZZ ',concat(' ',normalize-space(.),' ') ) ) )" flag="fatal">[CL-T68-R006]-UNDG MUST be coded according to the UNCL 8273 code list</assert>
 </rule>
 
-<rule context="cac:ClassifiedTaxCategory//cbc:ID" flag="fatal">
+<rule context="cac:ClassifiedTaxCategory/cbc:ID" flag="fatal">
   <assert test="( ( not(contains(normalize-space(.),' ')) and contains( ' AE E S Z H AA ',concat(' ',normalize-space(.),' ') ) ) )" flag="fatal">[CL-T68-R007]-Tax categories MUST be coded using UN/ECE 5305 code list</assert>
 </rule>
 
