@@ -1,5 +1,7 @@
 # VEFA Pre-Award
 
+[![Build Status](https://travis-ci.org/difi/vefa-preaward.svg?branch=master)](https://travis-ci.org/difi/vefa-preaward)
+
 Document types:
 * TRDM044: Advanced Tender
 * TRDM045: Tender Receipt Notification
