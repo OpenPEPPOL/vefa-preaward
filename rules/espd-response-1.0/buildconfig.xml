@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0" capabilities="espd">
+
+	<!-- <package>ESPD Response 1.0</package> -->
+
+	<testfolder>example</testfolder>
+
+	<configuration>
+		<identifier>esens-espd-response-1.0-xsd</identifier>
+		<title>ESPD Response 1.0 XSD</title>
+		<file source="xsd/maindoc/ESPDResponse-1.0.xsd" path="xsd/espd-response/maindoc/ESPDResponse-1.0.xsd" />
+	</configuration>
+	<configuration>
+		<identifier>esens-espd-response-1.0</identifier>
+		<title>ESPD Response 1.0</title>
+		<standardId>urn:grow:names:specification:ubl:schema:xsd:ESPDResponse-1::ESPDResponse::1</standardId>
+		<inherit>esens-espd-response-1.0-xsd</inherit>
+	</configuration>
+
+	<include source="xsd/common/CCTS_CCT_SchemaModule-2.1.xsd" path="xsd/espd-response/common/CCTS_CCT_SchemaModule-2.1.xsd" />
+	<include source="xsd/common/CCV-CommonAggregateComponents-1.0.xsd" path="xsd/espd-response/common/CCV-CommonAggregateComponents-1.0.xsd" />
+	<include source="xsd/common/CCV-CommonBasicComponents-1.0.xsd" path="xsd/espd-response/common/CCV-CommonBasicComponents-1.0.xsd" />
+	<include source="xsd/common/CEV-CommonAggregateComponents-1.0.xsd" path="xsd/espd-response/common/CEV-CommonAggregateComponents-1.0.xsd" />
+	<include source="xsd/common/CEV-CommonBasicComponents-1.0.xsd" path="xsd/espd-response/common/CEV-CommonBasicComponents-1.0.xsd" />
+	<include source="xsd/common/ESPD-CommonAggregateComponents-1.0.xsd" path="xsd/espd-response/common/ESPD-CommonAggregateComponents-1.0.xsd" />
+	<include source="xsd/common/ESPD-CommonBasicComponents-1.0.xsd" path="xsd/espd-response/common/ESPD-CommonBasicComponents-1.0.xsd" />
+	<include source="xsd/common/UBL-CommonAggregateComponents-2.1.xsd" path="xsd/espd-response/common/UBL-CommonAggregateComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-CommonBasicComponents-2.1.xsd" path="xsd/espd-response/common/UBL-CommonBasicComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-CommonExtensionComponents-2.1.xsd" path="xsd/espd-response/common/UBL-CommonExtensionComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-CommonSignatureComponents-2.1.xsd" path="xsd/espd-response/common/UBL-CommonSignatureComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-CoreComponentParameters-2.1.xsd" path="xsd/espd-response/common/UBL-CoreComponentParameters-2.1.xsd" />
+	<include source="xsd/common/UBL-ExtensionContentDataType-2.1.xsd" path="xsd/espd-response/common/UBL-ExtensionContentDataType-2.1.xsd" />
+	<include source="xsd/common/UBL-QualifiedDataTypes-2.1.xsd" path="xsd/espd-response/common/UBL-QualifiedDataTypes-2.1.xsd" />
+	<include source="xsd/common/UBL-SignatureAggregateComponents-2.1.xsd" path="xsd/espd-response/common/UBL-SignatureAggregateComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-SignatureBasicComponents-2.1.xsd" path="xsd/espd-response/common/UBL-SignatureBasicComponents-2.1.xsd" />
+	<include source="xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd" path="xsd/espd-response/common/UBL-UnqualifiedDataTypes-2.1.xsd" />
+	<include source="xsd/common/UBL-XAdESv132-2.1.xsd" path="xsd/espd-response/common/UBL-XAdESv132-2.1.xsd" />
+	<include source="xsd/common/UBL-XAdESv141-2.1.xsd" path="xsd/espd-response/common/UBL-XAdESv141-2.1.xsd" />
+	<include source="xsd/common/UBL-xmldsig-core-schema-2.1.xsd" path="xsd/espd-response/common/UBL-xmldsig-core-schema-2.1.xsd" />
+
+</buildConfigurations>
