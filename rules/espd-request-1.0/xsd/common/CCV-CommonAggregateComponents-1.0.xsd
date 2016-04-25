@@ -11,12 +11,10 @@
 	-->
 <xsd:schema xmlns="urn:isa:names:specification:ubl:schema:xsd:CCV-CommonAggregateComponents-1" xmlns:ccv="urn:isa:names:specification:ubl:schema:xsd:CCV-CommonAggregateComponents-1" xmlns:cev-cac="urn:isa:names:specification:ubl:schema:xsd:CEV-CommonAggregateComponents-1" xmlns:ccv-cbc="urn:isa:names:specification:ubl:schema:xsd:CCV-CommonBasicComponents-1" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:isa:names:specification:ubl:schema:xsd:CCV-CommonAggregateComponents-1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xsd:import namespace="urn:isa:names:specification:ubl:schema:xsd:CCV-CommonBasicComponents-1" schemaLocation="CCV-CommonBasicComponents-1.0.xsd"/>
-	<xsd:import namespace="urn:isa:names:specification:ubl:schema:xsd:CEV-CommonAggregateComponents-1" schemaLocation="CEV-CommonAggregateComponents-1.0.xsd"/>
 	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="UBL-CommonAggregateComponents-2.1.xsd"/>
 	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
 	<!-- Element declaration -->
 	<xsd:element name="Criterion" type="CriterionType"/>
-	<xsd:element name="Evidence" type="cev-cac:EvidenceType"/>
 	<xsd:element name="EvidenceDocumentReference" type="cac:DocumentReferenceType"/>
 	<xsd:element name="IssuerParty" type="cac:PartyType"/>
 	<xsd:element name="LegislationReference" type="ccv:LegislationType"/>
