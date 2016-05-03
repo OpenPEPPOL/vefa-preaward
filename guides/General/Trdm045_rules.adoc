@@ -1,0 +1,39 @@
+
+
+
+.Rules for Tender receipt notification (trdm045) :
+[cols="3", options="header"]
+|===
+|Rule ID
+|Rule text
+|Xpath
+
+| ESENS-T45-R001
+| A tender MUST not contain empty elements.
+|
+
+| ESENS-T45-R002
+| UBL version must be 2.1
+|cbc:UBLVersionID
+
+| ESENS-T45-R003
+| A tender MUST have a syntax identifier.
+|cbc:UBLVersionID
+
+| ESENS-T45-R004
+| SchemeID for endpoint identifier must be from PEPPOL Policy for identifiers, policy 8
+| //cbc:EndpointID//@schemeID
+
+|ESENS-T45-R005
+| An endpoint identifier MUST have a schemeID attribute
+|//cbc:EndpointID
+
+| ESENS-T45-R006
+| SchemeID for party identifier must be from PEPPOL Policy for identifiers, policy 8
+|//cac:PartyIdentification/cbc:ID/@schemeID
+
+|ESENS-T45-R007
+| A party identifier MUST have a schemeID attribute
+|//cac:PartyIdentification/cbc:ID
+
+|===

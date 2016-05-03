@@ -1,0 +1,102 @@
+
+
+.Rules for Tender (trdm090) :
+[cols="3", options="header"]
+|===
+|Rule ID
+|Rule text
+|Xpath
+
+| ESENS-T68-R001
+| A pre award catalogue MUST not contain empty elements.
+|
+
+| ESENS-T68-R002
+| UBL version must be 2.1
+|cbc:UBLVersionID
+
+| ESENS-T68-R003
+| A pre award catalogue MUST have a syntax identifier.
+|cbc:UBLVersionID
+
+| ESENS-T68-R004
+| SchemeID for endpoint identifier must be from PEPPOL Policy for identifiers, policy 8
+| //cbc:EndpointID//@schemeID
+
+|ESENS-T68-R005
+| An endpoint identifier MUST have a schemeID attribute
+|//cbc:EndpointID
+
+| ESENS-T68-R006
+| SchemeID for party identifier must be from PEPPOL Policy for identifiers, policy 8
+|//cac:PartyIdentification/cbc:ID/@schemeID
+
+|ESENS-T68-R007
+| A party identifier MUST have a schemeID attribute
+|//cac:PartyIdentification/cbc:ID
+
+| ESENS-T68-R008
+| If Party identification is used, identifier MUST be sent
+| //cac:PartyIdentification
+
+| ESENS-T68-R009
+| If Party Name is used, name MUST be sent
+| //cac:PartyName
+
+| ESENS-T68-R010
+| If Price is used, item net price MUST be sent
+| //cac:Price
+
+| ESENS-T68-R011
+| If AllowanceCharge is used, charge indicator, reason and amount MUST all be sent
+| //cac:Allowancecharge
+
+| ESENS-T68-R012
+| If Sellers Item Identification is used, item sellers identifier MUST be sent
+| //cac:SellersItemIdentification
+
+| ESENS-T68-R013
+| If Manufacturers Item Identification is used, manufacturer item identifier MUST be sent
+| //cac:ManufacturersItemIdentification
+
+| ESENS-T68-R014
+| If Standard Item Identification is used, item starndard identifier MUST be sent
+| //cac:StandardItemIdentification
+
+| ESENS-T68-R015
+| If Origin country is used, item origin country code MUST be sent
+| //cac:OriginCountry
+
+| ESENS-T68-R016
+| If Certificate is used, item label type and item label name MUST be sent
+| //cac:Certificate
+
+| ESENS-T68-R017
+| If Certificate is used, item label issuer party name MUST be sent
+| //cac:Certificate
+
+| ESENS-T68-R018
+| If Call for Tenders Line Reference is used, requested deliverable identifier MUST be sent
+| //cac:CallForTendersLineReference
+
+| ESENS-T68-R019
+| Minimum order quantity MUST have a unitCode
+| //cac:MinimumOrderQuantity
+
+| ESENS-T68-R020
+| Maximum order quantity MUST have a unitCode
+| //cac:MaximumOrderQuantity
+
+| ESENS-T68-R021
+| A pre-award catalogue line MUST have an orderable indicator
+| //cac:CatalogueLine
+
+| ESENS-T68-R022
+| If orderable indicator is true, orderable unit must be present
+| //cac:CatalogueLine
+
+| ESENS-T68-R023
+| The Minimum order quantity MUST be smaller than or equal to the Maximum order quantity.
+| //cac:CatalogueLine
+
+|===
