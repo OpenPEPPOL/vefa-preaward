@@ -1,0 +1,35 @@
+= eSENS Business interoperability specification 54 - Submit Tender
+:icons: font
+:toc: left
+:toclevels: 4
+:sourcedir: /Users/Siw/Documents/EHF/Pre-award/Dokumentasjon/BIS_54
+:gendoc: ../General
+:imagesdir: /Users/Siw/Documents/EHF/Pre-award/Dokumentasjon/General/assets
+
+Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
+v0.1: First draft for review
+
+:leveloffset: +1
+
+include::{gendoc}/attributes.adoc[]
+include::{gendoc}/Copyright/statement.adoc[]
+include::{sourcedir}/document_history\revision_history.adoc[]
+include::{sourcedir}/document_history\contributors.adoc[]
+include::{sourcedir}/introduction\README.adoc[]
+include::{gendoc}/audience.adoc[]
+include::{sourcedir}/principles_and_prerequisites\README.adoc[]
+include::{sourcedir}/principles_and_prerequisites\scope.adoc[]
+include::{sourcedir}/principles_and_prerequisites\interoperability.adoc[]
+include::{sourcedir}/principles_and_prerequisites\non-functional_requirements.adoc[]
+include::{sourcedir}/process\business_process.adoc[]
+include::{sourcedir}/codes_rules\README.adoc[]
+include::{sourcedir}/codes_rules\code_lists.adoc[]
+include::{sourcedir}/codes_rules\business_rules.adoc[]
+include::{gendoc}/Peppol_policy.adoc[]
+include::{gendoc}/party_identifiers.adoc[]
+include::{gendoc}/version_id.adoc[]
+include::{sourcedir}/peppol_identifiers\profile_id.adoc[]
+include::{sourcedir}/peppol_identifiers\customization_id.adoc[]
+include::{sourcedir}/annex\README.adoc[]
+
+:leveloffset: -1

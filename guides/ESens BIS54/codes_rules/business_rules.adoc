@@ -1,0 +1,10 @@
+== Business rules
+
+The below listed business rules are additional rules added by the {eSENS} pilot project, to ensure valid instance documents, and to ensure that identifiers needed in the {PEPPOl} Transport infrastructure are present.
+
+IMPORTANT: Additional business rules are listed in the {CENBII} documents, and these cannot be violated if the instance document is to be valid!
+
+include::../{gendoc}/Trdm090_rules.adoc[]
+
+<<<
+include::../{gendoc}/Trdm045_rules.adoc[]
