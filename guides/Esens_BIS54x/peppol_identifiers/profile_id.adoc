@@ -4,15 +4,15 @@
 The ProfileID identifies the process that the business document is part of {eSENS} eTendering BIS uses the identification system according to {CENBII}.
 
 
-As an example the following process identifier is used for this BIS:
-
-
 NOTE: Please be aware that this BIS is using a profileID that is not a {CENBII} profile. See #add link to processmap#
 
-ProfileID: `urn:www.cenbii.eu:profile:bii54x:ver1.0`
+As an example the following process identifier is used for this BIS:
 
-Example:
+.ProfileID:
+`urn:www.cenbii.eu:profile:bii54x:ver1.0`
 
+
+.Example:
 [source, xml]
 ----
 <cbc:ProfileID>urn:www.cenbii.eu:profile:bii54x:ver1.0</cbc:ProfileID>

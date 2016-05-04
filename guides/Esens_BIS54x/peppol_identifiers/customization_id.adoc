@@ -7,33 +7,42 @@ The {PEPPOL} Customization ID identifies the specification of content and rules 
 <transactionId>:(restrictive|extended|partly):<extensionId>[(restrictive|extended|partly):<extensionId>].
 ----
 
-Example:
+Where:
 
 [cols="2"]
 .CustomizationID
 |===
 |*Transaction ID:*
-|`urn:www.cenbii.eu:transaction:biitrdm090:ver3.0`
+|`urn:www.cenbii.eu:transaction:biitrdm068:ver3.0`
 
 |*Extension ID:*
-|`urn:www.peppol.eu:bis:peppol54a:ver1.0`
+|`urn:www.peppol.eu:bis:peppol54x:ver1.0`
 |===
 
 
-CustomizationID to use:
-----
-For Submit tender:
-urn:www.cenbii.eu:transaction:biitrdm090:ver3.0:extended:urn:www.peppol.eu:bis:peppol54a:ver1.0
+CustomizationIDs  to use:
 
-For Tender Receipt Notification:
-urn:www.cenbii.eu:transaction:biitrdm045:ver3.0:extended:urn:www.peppol.eu:bis:peppol54a:ver1.0
+.For Submit Tender (trdm090):
 ----
+urn:www.cenbii.eu:transaction:biitrdm090:ver3.0:extended:urn:www.peppol.eu:bis:peppol54x:ver1.0
+----
+
+.For Pre-award catalogue:
+----
+urn:www.cenbii.eu:transaction:biitrdm068:ver3.0:extended:urn:www.peppol.eu:bis:peppol54x:ver1.0
+----
+
+.For Tender receipt notification:
+----
+urn:www.cenbii.eu:transaction:biitrdm045:ver3.0:extended:urn:www.peppol.eu:bis:peppol54x:ver1.0
+----
+
 
 Example of usage:
 [source, xml]
 ----
 <cbc:CustomizationID>
-urn:www.cenbii.eu:transaction:biitrdm090:ver3.0:extended:urn:www.peppol.eu:bis:peppol54a:ver1.0
+urn:www.cenbii.eu:transaction:biitrdm068:ver3.0:extended:urn:www.peppol.eu:bis:peppol54x:ver1.0
 </cbc:CustomizationID>
 ----
 

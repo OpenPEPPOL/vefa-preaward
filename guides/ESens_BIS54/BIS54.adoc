@@ -2,9 +2,9 @@
 :icons: font
 :toc: left
 :toclevels: 4
-:sourcedir: /Users/Siw/Documents/EHF/Pre-award/Dokumentasjon/BIS_54
+:sourcedir: ../Esens_BIS54
 :gendoc: ../General
-:imagesdir: /Users/Siw/Documents/EHF/Pre-award/Dokumentasjon/General/assets
+:imagesdir: ../General/assets
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
 v0.1: First draft for review

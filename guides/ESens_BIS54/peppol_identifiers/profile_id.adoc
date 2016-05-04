@@ -5,10 +5,10 @@ The ProfileID identifies the process that the business document is part of {eSEN
 
 As an example the following process identifier is used for {CENBII} Profile 54 – Tender:
 
-ProfileID: `urn:www.cenbii.eu:profile:bii54:ver3.0`
+.ProfileID:
+`urn:www.cenbii.eu:profile:bii54:ver3.0`
 
-Example:
-
+.Example:
 [source, xml]
 ----
 <cbc:ProfileID>urn:www.cenbii.eu:profile:bii54:ver3.0</cbc:ProfileID>
