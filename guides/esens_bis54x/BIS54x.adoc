@@ -3,7 +3,7 @@
 :toc: left
 :toclevels: 4
 :source-highlighter: coderay
-:sourcedir: ../Esens_BIS54x
+:sourcedir: .
 :gendoc: ../General
 :imagesdir: ../General/assets
 
