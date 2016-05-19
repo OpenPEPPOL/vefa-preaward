@@ -12,8 +12,8 @@ v0.1: First draft for review
 
 :leveloffset: +1
 
-include::{gendoc}/attributes.adoc[]
-include::{gendoc}/Copyright/statement.adoc[]
+include::{gendoc}/Attributes.adoc[]
+include::{gendoc}/Copyright/Statement.adoc[]
 include::{sourcedir}\document_history\revision_history.adoc[]
 include::{sourcedir}\document_history\contributors.adoc[]
 include::{sourcedir}\introduction\README.adoc[]
