@@ -36,7 +36,6 @@ It applies the Framework as follows:
 
 . *Technical interoperability*
 
-#Links must be added#
 
 *   Technical Interaction (Process and semantic implementation):
     **   Binding to {SBDH}[SBDH] v1.3

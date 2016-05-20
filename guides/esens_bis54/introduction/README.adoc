@@ -10,4 +10,4 @@ This BIS provides a set of specifications for implementing a business process. T
 *The purpose* of this document is to describe a common format for exchanging messages in a procurement procedure, to facilitate an efficient implementation and increased use of electronic tendering based on this format.
 
 
-image::{imagesdir}/purpose.png[Purpose, align="center"]
+image::purpose.png[Purpose, align="center"]
