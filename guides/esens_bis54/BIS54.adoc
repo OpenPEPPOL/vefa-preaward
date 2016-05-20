@@ -5,6 +5,7 @@
 :source-highlighter: coderay
 :sourcedir: .
 :gendoc: ../General
+:imagesdir: ../General/assets
 
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
