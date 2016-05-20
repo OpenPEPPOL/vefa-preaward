@@ -15,7 +15,6 @@ The content model of the transactions can also be used in procurement platforms 
 
 === Tendering procedures
 
-#Add links to BIIprofiles#
 
 Individual pre-award processes can be put in place using different procedures, depending on the value and the type of the contract to be awarded, on the legal nature of the contracting body and on specific member state national legislation
 {EU_Dir_24}[(Directive 2014/24/EU art. 26)].
@@ -57,4 +56,4 @@ The following parties participate as business partners in this profile, acting i
 | Party participating with a bid in a procurement process to sell goods, services or works.
 |===
 
-image::{imagesdir}/Process_Tender.png[Process, align="center"]
+image::Process_Tender.png[Process, align="center"]

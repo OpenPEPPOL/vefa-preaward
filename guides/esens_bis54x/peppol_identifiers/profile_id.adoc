@@ -4,7 +4,7 @@
 The ProfileID identifies the process that the business document is part of {eSENS} eTendering BIS uses the identification system according to {CENBII}.
 
 
-NOTE: Please be aware that this BIS is using a profileID that is not a {CENBII} profile. See #add link to processmap#
+NOTE: Please be aware that this BIS is using a profileID that is not a {CENBII} profile.
 
 As an example the following process identifier is used for this BIS:
 

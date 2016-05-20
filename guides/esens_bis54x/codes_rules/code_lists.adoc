@@ -25,30 +25,30 @@ IMPORTANT: Additional code lists are listed in the {CENBII} documents, and must 
 
 === Code lists for identifier schemes
 
-[cols="4", options="header"]
+[cols="3", options="header"]
 .Code list for identifier schemes
 |===
 |Business Term
 |Allowed Scheme
 |Applicable Xpath
-|Note
+
 
 |Economic operator electronic address identifier
 |Must be according to {PEPPOL_identifier}[PEPPOL Policy for use of identifiers], policy 8
 |//cac:TendererParty/cbc:EndpointID/@schemeID
-|
+
 
 |Contracting body electronic address identifier
 |Must be according to {PEPPOL_identifier}[PEPPOL Policy for use of identifiers], policy 8
 |//cac:ContractingParty/cac:Party/cbc:EndpointID/@schemeID
-|
+
 |Economic operator identifier
 |Must be according to {PEPPOL_identifier}[PEPPOL Policy for use of identifiers], policy 8
 |//cac:TendererParty/cac:PartyIdentification/cbc:ID/@schemeID
-|
+
 
 |Contracting body identifier
 |Must be according to {PEPPOL_identifier}[PEPPOL Policy for use of identifiers], policy 8
 |//cac:ContractingParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID
-|
+
 |===

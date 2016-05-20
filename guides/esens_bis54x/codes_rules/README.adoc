@@ -3,8 +3,6 @@
 = Code lists and business rules
 
 
-#Add link to BII documents#
-
 The piloting of {eSENS} for Submit Tender, is based on work done by {CENBII}, and business rules and code lists used are inherited from the follwing {CENBII} documents:
 
 * CWA3456 Part 218 UBL SIG - Trdm090 Tender
