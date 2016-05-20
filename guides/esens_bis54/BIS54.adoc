@@ -5,7 +5,7 @@
 :source-highlighter: coderay
 :sourcedir: .
 :gendoc: ../General
-:imagesdir: ../General/assets
+
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
 v0.1: First draft for review
