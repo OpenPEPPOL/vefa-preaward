@@ -24,10 +24,13 @@
 
 :Tender_Rec_xsd: http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-TenderReceipt-2.1.xsd
 
+:CfT_xsd: http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-CallForTenders-2.1.xsd
 :Catalogue_xsd: http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd
 
 :BPMN: https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation[BPMN]
 
 :ISO639: http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=22109
+
+:IANA: http://www.iana.org/assignments/media-types/media-types.xhtml[IANA]
 
 :PEPPOL_identifier: https://joinup.ec.europa.eu/svn/peppol/TransportInfrastructure/PEPPOL_Policy%20for%20use%20of%20identifiers-300.pdf
