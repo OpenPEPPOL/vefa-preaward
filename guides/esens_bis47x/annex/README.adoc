@@ -2,16 +2,9 @@
 [appendix]
 = Example files
 
-== Submit tender
+== Call for Tender
 [source,xml]
-.Submit tender, trdm090:
+.Call for Tender, trdm083:
 ----
-include::../{gendoc}/examples/Trdm090.xml[]
-----
-
-== Tender receipt notification
-[source,xml]
-.Tender Receipt notification, trdm045:
-----
-include::../{gendoc}/examples/Trdm045.xml[]
+include::../{gendoc}/examples/Trdm083.xml[]
 ----
