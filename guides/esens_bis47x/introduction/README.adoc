@@ -8,6 +8,13 @@ This BIS provides a set of specifications for implementing a business process. T
 * Profile 47 Call for Tenders
 * Profile 41 European Single Procurement Document
 
+
+
+****
+[IMPORTANT]
+This document does not contain any transaction details/examples for the ESPD request transaction, this will be added at a later stage. 
+****
+
 *The purpose* of this document is to describe a common format for exchanging messages in a procurement procedure, to facilitate an efficient implementation and increased use of electronic call for tender and ESPD based on this format.
 
 image::purpose.png[Purpose, align="center"]
