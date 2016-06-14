@@ -55,4 +55,4 @@ The following parties participate as business partners in this profile, acting i
 | Party participating with a bid in a procurement process to sell goods, services or works.
 |===
 
-image::Process_Tender.png[Process, align="center"]
+image::Process_CallForTender.png[Process, align="center"]
