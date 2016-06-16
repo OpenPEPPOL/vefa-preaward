@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0" capabilities="espd">
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
 	<!-- <package>ESPD Request 1.0</package> -->
 
-	<testfolder>example</testfolder>
+	<!-- <testfolder>example</testfolder>
 
 	<configuration>
 		<identifier>esens-espd-request-1.0-xsd</identifier>
@@ -36,6 +36,6 @@
 	<include source="xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd" path="xsd/espd-request/common/UBL-UnqualifiedDataTypes-2.1.xsd" />
 	<include source="xsd/common/UBL-XAdESv132-2.1.xsd" path="xsd/espd-request/common/UBL-XAdESv132-2.1.xsd" />
 	<include source="xsd/common/UBL-XAdESv141-2.1.xsd" path="xsd/espd-request/common/UBL-XAdESv141-2.1.xsd" />
-	<include source="xsd/common/UBL-xmldsig-core-schema-2.1.xsd" path="xsd/espd-request/common/UBL-xmldsig-core-schema-2.1.xsd" />
+	<include source="xsd/common/UBL-xmldsig-core-schema-2.1.xsd" path="xsd/espd-request/common/UBL-xmldsig-core-schema-2.1.xsd" /> -->
 
 </buildConfigurations>
