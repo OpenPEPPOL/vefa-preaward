@@ -5,6 +5,7 @@ The below listed business rules are additional rules added by the {eSENS} pilot 
 IMPORTANT: Additional business rules are listed in the {CENBII} documents, and these cannot be violated if the instance document is to be valid!
 
 [cols="3", options="header"]
+.Rules for Trdm090, Submit tender
 |====
 |Rule
 |Test
@@ -14,6 +15,7 @@ include::../{gendoc}/Trdm090_rules.adoc[]
 
 <<<
 [cols="3", options="header"]
+.Rules for Trdm045, Tender receipt notification
 |====
 |Rule
 |Test
