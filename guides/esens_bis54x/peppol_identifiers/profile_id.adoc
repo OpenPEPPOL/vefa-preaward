@@ -15,7 +15,7 @@ As an example the following process identifier is used for this BIS:
 .Example:
 [source, xml]
 ----
-<cbc:ProfileID>urn:www.cenbii.eu:profile:bii54x:ver1.0</cbc:ProfileID>
+include::../{gendoc}/examples/Trdm090.xml[tags=profile]
 ----
 
 IMPORTANT: Please note that process identifiers in the document instance MUST correspond to the SMP process identifier.

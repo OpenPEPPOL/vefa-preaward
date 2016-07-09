@@ -9,10 +9,12 @@ Some comments has been added and is used for extracting information to the guide
   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
-  <!-- tag::custID[]-->
+  <!-- tag::custID[] -->
   <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrdm090:ver3.0:extended:urn:www.peppol.eu:bis:peppol54a:ver1.0</cbc:CustomizationID>
   <!-- end::custID[] -->
+  <!-- tag::profile[] -->
   <cbc:ProfileID>urn:www.cenbii.eu:profile:bii54:ver3.0</cbc:ProfileID>
+  <!-- end::profile[] -->
   <cbc:ID>TND12345</cbc:ID>
   <cbc:ContractFolderID>REF98</cbc:ContractFolderID>
   <cbc:IssueDate>2015-08-04</cbc:IssueDate>
