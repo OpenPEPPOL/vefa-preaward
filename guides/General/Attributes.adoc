@@ -34,3 +34,5 @@
 :IANA: http://www.iana.org/assignments/media-types/media-types.xhtml[IANA]
 
 :PEPPOL_identifier: https://joinup.ec.europa.eu/svn/peppol/TransportInfrastructure/PEPPOL_Policy%20for%20use%20of%20identifiers-300.pdf
+
+:Profile54x: https://test-vefa.difi.no/esens/gefeg/submittender/1.0/039.htm[ProfileID54x]

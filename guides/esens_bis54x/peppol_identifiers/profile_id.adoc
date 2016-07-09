@@ -1,7 +1,7 @@
 == Profile ID
 
 
-The ProfileID identifies the process that the business document is part of {eSENS} eTendering BIS uses the identification system according to {CENBII}.
+The {ProfileID54x} identifies the process that the business document is part of {eSENS} eTendering BIS uses the identification system according to {CENBII}.
 
 
 NOTE: Please be aware that this BIS is using a profileID that is not a {CENBII} profile.
