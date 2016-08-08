@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" 
-    xmlns:ns2="http://www.schematron-quickfix.com/validator/process" schemaVersion="iso" queryBinding="xslt2">
-    <title>ESENS business rules trdm083</title>
-    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Tender-2" prefix="ubl"/>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:ns2="http://www.schematron-quickfix.com/validator/process" schemaVersion="iso" queryBinding="xslt2">
+    <title>ESENS business rules</title>
+    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2" prefix="ubl"/>
     <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
     <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
     <pattern>
         <rule context="/ubl:CallForTenders">
-            <assert test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)" flag="fatal" id="ESENS-T83-R001">A call for tender MUST not contain empty elements.</assert>
-            <assert test="(cbc:UBLVersionID)" flag="fatal" id="ESENS-T83-R003">A call for tender MUST have a syntax identifier.</assert>
+            <assert test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)" flag="fatal" id="ESENS-T83-R001">A call for tenders MUST not contain empty elements.</assert>
+            <assert test="(cbc:UBLVersionID)" flag="fatal" id="ESENS-T83-R003">A call for tenders MUST have a syntax identifier.</assert>
+        </rule>
+        <rule context="/ubl:IssueTime">
+            <assert test="count(timezone-from-time(cbc:IssueTime)) &gt; 0&quot;" flag="fatal" id="ESENS-T83-R009">Issue time must include timezone information.</assert>
         </rule>
         <rule context="cbc:UBLVersionID">
             <assert test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )" flag="fatal" id="ESENS-T83-R002">UBL version must be 2.1</assert>
+        </rule>
+        <rule context="//cac:DocumentReference/cbc:LocaleCode">
+            <assert test="( ( not(contains(normalize-space(.),' ')) and contains( ' aa ab ae af ak am an ar as av ay az ba be bg bh bi bm bn bo br bs ca ca ce ch co cr cs cu cu cu cu cu cv cy da de dv dv dv dz ee el en eo es es et eu fa ff fi fj fo fr fy ga gd gd gl gn gu gv ha he hi ho hr ht ht hu hy hz ia id ie ie ig ii ii ik io is it iu ja jv ka kg ki ki kj kj kk kl kl km kn ko kr ks ku kv kw ky ky la lb lb lg li li li ln lo lt lu lv mg mh mi mk ml mn mr ms mt my na nb nb nd nd ne ng nl nl nn nn no nr nr nv nv ny ny ny oc oj om or os os pa pa pi pl ps ps pt qu rm rn ro ro ro ru rw sa sc sd se sg si si sk sl sm sn so sq sr ss st su sv sw ta te tg th ti tk tl tn to tr ts tt tw ty ug ug uk ur uz ve vi vo wa wo xh yi yo za za zh zu ',concat(' ',normalize-space(.),' ') ) ) )" flag="fatal" id="ESENS-T83-R008">Language codes must be from ISO 639-1</assert>
         </rule>
         <rule context="//cac:PartyIdentification/cbc:ID">
             <assert test="(@schemeID)" flag="warning" id="ESENS-T83-R007">A party identifier MUST have a schemeID attribute</assert>
