@@ -7,7 +7,9 @@ IMPORTANT: Additional business rules are listed in the {CENBII} documents, and t
 [cols="3", options="header"]
 .Rules for Trdm083, call for tender
 |====
+|RuleID
 |Rule
+|Flag
 |Test
 | Message
 include::../{gendoc}/Trdm083_rules.adoc[]
