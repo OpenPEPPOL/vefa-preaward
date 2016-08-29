@@ -11,7 +11,7 @@ As an example the following process identifier is used for {CENBII} Profile 54 â
 .Example:
 [source, xml]
 ----
-include::../Source/examples/Trdm090.xml[tags=profile]
+include::../gendoc/examples/Trdm090.xml[tags=profile]
 ----
 
 
