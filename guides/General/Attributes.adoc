@@ -36,8 +36,5 @@
 :PEPPOL_identifier: https://joinup.ec.europa.eu/svn/peppol/TransportInfrastructure/PEPPOL_Policy%20for%20use%20of%20identifiers-300.pdf
 
 :Profile54x: https://test-vefa.difi.no/esens/gefeg/submittender/1.0/039.htm[ProfileID54x]
-
-:T90_DocRef: https://test-vefa.difi.no/esens/gefeg/submittender/1.0/0314.htm[Document Reference]
-
-:T90_DocTypeCode:
-https://test-vefa.difi.no/esens/gefeg/submittender/1.0/0317.htm
+:T90_DocRef: https://test-vefa.difi.no/esens/gefeg/submittender/1.0/0314.htm[Document_Reference]
+:T90_DocTypeCode: https://test-vefa.difi.no/esens/gefeg/submittender/1.0/0317.htm

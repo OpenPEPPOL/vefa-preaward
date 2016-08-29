@@ -11,7 +11,8 @@ As an example the following process identifier is used for {CENBII} Profile 54 â
 .Example:
 [source, xml]
 ----
-<cbc:ProfileID>urn:www.cenbii.eu:profile:bii54:ver3.0</cbc:ProfileID>
+include::../Source/examples/Trdm090.xml[tags=profile]
 ----
+
 
 IMPORTANT: Please note that process identifiers in the document instance MUST correspond to the SMP process identifier.
