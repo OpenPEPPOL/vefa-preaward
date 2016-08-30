@@ -29,7 +29,7 @@ Official notification through publishing bodies is part of many procedures. eNot
 
 The following parties participate as business partners in this profile, acting in the roles as defined below
 
-[cols="3", options="header"]
+[cols="1,3,2", options="header"]
 .parties
 |===
 | Party
@@ -44,7 +44,7 @@ The following parties participate as business partners in this profile, acting i
 |===
 
 
-[cols="2", options="header"]
+[cols="1,3", options="header"]
 .roles
 |===
 | Role

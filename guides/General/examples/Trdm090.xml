@@ -75,10 +75,12 @@ Some comments has been added and is used for extracting information to the guide
   </cac:DocumentReference>
   <!-- end::Provided_ESPD[] -->
   <cac:TendererParty>
-    <cbc:EndpointID schemeID="GB:VAT">GB999 9999 73</cbc:EndpointID>
+    <cbc:EndpointID schemeID="NO:ORGNR">999888777</cbc:EndpointID>
+    <!-- tag::partyID[] -->
     <cac:PartyIdentification>
-      <cbc:ID schemeID="GB:VAT">GB999 9999 73</cbc:ID>
+      <cbc:ID schemeID="NO:ORGNR">999888777</cbc:ID>
     </cac:PartyIdentification>
+    <!-- end::partyID[] -->
     <cac:PartyName>
       <cbc:Name>Economic Operator Inc.</cbc:Name>
     </cac:PartyName>
@@ -97,9 +99,11 @@ Some comments has been added and is used for extracting information to the guide
   </cac:TendererParty>
   <cac:ContractingParty>
     <cac:Party>
-      <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+      <!-- tag::endpoint[] -->
+      <cbc:EndpointID schemeID="GB:VAT">GBHA599</cbc:EndpointID>
+      <!-- end::endpoint[] -->
       <cac:PartyIdentification>
-        <cbc:ID schemeID="NO:ORGNR">123456789</cbc:ID>
+        <cbc:ID schemeID="GB:VAT">GBHA599</cbc:ID>
       </cac:PartyIdentification>
       <cac:PartyName>
         <cbc:Name>Contracting Body AS</cbc:Name>

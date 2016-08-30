@@ -36,17 +36,15 @@ It applies the Framework as follows:
 
 . *Technical interoperability*
 
-
 *   Technical Interaction (Process and semantic implementation):
     **   Binding to {SBDH}[SBDH] v1.3
     **   {ASIC}[ASIC-E] container with {CAdES}[CAdES] signature.
     **   Binding to {UBL}[UBL 2.1]:
-    *** CWA3456 Part 218 UBL SIG - Trdm090 Tender.docx
-    ***   CWA3456 Part 205 UBL SIG - Trdm045 Tender Reception Notification.docx
-    **   Validation:
-        *** BIIRULES-UBL-T90.sch
-        *** BIIRULES-UBL-T45.sch
-        *** UBL-T90-eSENS.sch
-        *** UBL-T45-eSENS.sch
+    *** Submit tender: CWA 17027-218
+    *** Tender Reception Notification: CWA 17027-205
+    **   Validation artefacts:
+        *** {CENBII_VA}[Validation tools from {CENBII}]
+        *** {Trdm090_sch}
+        *** {Trdm045_sch}
         *** {Tender_xsd}[UBL-Tender-2.1.xsd]
         *** {Tender_Rec_xsd}[UBL-TenderReceipt-2.1.xsd]

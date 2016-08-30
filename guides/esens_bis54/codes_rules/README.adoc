@@ -4,9 +4,9 @@
 
 The piloting of {eSENS} for Submit Tender, is based on work done by {CENBII}, and business rules and code lists used are inherited from the follwing {CENBII} documents:
 
-* CWA3456 Part 218 UBL SIG - Trdm090 Tender.docx
-* CWA3456 Part 205 UBL SIG - Trdm045 Tender Reception Notification.docx
-* CWA3456 Part 119 Profile 54 - Tendering.docx
+* UBL binding for Submit tender: CWA 17027-218
+* UBL binding for Tender Reception Notification: CWA 17027-205
+* Profile 54 Submit Tender: CWA 17027-119
 
 IMPORTANT: The profile document and syntax implementation guides from {CENBII} must be considered when implementing Submit Tender based on this BIS document
 

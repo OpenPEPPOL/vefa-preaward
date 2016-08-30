@@ -1,7 +1,7 @@
 = Revision history
 
 
-[cols="5", options="header"]
+[cols="1,2,3,2,3", options="header"]
 .Revision history
 |===
 | Version
@@ -15,4 +15,12 @@
 | Siw Midtgård Meckelborg
 | DIFI/Edisys
 | First draft for review
+
+| {revnumber}
+| {revdate}
+| Siw Midtgård Meckelborg
+| DIFI/Edisys
+| Corrected after review
 |===
+
+<<<<
