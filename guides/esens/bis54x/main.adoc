@@ -4,8 +4,8 @@
 :toclevels: 4
 :source-highlighter: coderay
 :sourcedir: .
-:gendoc: ../General
-:imagesdir: ../assets/images
+:gendoc: ../../General
+:imagesdir: ../../../assets/images
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
 v0.1: First draft for review
