@@ -13,3 +13,5 @@ Implementers of this profile attach ESPD Request/Response by adding a DocumentRe
 
 `cac:DocumentReference/cbc:DocumentTypeCode`:: 916 (Related document)
 `cbc:DocumentDescription`:: ESPD Request/Response
+
+Please also see <<espd_descr, chapter for description>> for further details.

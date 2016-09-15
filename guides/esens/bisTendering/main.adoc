@@ -1,4 +1,4 @@
-= BIS54a - Tendering
+= image:peppol.png[]openPEPPOL BIS54a - Tendering
 :author: Direktoratet for forvaltning og IKT, DIFI
 :revnumber: 0.9
 :revdate: 30-08-2016
@@ -30,9 +30,9 @@ include::{sourcedir}\process\business_process.adoc[]
 include::{sourcedir}\codes_rules\README.adoc[]
 include::{sourcedir}\codes_rules\code_lists.adoc[]
 include::{sourcedir}\codes_rules\business_rules.adoc[]
+include::{sourcedir}\descriptions\espd.adoc[]
 include::{sourcedir}\descriptions\README.adoc[]
 include::{sourcedir}\descriptions\Tender.adoc[]
-include::{gendoc}/espd.adoc[]
 include::{gendoc}/Peppol_policy.adoc[]
 include::{gendoc}/party_identifiers.adoc[]
 include::{gendoc}/version_id.adoc[]
