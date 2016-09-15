@@ -12,7 +12,7 @@ This BIS is based on work done by {CENBII} and the European Commision for ESPD, 
 * CWA3456 Part 105 Profile 35 - Advanced Tendering with Pre-award Cat
 * {ESPD_docs}
 
-IMPORTANT: The profile document and syntax implementation guides from {CENBII}, as well as the {ESPD_model} and {ESPD_docs} must be considered when implementing BIS Tendering.
+IMPORTANT: The profile document and syntax implementation guides from {CENBII}, as well as the {ESPD_model} and {ESPD_doc} must be considered when implementing BIS Tendering.
 
 In addition to the rules and code lists from the {CENBII} and {ESPD} work, some additional business rules has been added, to ensure correct use according to {PEPPOL} Policies. The testing/piloting has also revealed that there where a few other rules/code lists needed as validation artefacts to ensure an instance document is conformant with the {CENBII} specifications.
 
