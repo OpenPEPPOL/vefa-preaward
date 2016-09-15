@@ -1,0 +1,39 @@
+
+== Overall signing and encryption requirements
+
+Concerning signing and encryption, the following overall rules apply:
+
+.Requirement 1
+****
+The {CENBII} document (with manifest structure or not) may be signed and shall not be encrypted.
+****
+
+.Requirement 2
+****
+Exception to previous requirement: If a {CENBII} manifest structure points at another {CENBII} document, this other {CENBII} document may be signed and may be encrypted.
+****
+
+.Requirement 3
+****
+Individual attachments to a {CENBII} document may be signed and may be encrypted.
+****
+
+.Requirement 4
+****
+The inner {SBDH}[SBDH] shall not be signed and shall not be encrypted.
+****
+
+.Requirement 5
+****
+The {ASIC}[ASiC] manifest shall be signed and shall not be encrypted.
+****
+
+.Requirement 6
+****
+The {ASIC}[ASiC] manifest detached signature shall not be encrypted.
+****
+
+.Requirement 7
+****
+The outer {SBDH}[SBDH] shall not be signed and shall not be encrypted.
+****

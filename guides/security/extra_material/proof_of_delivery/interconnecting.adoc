@@ -1,0 +1,31 @@
+
+[[interconnecting]]
+==	Interconnecting multiple eDelivery infrastructures
+
+This note describes a situation where all communicating parties are directly connected to access points. The {eDelivery} building block currently makes this assumption.
+
+An observation is however that national eDelivery solutions are deployed by governments and commercial actors in many EU member states. In the case of commercial actors, national boundaries might not be a limitation to operation of the services; eIDAS defines electronic delivery as a separate trust service that is applicable in the EU internal market.
+
+Thus, in future setups, actors may want to use their national (or international) eDelivery service of choice, requiring a pan-European interconnection solution to bridge the individual eDelivery services. {eDelivery} might be used as the interconnecting solution by turning selected access points into gateways that relay communication into a connected eDelivery service. The concept “eDelivery service” must then be defined appropriately in the service metadata system of eDelivery.
+
+Further study is needed to determine whether or not {eDelivery} would really be useful in this context and the changes that would be necessary for the infrastructure to accomplish the interconnection task.
+
+<<fig17, Figure 17>> below shows scenarios. The left hand side might be the most likely situation, with one “hop” (a national/international eDelivery service) on either side of the access point. The right hand side shows that, at least in theory, messages may pass through a chain of eDelivery services before reaching the final destination. At the EU level, this can be avoided by requiring all European eDelivery services to connect directly to the interconnecting infrastructure. The right hand side of the figure also shows that one actor may be connected directly to {eDelivery} while the other actor may use an interconnected eDelivery service.
+
+[[fig17]]
+.Figure 17 - Interconnecting eDelivery services – possible, future role of CEF eDelivery
+image:interconnecting1.png[align="left"]
+image:interconnecting2.png[align="right"]
+
+
+Regarding the specifications in this note, all except proof of delivery (chapter 10) shall be unaffected as long as the eDelivery services are capable of addressing and of transporting the ASiC container as payload. Proof of delivery however becomes difficult. In the setup described by this note, it is clear that a {eDelivery} access point must send the transport level confirmation at once, not waiting for a confirmation from the next eDelivery service in the chain to confirm that the message has been successfully transferred by that service. This means that the REM MD evidence usage described by this note can only provide REM MD evidences for the time of delivery to an {eDelivery} access point; what goes on beyond this access point is out of scope.
+
+As a consequence, the specifications in this note also do not cover how the REM MD evidences from the access points can be requested by and properly delivered to the CA and EO in the setup in the left-hand part of <<fig17, Figure 17>>, i.e. when the CA and/or EO is on an interconnected eDelivery service.
+In principle, the proof of delivery should be sent when the message has reached the real destination, in the final eDelivery service through all the interconnected eDelivery systems as shown in <<fig17, Figure 17>>. This issue is at present considered out of scope for tendering, or at least out of scope for this note.
+
+Achieving proof of delivery across interconnected eDelivery services will require standardization of proof of delivery across different eDelivery technologies; work on this issue is likely to start in ETSI autumn 2016. This also requires all eDelivery endpoints to sign proofs of delivery by a signature that can be validated “anywhere” and that shows that this is really an eDelivery service endpoint. The latter issue can probably in the future be solved at least for qualified eDelivery services as these will be listed in the EU trusted list system.
+
+If the REM MD evidence solution described in this note is used, and the final eDelivery service additionally sends a delivery confirmation that is routed back to the sender (and that the sender is capable of processing), this can be handled in two ways, using proof of delivery of tender as example:
+
+. The EO (the submission service) will obtain two proofs of delivery, from the access point and from the CA’s interconnected eDelivery service. Probably, the proof of delivery from the interconnected eDelivery service should be authoritative, in particular if the two proofs are contradicting, showing that the message was successfully delivered across {eDelivery} but something went wrong in the interconnected eDelivery service.
+. As the REM MD evidence from the access point is recommended to be delivered on request, the EO (the submission service) can refrain from requesting this and instead rely only on the delivery confirmation received from the final eDelivery service.

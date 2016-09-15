@@ -1,0 +1,64 @@
+
+
+[[proposed_solution]]
+== Proposed solution: Dedicated PEPPOL PKI for ASiC sealing
+
+The proposal made by this note is to establish a dedicated PKI for {ASIC}[ASiC]
+sealing certificates as a separate sub-certification authority of the
+existing PEPPOL PKI. PEPPOL has a well-established scheme for access
+point certificates, which is provided upon entering into an agreement
+with a PEPPOL authority. This scheme is well understood and has proven
+to work across borders. The same scheme can be applied for {ASIC}[ASiC] signing.
+
+A change request has been filed to PEPPOL's Management Board and
+eventually should be filed to CEF Digital. The change is highly desired
+but not critical in the short term. Alternative 2 above will work as
+long as the number of actors is small, and in particular will work for a
+Norwegian e-procurement system where the service providers can be
+assumed to be few and well-known.
+
+The certificate policy will require an agreement where the subscriber of
+the certificate commits to the necessary requirements. Henceforth a
+signature supported by the certificate commits that the signer of the
+{ASIC}[ASiC] archive has spent reasonable effort to associate the documents
+inside the {ASIC}[ASiC] archive with the legal entity, which has issued the
+documents. The {ASIC}[ASiC] signer will by the certificate agreement be legally
+responsible for this effort, refer <<fig12, Figure 13>>.
+
+[.thumb]
+.Figure 12 - PEPPOL PKI for ASiC signing certificates
+[[fig12]]
+image::peppol_pki.png[]
+
+It is important to note that the certificates shall apply to the {ASIC}[ASiC]
+signing function only. Any service provider, regardless of the service
+provided, and in principle any other actor, can obtain a certificate.
+The certificate does not imply any commitment regarding other aspects of
+the service provided, e.g. obtaining the certificate does not require a
+check that a tendering service is run as it should.
+
+This is pinpointed by the figures in <<fig4,section 9.3>>, showing that {ASIC}[ASiC]
+signing can be carried out by a service provider, by an access point, or
+even (at least in theory, the business case is not clear) by a separate
+actor. Each of these may obtain a certificate for the {ASIC}[ASiC] signing
+role/function.
+
+For {ASIC}[ASiC] signatures, the resulting scenario is that the situations in
+<<fig13, Figure 13>> shall be deemed to be correct. This solves the issue
+identified by <<fig11,Figure 11>>.
+
+[.thumb]
+.Figure 13 - signature with PEPPOL certificate proves association of sender and content
+[[fig13]]
+image::asic_with_peppol_cert.png[]
+
+PEPPOL's liabilities must be clear. By issuing certificates pursuant to
+either an appendix to the existing Transport Infrastructure Agreement or
+a separate agreement, PEPPOL might be liable to litigation. Referring to
+<<fig12,Figure 12>>, if parties A and B enters into an agreement with PEPPOL in
+order to obtain certificates for signing {ASIC}[ASiC] archives, who is liable if
+one of the parties does not follow the requirements pursuant to the
+agreement? What happens if PEPPOL by mistake issues a certificate to a
+party without the written agreement?
+
+<<<<

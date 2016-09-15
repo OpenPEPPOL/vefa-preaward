@@ -1,0 +1,15 @@
+
+== Applying advanced/qualified (digital) signatures
+
+[[current_signing_bii]]
+===	Current signalling of signature requirements in CEN BII call for tender
+
+The only signature parameters included in a {CENBII} call for tender document at present are:
+
+*	In the tendering terms part, an “overall expected level of tender signature” can be indicated.
+*	In the provided documents part, a “provided document signature requested” flag can be set, and accordingly a “document signature level”.
+*	In the required documents part, a “document signature level” can be set.
+
+This should be sufficient to indicate wether or not a specific document shall be signed (the “what” of a signature policy). The “signature level” is one aspect of the “how” of a signature policy, but signature instructions may need to be more detailed, and there is no indication of what a level is, e.g. how this can be related to advanced electronic signature levels as defined by eIDAS. The “by whom” and the “why” of a signature policy may be evident in many cases; the EO or the issuer of the part signing for “obvious” reasons.
+
+Still the current signalling of signature requirements must be regarded as insufficient. If XML format specifications for signature policies are developed by the ETSI/ESI standards body, such signature policy structures may be included in appropriate {CENBII} documents.

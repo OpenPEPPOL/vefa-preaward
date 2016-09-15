@@ -1,0 +1,19 @@
+
+===	Receiving a digital signature when it is not required
+
+Article 22.6.c of the public procurement directive states that when it is deemed that an advanced electronic signature is required, then a qualified signature and an advanced electronic signature supported by qualified certificate from any certification authority on a trusted list shall be accepted.
+
+The directive makes no statement related to acceptance of an advanced signature when it is not required; however, receiving such “unnecessary” signatures is likely to happen. A German EO, used to signing a tender with a qualified signature, is likely to sign a tender submitted to Norway the same way, even though the Norwegian CA has not asked for such a signature.
+
+Two options exist:
+
+. Always validate all signatures.
+.	Discard unnecessary signatures and treat the tender as if it were unsigned.
+This may be considered as a policy decision. This note suggests the following as good practice:
+
+.Requirement 19
+****
+All digital signatures should be validated regardless of whether they are required or not. Signing when not required shall not give the signing actor any advantage or disadvantage.
+****
+
+Care must be taken concerning handling of signature errors (see next section). Discarding a tender due to a signature error when there was no requirement to sign the tender, may not be good practice.

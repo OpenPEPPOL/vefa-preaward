@@ -1,0 +1,63 @@
+
+[[cert_requirements]]
+==	Encryption certificate requirements
+
+Some basic requirements are posed on the public key encryption certificate:
+
+.Requirement 24
+****
+The encryption certificate shall be an X.509v3 certificate.
+
+NOTE: Use of European standard certificate formats as specified by the ETSI EN 319 412 series of standards <<30>> may be recommended where appropriate.
+****
+
+.Requirement 25
+****
+The subject public key should be RSA with key length 2048 bits. Deviation from this requirement (shorter or longer public key) shall be justified by a risk analysis.
+
+NOTE: RSA cryptography is required since the key transport mode of CMS is used. Addition of support for elliptic curve cryptography and Diffie-Hellman key agreement is for further study (see <<Adding support for Diffie-Hellman key agreement, 14.3.4>>).
+****
+
+.Requirement 26
+****
+The subject name in the certificate should identify either the receiver of the business protocol message or the actor that will perform the decryption (the latter is relevant if a service provider decrypts).
+
+NOTE: Since the receiver is assumed to be a legal person, use of a well-known identifier such as a company registration number may be preferred but no strict naming requirement is posed. E.g. identification of a natural person associated with the receiver could be allowed.
+****
+
+.Requirement 27
+****
+The certificate shall have a key usage extension with the keyEncipherment bit set.
+****
+
+.Requirement 28
+****
+The certificate should include the subjectKeyIdentifier extension to enable use of CMSType 2 format. (CMSType 0 format identifies the public key by certificate serial number and certificate issuer, which are both mandatory for X.509v3 certificates.)
+****
+
+.Requirement 29
+****
+The quality of the certificate (as indicated by the certificate policy if a policy exists) shall be sufficient to provide adequate protection according to a risk evaluation.
+****
+
+.Requirement 30
+****
+The receiver of the certificate (the actor that encrypts) shall be able to validate the certificate.
+****
+
+This note places no particular requirement on the PKI used to obtain the encryption certificate. Certificate issues are discussed in the informational <<Issues regarding encryption certificate, section 14.1>>.
+
+The requirements on validation needs some clarification. To enable cryptographic validation of the certificate, the following alternatives can be used:
+
+*	The issuer of the certificate is “well known”, e.g. a certification authority on the EU trusted list system (although these do rarely issue encryption certificates, see <<Issues regarding encryption certificate, section 14.1>>) or included in the certificate root stores of major suppliers.
+*	Certificate path to the root-certification authority is provided, in which case the validator still has to determine trust in the root.
+*	The certificate is self-signed, i.e. it is its own root-certificate. The validator has to determine that this is a trustworthy approach.
+
+Furthermore, one has to determine that the certificate is within its validity period (examine the “valid from” and “valid to” indications in the certificate) and not revoked. Regarding revocation checking, two approaches are possible:
+
+*	The certificate is short-lived and assumed not to be revoked during its lifetime. This will typically apply to self-signed certificates. No revocation checking is done and no revocation service URI is provided.
+*	Revocation checking is done by an available OCSP and/or CRL service. URI to revocation service may be included in the certificate as an extension and/or be provided by other means.
+
+The meaning of “short-lived” is not specified by this note but a reasonable assumption is “valid until a short time after completion of the business protocol”, e.g. the tendering process, or “valid until a short time after opening of the tenders”. The actor that encrypts has to accept the lack of revocation checking. The certificate owner should have defined means to alert all concerned parties in the unlikely event of a private key compromise for such a certificate.
+
+If the message containing the encryption instructions is properly integrity protected end-to-end (by signing), transfer of a “bare” public key without a certificate could be possible. This is not discussed further in this note. The CMS format in practice assumes that a certificate is used.

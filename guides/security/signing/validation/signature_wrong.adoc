@@ -1,0 +1,28 @@
+
+===	What if a digital signature goes wrong?
+
+A digital signature may go wrong in validation in different ways:
+
+. Technical signature processing yields an invalid result, including situations where the certificate is revoked or outside of its validity period, or because the hash value computed on the clear text does not match the signed hash value.
+.	Technical signature processing yields an indeterminate result, e.g. because trust in the root certification authority referred to has not been determined.
+.	Signature policy violation, e.g. using a lower quality when a qualified signature is required, not signing all parts required, or signatures made by persons that are not properly authorised.
+
+Note the, perhaps mostly theoretical, issues on certificate validity time discussed in <<Validation and timing issues, section 9.6.1>>.
+
+.Requirement 20
+****
+Proper rules for handling of signature validation errors shall be defined. These rules should be stated in the signature policy in force.
+****
+
+National rules or the CA may specify that a signature error shall cause mandatory rejection of a tender.  Hopefully, a rule stating a discretionary right to reject is more likely, i.e. that the CA can make an informed decision on rejection or not. In this case, an exception should be raised if the signature processing reports an error, and the situation could be handled “manually”.
+
+Error handling may be different for different signatures. A correct signature from the EO itself on a tender may be considered more important than a correct signature of a sub-contractor on its letter of commitment.
+
+This note does not venture deep into discussions on error handling but using a tender as example, several options are possible besides the obvious of discarding the tender:
+
+*	Allow resubmission of all or parts of the tender– must be exactly the same tender/parts except for correction of signatures.
+*	Discard the signature and accept the unsigned document – could be applicable where a signature is not crucial, and the document is likely to be correct.
+*	For a negotiated procedure, demand the error to be corrected in the next round.
+*	Etc.
+
+<<<<

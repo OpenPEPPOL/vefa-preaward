@@ -1,0 +1,22 @@
+
+== SBDH XML headers
+
+{SBDH}[SBDH] (Standard Business Document Header) <<14>> provides an XML format for a standardised business document envelope at the business protocol level. The envelope identifies the sender and receiver of the document and is used to route the message to the correct recipient. Use of {SBDH}[SBDH] is largely out of scope of this note.
+
+Two (optionally three) levels of {SBDH}[SBDH] are used in the solution as shown in Figure 3 below. Use of {ASIC}[ASiC] is described in section 5.5 and chapter 9.
+
+* An inner {SBDH}[SBDH] referring the CEN BII profile in use, included in the {ASIC}[ASiC] container as part of the payload, and identifying the sender and receiver of the document (usually the EO and the CA); this {SBDH}[SBDH] can be considered to be created at the process step of {ASIC}[ASiC] packaging.
+* An outer {SBDH}[SBDH] referring the {ASIC}[ASiC] container holding the business document (the payload), and identifying the endpoints for the business protocol message (usually submission service and tendering service); this {SBDH}[SBDH] will usually be added by the CEF eDelivery access point.
+* Additionally, {SBDH}[SBDH] may be used at the transport level for routing – out of scope of this note and always added by the access point.
+
+This means that a message consists of two objects: the outer {SBDH}[SBDH] and the {ASIC}[ASiC] container. In order for routing to be done, the outer {SBDH}[SBDH] must be unencrypted. At present, CEF eDelivery does not specify functionality to handle signed {SBDH}[SBDH], meaning that the outer {SBDH}[SBDH] shall also be unsigned.
+
+NOTE: If further analysis shows a need to digitally sign the outer {SBDH}[SBDH], then it should be signed as a separate object using an enveloped XAdES <<23>> signature, i.e. the signature is embedded in the XML structure. This will allow nodes to directly process the {SBDH}[SBDH], skipping signature verification for nodes that do not support this.
+
+The inner {SBDH}[SBDH] must be unencrypted as it is also to be used in routing. The {SBDH}[SBDH] shall not be signed as a separate document. The {SBDH}[SBDH] is implicitly signed by the {ASIC}[ASiC] manifest signature.
+
+NOTE: An {SBDH}[SBDH], in this case only relevant for the inner {SBDH}[SBDH], may optionally include a manifest structure with identification and hash values of each object of the transmission covered by the {SBDH}[SBDH]. This note requires this option not to be used. The {ASIC}[ASiC] manifest covers the same purpose. For completeness, the option is briefly mentioned in section 7.4.5 in connection with signing.
+
+.Figure 3 - Use of SBDH headers
+[[sbdh_headers]]
+image:sbdh_headers.png[align="left"]

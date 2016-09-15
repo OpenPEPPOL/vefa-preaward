@@ -1,0 +1,57 @@
+
+=== Adding the transport level confirmation to the REM MD evidence
+
+When payload information is added to the transport level confirmation,
+this confirmation constitutes a proof that this specific payload was
+received at the access point at the time indicated. The transport level
+confirmation is the base evidence signed by the receiving access point.
+
+This note specifies that the signed transport level confirmation shall
+be included in the {REM} MD evidence (see Figure 16 below) as an extension
+as allowed by the {REM} standard <<27>>. The extension should identify the
+type of the transport level confirmation, e.g. AS2 MDN or AS4 ebReceipt.
+The detailed structure of the extension is not specified by this note;
+this specification will be done when/if the necessary changes are
+approved by the PEPPOL Management Board.
+
+Thus, the semantics of the {REM} MD evidence, using AS2 as example, is
+that:
+
+* The specific, identified payload (the {ASIC}[ASiC] container)
+represented by hash value in the AS2 MDN extension was received at the
+access point that has signed the AS2 MDN at the time inside the AS2 MDN
+extension.
+
+Information elements such as time and message identification could be
+copied to the main part of the {REM} MD evidence. As shown, the access
+points independently produce and sign the {REM} MD evidence for its local
+customer.
+
+[thumb]
+.Figure 15 - Inclusion of AS2 MDN in REM MD evidence and signing of REM MD evidence
+image::AS2_REM.png[]
+
+The transport level confirmation inside the {REM} MD evidence is signed by
+use of a certificate issued by the internal PEPPOL eDelivery PKI. No
+business level actor can be assumed to be able to validate this
+signature on its own. But since the transport level confirmation should
+be on a standard format (e.g. AS2 MDN), business level actors and other
+parties may be capable of parsing the structure to read out information.
+For signature validation and for parsing if needed, an access point or
+another actor within the domain of the PEPPOL PKI for {eDelivery}
+should be asked to assist.
+
+Since disputes involving use of the {REM} MD evidence must be expected to
+occur shortly after the event, issues regarding expiry or revocation of
+any certificate used to sign is considered out of scope. This concerns
+the signature of the transport level confirmation and the signature of
+the {REM} MD evidence itself. An EO that has its tender refused must take
+immediate action. Correspondingly for the CA to prove that the tender
+was too late or in time. Thus, a basic signature format should be
+sufficient for the {REM} MD evidence signature. The crucial time element
+is inside the evidence, not related to any time-stamp applied to the
+signatures of the evidence.
+
+Note: {eIDAS} article 44.f requires events related to a qualified
+eDelivery service to be attested by qualified time-stamps. This
+requirement may be considered in the future.

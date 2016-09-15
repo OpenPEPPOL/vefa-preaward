@@ -1,0 +1,8 @@
+
+=== Digital signature on SBDH with manifest - not relevant
+
+Neither the Norwegian e-tendering solution nor the e-SENS pilots use the optional {SBDH}[SBDH] manifest extension for the inner {SBDH}[SBDH]. This extension works similarly to a tender manifest as described in the previous subsection. The alternative is however mentioned for completeness.
+
+If the optional manifest element is included in the inner {SBDH}[SBDH], a digital signature on the {SBDH}[SBDH] will sign hash values of all parts similarly to signing a {CENBII} document with manifest. The difference is that unlike a {CENBII} manifest, the {SBDH}[SBDH] is not (normally) stored as part of the business document at the receiving side. This implies that an {SBDH}[SBDH] digital signature may be more useful as a transport signature than as an advanced (legal) electronic signature.
+
+Digitally signing an inner {SBDH}[SBDH] without a manifest is of course also possible but has no value as the {SBDH}[SBDH] is anyway implicitly signed as part of the {ASIC}[ASIC] signature.

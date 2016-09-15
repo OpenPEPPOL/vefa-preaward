@@ -1,0 +1,48 @@
+
+==	Individual encryption of parts of the business protocol message
+
+A business protocol message consists of a CEN BII document and possibly attachments. A part of a business protocol message may be:
+
+*	In any format,
+*	Unsigned or signed as specified in chapter 7,
+*	A single document or a container file (e.g. zip-format) etc.
+
+This implies that the encryption method must be independent from formats and other characteristics. If one excludes format specific encryption such as PDF Encryption and XML Encryption, in practice the only standardized, applicable encryption format is CMS, Cryptographic Message Syntax, as defined by RFC 5652 <<19>>.
+
+The encryption process is well-known and shown in <<ind_encrypt,Figure 7>>:
+
+. A secret encryption key is randomly generated according to requirements for the symmetric key algorithm and parameters to be used.
+. The part/object is encrypted by this encryption key in the manner specified.
+. The symmetric encryption key is encrypted by the public key from the encryption certificate.
+. The results of steps 2 and 3 are glued together according to the CMS format.
+. Steps 1-4 are repeated for all parts/objects. (Or possibly, in a future extension, only for the selected documents that shall be encrypted.)
+
+The resulting requirements are as follows:
+
+.Requirement 31
+****
+When a business protocol message shall be encrypted, all parts of the message shall be encrypted individually with the following exceptions: SBDH headers shall not be encrypted, a CEN BII document shall only be encrypted if it is referenced from another CEN BII document through a manifest structure.
+
+
+NOTE: The CEN BII advanced tendering profile <<10>> explicitly requires the tender manifest to be unencrypted and referenced CEN BII documents to be encrypted.
+
+NOTE: An unencrypted CEN BII document implies that all sensitive content should be placed in attachments.
+****
+
+.Figure 7 - Individual encryption of all parts of a business protocol message
+[[ind_encrypt]]
+image::individual_encrypt.png[align="center"]
+
+.Requirement 32
+****
+The symmetric encryption algorithm shall be AES <<32>>. A key length of 256 bits shall be used. CBC mode shall be used. The initialization vector (IV) shall be randomly generated for each new encryption.
+
+NOTE: When RSA 2048 is used, AES with 128-bit key is more than sufficient to provide the same cryptographic strength. Since a fixed requirement is needed, 256 bits is suggested to cater for any deviations in size of RSA key. This implies a performance penalty in encryption and decryption of perhaps 40 % compared to 128-bit key. Alternatives to CBC mode could be OK as long as ECB (electronic code book) mode is not used.
+****
+
+.Requirement 33
+****
+The encryption process shall for each encrypted part yield a format according to CMS <<19>> using either CMSType 0 or CMSType 2 (see <<The CMS EnvelopedData and AuthEnvelopedData formats, 14.3>>).
+
+NOTE: Use of authenticated encryption according to <<20>> is a possible extension that is not included in the recommendations of this note, see <<Data structure for AuthEnvelopedData, 14.3.2>>. It is noted that the encrypted parts can be considered authenticated by the ASiC manifest signature.
+****

@@ -1,0 +1,35 @@
+
+== Requirements for internal processing in an access point
+
+An access point must archive all transport level confirmations sent or
+received with signature intact for a pre-determined period of time. This
+note does not pose requirements for the duration of the archival.
+
+Regarding production of {REM} MD evidences, an access point has two
+options, both equally valid:
+
+* Produce and sign the {REM} MD evidence immediately after receiving
+a transport level confirmation, then archive the {REM} MD evidence (and
+thus implicitly the transport level confirmation).
+
+* Produce and sign the {REM} MD evidence on request by the customer
+based on the archived transport level confirmation.
+
+If the access point service includes the ability of the customer to
+request a {REM} MD evidence of an event "a long time ago", proper
+mechanisms should be in place for persistent archival and to cope with
+expired and revoked certificates for archived transport level
+confirmation and/or archived {REM} MD evidence signatures.
+
+Furthermore, on receiving a transport level confirmation for a specific
+message, an access point shall:
+
+* Verify that the hash value of the {ASIC}[ASiC] container in the
+transport level confirmation extension matches the locally computed hash
+value of the ASiC container sent.
+
+* Verify that the timing of events for the transport protocol (see
+<<timVerifying timing of events for the process flow, section 15.2.2>> for details) is correct.
+
+* Take appropriate action (not specified in this note) if
+discrepancies are detected.

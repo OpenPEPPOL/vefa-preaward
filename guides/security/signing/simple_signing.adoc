@@ -1,0 +1,44 @@
+
+[[simple_signing]]
+==	Applying “simple” electronic signatures, ASiC signing semantics
+
+As stated above, the public procurement directive does not mandate use of advanced/qualified signatures, and presumably some member states will use this opportunity to simplify tendering processes. Norway is one example of such as state.
+
+Assuming that none of the parts of the business protocol message has an advanced/qualified signature (i.e. is digitally signed), the solution specified by this note is to assign specific semantics to the {ASIC}[ASiC] container signature in order to mediate a “simple” electronic signature. Further requirements for {ASIC}[ASiC] container signing are stated in chapter 9; below only the basic principles are stated.
+
+.Requirement 12
+****
+The {ASIC}[ASiC] container signature (the actor digitally signing the container) shall attest to the correctness of the identity of the sender as identified in the inner SBDH and to the fact that the sender has explicitly committed to the sending of the business protocol message.
+****
+Using tendering as an example and referring to <<fig, Figure 4>> below, the setup on the left hand side indicates that the EO itself signs the {ASIC}[ASiC] container. Thus, the EO itself attests according to identity and commitment for the requirement above. Whether or not one wants to interpret this as a legal advanced electronic signature by the EO is a matter of taste. As argued in section 7.4.1 below, this note suggests that the signature should be regarded as a transport signature with the semantics of the requirement above rather than as the legal signature of the tender.
+
+The right hand side of <<fig4, Figure 4>> indicates that the submission service provider signs the {ASIC}[ASiC] container. The requirement above shall then be interpreted as a confirmation of the following:
+
+. The submission service provider has authenticated the EO (usually that means a natural person authorised to represent the EO).
+. The EO (usually the authenticated natural person) has explicitly confirmed the commitment of sending of the tender.
+. Information proving these two steps is available in the submission service provider’s logs.
+
+The authentication mechanism applied in step 1 is out of scope of this note but a signature policy that does not require digital signatures may instead state requirements on the strength of the authentication by referring to levels defined by the {eIDAS} implementing act on eID assurance levels <<3>>.
+
+NOTE: One may get the impression that the submission service provider signs the tender “on behalf of” the EO; however, the {ASIC}[ASiC] signature is not a legally binding signature of the tender. The semantics of the {ASIC}[ASiC] signature is to mediate the fact that the EO has produced a “simple” electronic signature in the submission service.
+
+.Figure 4 - ASiC signature by sender or service provider confirms identity of sender
+[[fig4]]
+image:sign_sender1.png[align="left"]
+image:sign_sender2.png[align="right"]
+
+<<sign_separate,Figure 5>> below indicates that the {ASIC}[ASiC] container signing should be regarded as a separate function. The actor that signs to confirm identity and commitment can be another than the EO or the submission service provider, or at least the signing is a separate function of the submission service provider. As shown in the figure, the {ASIC}[ASiC] signing can even be drawn towards the access point and may actually be offered by an access point service provider.
+
+The requirement above for attesting to identity and commitment still applies. When {ASIC}[ASiC] signing is separated this way, the {ASIC}[ASiC] signer must (left hand side of figure) itself authenticate the EO or (right hand side of figure) trust the service provider to take care of authentication and commitment. How authentication is done, how an {ASIC}[ASiC] signing service is offered, the interface to such a service, and how the {ASIC}[ASiC] processing additional to signing is split between the actors, is not subject to standardization. One requirement is however posed:
+
+.Requirement 13
+****
+When {ASIC}[ASiC] container signing is done by a separate role/function, the signed {ASIC}[ASiC] container and shall be returned to the sender.
+****
+
+This is due to the need to compare the hash value of the sent {ASIC}[ASiC] container with the hash value provided in a {REM} MD evidence message. Return of the entire {ASIC}[ASiC] container is required since it is assumed that the EO or submission service provider will need this for archival.
+
+.Figure 5 - ASiC container signing as separate role, close to access point
+[[sign_separate]]
+image:sign_separate1.png[align="left"]
+image:sign_separate2.png[align="right"]

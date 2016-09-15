@@ -1,0 +1,75 @@
+
+= ASiC packaging, e-seal, vouching for sender identity
+
+[[electronic_seal]]
+== Electronic seal - digital signature on ASiC container
+
+Applying a digital signature to the {ASiC}[ASiC] container is technically
+straightforward:
+
+.Requirement 34
+****
+The {ASiC}[ASiC] manifest should be signed by a CAdES B-B
+detached signature <<22>>.
+****
+
+.Requirement 35
+****
+The cryptographic strength of the signature and the
+quality of the supporting certificate shall be adequate for the business
+process requirements.
+****
+
+.Requirement 36
+****
+The hash algorithm should be SHA-256 <<33>>. Deviation
+from this requirement shall be justified by a risk analysis.
+****
+
+.Requirement 37
+****
+The signing algorithm should be RSA with 2048-bit
+key size or a standard public key algorithm providing similar strength,
+e.g. EC-DSA using a well-known curve. Deviation from this requirement
+shall be justified by a risk analysis.
+****
+
+.Requirement 38
+****
+An X.509v3 certificate shall be used, and the
+certificate should conform to the European standard certificate profiles
+<<30>>.
+****
+
+.Requirement 39
+****
+The issuer of the certificate shall be "well known"
+in order for any receiver to be able to validate the certificate.
+
+NOTE: Solutions to this requirement are further discussed in <<proposed_solution, 11.5>>
+below.
+****
+
+An alternative signature format XAdES B-B <<23>> could be used. The
+recommendation for the CMS-based CAdES format is made because this may
+be a simpler format to implement, and because CMS is used for
+encryption. There is no need to use more advanced signature formats
+including time stamps.
+
+As argued in section <<current_signing_bii, 9.4.1>>, the {ASiC}[ASiC] container signature is not useful
+as a legal signature on e.g. a tender; thus it makes no sense to require
+a signature from a natural person on the container.
+
+.Requirement 40
+****
+The {ASiC}[ASiC] container shall be signed by an electronic
+seal supported by a certificate identifying the legal person responsible
+for the signing.
+
+NOTE: {eIDAS} preamble item 58 states that: _"When a transaction requires a
+qualified electronic seal from a legal person, a qualified electronic
+signature from the authorised representative of the legal person should
+be equally acceptable."_ At least in theory, this means that one may have
+to accept an {ASiC}[ASiC] container signed with a qualified signature from a
+natural person. We do not discuss this alternative further.
+****

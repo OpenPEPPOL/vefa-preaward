@@ -1,0 +1,28 @@
+
+= Status and purpose of document
+
+This note is a technical requirements specification supporting implementation of a Norwegian solution for e-tendering. The note is shared with the {eSENS} project (WP 5.1 working on pan-European tendering) for re-use by anyone interested. The note is not intended to become (part of) an {eSENS} deliverable but this can be discussed if the {eSENS} project desires.
+The note may become an input document for the next round of standardization work in the successor to the {CENBII} workshop.
+
+The setup is the following:
+
+* {eDelivery} is used for communication. In fact, use of PEPPOL eDelivery, which is an instantiation of the {eDelivery} building block, is assumed. But the specifications in this note shall be applicable to {eDelivery} in general so the term {eDelivery} is used.
+* A business protocol (e.g. tendering) is run between a Contracting Authority (CA) and an Economic Operator (EO). The business protocol consists of exchange of business protocol messages consisting of documents structured according to {CENBII} standards. UBL syntax is used but choice of syntax does not influence the specifications. Thus, “{CENBII}” is referred to, not UBL. The specifications will largely work for other types of documents/content; only minor parts depend on use of {CENBII} standards.
+* {CENBII} document, and attachments if such exist, are collected in an {ASIC}[ASiC] container before sending. The {ASIC}[ASiC] becomes the payload for the {eDelivery} transport level message.
+* 	{SBDH}[SBDH] is used to identify sender and receiver and for routing. An inner {SBDH}[SBDH] is included in the {ASIC}[ASiC] container for routing of the content, and an outer {SBDH}[SBDH] is used for routing of the {ASIC}[ASiC] container itself.
+*	The CA and the EO will usually rely on service providers. The CA’s service provider is termed “tendering service provider” and the EO’s service provider is termed “submission service provider” (for submission of tenders etc.). Alternatively, the CA and/or the EO may connect directly to {eDelivery} and fulfill all requirements in their own systems.
+
+IMPORTANT: The specifications rely upon three changes to the current {eDelivery} specifications, or at least to the PEPPOL eDelivery specifications, see chapter 3. Two of these changes are critical for the solution to work.
+
+This note describes:
+
+*	How to technically sign a business protocol message using:
+**	A confirmed identity linked to the message, equalling an (“simple”) electronic signature according to the {eIDAS} regulation <<1>>.
+**	Digital signature on parts of the business protocol message, equalling an advanced electronic signature according to {eIDAS}.
+*	How a sender can encrypt individual parts of a business protocol message based on a public encryption key from a certificate provided by the receiver.
+*	How to pack the business protocol message into a digitally signed {ASIC}[ASiC] container and transmit the message.
+*	How a proof of time of delivery to the receiver’s {eDelivery} access point can be obtained by both sender and receiver; this event is regarded as the time of delivery of the business protocol message.
+
+The specifications in this note should be viewed in light of the {eIDAS} regulation <<1>> articles 43 and 44 on (qualified) electronic registered delivery services. The specifications in this note may move {eDelivery} towards an electronic registered delivery solution according to {eIDAS}
+
+The numbered Requirements stated in this note apply to the business level actors, e.g. tendering service providers and submission service providers must comply with them. Requirements that apply to {eDelivery} and its access points are not stated as numbered requirements.

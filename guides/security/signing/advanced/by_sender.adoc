@@ -1,0 +1,22 @@
+
+===	Signature by the sender, alternatives
+
+Using a tender as example and assuming that the EO has to sign the tender by an advanced/qualified signature, basically two alternatives exist:
+
+. The EO signs one, more or all of the attachments to the tender (e.g. a tender letter).
+. The EO signs the {CENBII} XML document, which may contain a tender manifest.
+
+The two may be combined by signatures on both the {CENBII} document and one or more attachments. The alternatives are briefly described below, not stating specific requirements for signing as these belong in the signature policy, which is out of scope of this note.
+
+.Requirement 14
+****
+When an advanced/qualified signature is required, this shall be applied to the {CENBII} document and/or to one or more individual attachments as specified by the signature policy in force.
+****
+
+Note also requirements for correspondence of naming between signatures and the inner {SBDH}[SBDH] as stated in <<Identification and authentication by signing individual parts, section 11.2.2>>.
+
+Additionally, the {ASIC}[ASIC] container is always digitally signed (see <<Applying “simple” electronic signatures, ASiC signing semantics, 9.3>> above), but using this to represent the legal signature of the EO is highly questionable. There are several reasons:
+
+* The {ASIC}[ASIC] signature may (implicitly through manifest) sign encrypted content, which is not advisable for a legal signature.
+* If used as a legal, advanced/qualified signature, the “real” sender (e.g. the EO for a tender) must sign, which is possible for the {ASIC}[ASIC] signature but not the normal situation when service providers are used, as described in <<Applying “simple” electronic signatures, ASiC signing semantics, section 9.3>> above.
+* The recommendation is to use an electronic seal (by a legal person) to sign the {ASIC}[ASIC] container; for legal signatures, one must today expect a requirement for a signature by a natural person.

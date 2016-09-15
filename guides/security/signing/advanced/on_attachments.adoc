@@ -1,0 +1,15 @@
+
+===	Digital signatures on individual attachments
+
+Using a tender as example, the tender will consist of a {CENBII} document (simple tendering or advanced tendering) and attachments that contain tender information; e.g. a tender letter stating the necessary commitments of the EO will usually be an attachment.
+
+Tender instructions may describe the required structure of a tender, and tender instructions may describe requirements for signing (the signature policy). It is quite obvious that a possible requirement is that the tender letter shall be signed using an advanced/qualified signature. Additionally, other parts may be signed. See <<Digital signature on SBDH with manifest - not relevant, 9.4.6>> below for signature formats.
+
+When an attachment is embedded (this is not recommended), it is tagged in the XML by specific metadata and included as a base64 encoded binary object.
+
+.Requirement 15
+****
+If a signed and/or encrypted, embedded attachment is included in the {CENBII} document, the metadata (MIME type) must be set accordingly.
+****
+
+E.g. MIME type PKCS#7 must be supported if the attachment is encrypted by CMS or signed by an enveloping CMS/CAdES signature. If an unencrypted {ASIC}[ASIC] container is embedded, the MIME types defined for {ASIC}[ASIC] must be supported. An enveloped, unencrypted signature (e.g. PAdES for PDF) will not change the type of the attachment and does not change how the attachment is included.

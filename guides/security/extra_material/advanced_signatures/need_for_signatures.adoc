@@ -1,0 +1,19 @@
+
+== The need for a legal electronic signature
+
+The commitment of the sender to the message content may have to be
+proven. In the case of a tender, this is quite obvious. In a broad
+sense, a tender has to have a legal electronic signature.
+
+An electronic signature may need to be preserved for some time and it is
+common practice to apply a signature to unencrypted content. This is
+particularly important when an AdES (a digital signature) is used; the
+signature must be applied before encryption else the signature cannot be
+validated after decryption. Signing unencrypted content also pinpoints
+that a signature should be created according to WYSIWYS (what you see is
+what you sign), a property that is questionable if the content is
+encrypted.
+
+The possible semantics (e.g. the authorizations and commitments implied,
+if any) of an electronic signature are not discussed further in this
+note.

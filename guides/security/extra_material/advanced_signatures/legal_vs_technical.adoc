@@ -1,0 +1,76 @@
+
+= Informative: Extra material on advanced signatures
+
+[[legal_vs_technical]]
+== "Legal" electronic signatures versus "technical" digital signatures
+
+The {eIDAS} regulation <<1>> separates two concepts:
+
+* An electronic signature is always by a physical person.
+
+* An electronic seal is by a legal person.
+
+The following should be observed:
+
+* "Electronic signature/seal" is a legal term. For example, an
+electronic signature can be used as a replacement for a handwritten
+signature as a legally binding signature.
+
+* "Digital signature" is a technical term for a specific mechanism
+using public key cryptography; in this note assumed to be supported by a
+PKI certificate issued by a recognized certification authority. This
+technology is currently needed to support "advanced" and "qualified"
+signatures (see below).
+
+The {eIDAS} regulation defines several types of signatures, all of them
+legal terms since {eIDAS} is a legal document that in principle shall be
+technology neutral. When related to technology (not repeating the rather
+abstract {eIDAS} definitions), the implications of the {eIDAS} definitions
+are:
+
+* An "electronic signature" (sometimes called a "simple electronic
+signature", although that is not an {eIDAS} term) can be created by any
+technical mechanism that creates a link between the
+data/information/document that is signed, and the act of the user.
+Notably, a "click to consent" user interface where an authenticated user
+explicitly confirms his/her intention by clicking a button on a web page
+can be used, preferably in combination with creation of a sufficiently
+strong audit log record of the event. Some say that even a plaintext
+"signature" at the bottom of an email constitutes an electronic
+signature.
+
+* An "advanced electronic signature" (AdES) is in reality not a
+technology neutral term but requires a digital signature and use of a
+PKI certificate. {eIDAS} and implementing acts pose no quality
+requirements to a "basic" AdES, e.g. no requirement on the quality of
+the PKI certificate used (see <<Requiring AdES without qualified certificate, 13.6.1>> below).
+
+* An "advanced electronic signature with qualified certificate"
+(AdES~QC~) adds the requirement for use of a qualified certificate, i.e.
+a certificate issued by a certification authority that is nationally
+supervised and present in the EU trusted list system.
+
+* A "qualified electronic signature" (QES) additionally requires
+use of a "qualified signature creation device" (QSCD) holding the
+signer's private signing key. A QSCD can be based on various
+technologies; although a smart card was initially foreseen, server-based
+solutions are increasingly being used.
+
+Corresponding levels are defined for electronic seals. A qualified
+electronic signature shall always be accepted where a handwritten
+signature is required. A qualified electronic seal shall always enjoy
+the presumption of authenticity and integrity of the sealed data;
+meaning that use of seals for legally binding purposes is not guaranteed
+by {eIDAS}.
+
+One may argue that since e.g. a contract is entered into by legal
+persons, a seal would be a better mechanism than the signature of a
+natural person, but acceptance of such a setup must be agreed between
+the parties and be allowed by the applicable national law (see <<Can an e-seal be used as a binding signature?, section 13.6.4>> below).
+
+Technically, all advanced/qualified signatures and seals are digital
+signatures implemented by the same technology. Basically, the only
+technical difference is that when qualified certificates are used, a
+processing requirement is added for validation of the qualification of
+the certification authority against the trusted list of the member state
+where the certification authority is located.

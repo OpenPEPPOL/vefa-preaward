@@ -1,0 +1,14 @@
+
+= Obtaining proof of delivery (to receiver's access point)
+
+== REM MD evidence format for proof of delivery
+
+A proof of delivery should be on a standard format in order to enable
+the proof to be presented to and validated by "any" actor. The {REM} MD
+evidence format (Registered Electronic Mail, Message Delivery) <<27>> is
+possibly the only applicable standard format.
+
+This format is defined for use by {REM} messaging systems. In the case
+described by this note, {eDelivery}, which is not based on {REM}, is
+used. This means that the {REM} MD evidence format is used but not the
+rest of the {REM} specifications.

@@ -1,0 +1,38 @@
+
+[[error_discovery]]
+== Using the ASiC and hash values for error discovery
+
+The basic property of storing hash values of the {ASIC}[ASiC] container
+"everywhere" is that a comparison may be made to ensure that the same
+structure has been processed along the entire route. In case of a
+discrepancy, it is easy to discover where a change to the {ASIC}[ASiC] has
+occurred. The proof that what was sent is what was received is easy.
+
+The links between the clear text content on either side and the
+presumably encrypted content of the {ASIC}[ASiC] container are however deserve
+some concern.
+
+On the sending side, the clear text content is archived but the process
+leading to the {ASIC}[ASiC] container cannot be repeated; different
+initialization vectors for encryption will lead to different encrypted
+result if encryption is attempted a new on the same content. Thus, the
+link from the clear text content to the {ASIC}[ASiC] hash value cannot be proven
+at the sending side.
+
+However, on the receiving side, as long as the {ASIC}[ASiC] container and the
+decryption private key are available, the clear text content can be
+derived from the {ASIC}[ASiC]. Thus, the receiving side can prove that the clear
+text stored is what was derived from the {ASIC}[ASiC] container. This
+possibility of doing this derivation may be necessary over some time
+since it is the only way to solve a discrepancy between clear text at
+the sending and receiving sides. Such discrepancies indicate an
+unauthorized (since nothing should be changed after sending or
+receiving) change at one of the ends.
+
+.Requirement 48
+****
+The receiver of an {ASIC}[ASiC] container should store the
+{ASIC}[ASiC] container and have available the private decryption key for
+encrypted content until the business process in question is properly
+closed.
+****

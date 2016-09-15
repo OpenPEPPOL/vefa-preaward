@@ -1,0 +1,57 @@
+
+[[conditions_service_provider]]
+== Conditions for service provider signing of ASiC container
+
+As it is still desired that a service provider (another actor than the
+sender) shall be allowed to sign the {ASIC}[ASiC], one must find conditions
+where the situation in Figure 12 (note similarity to the "unacceptable"
+left-hand side of Figure 11) is accepted.
+
+As stated in <<simple_signing, section 9.3>>, the proof of the association should be
+interpreted to mean that the {ASIC}[ASiC] seal attests to the following
+conditions:
+
+. The sealer has authenticated the sender; usually by
+authenticating a human user authorized to act on behalf of the sender.
+
+. The sealer has ensured that sending of the message is explicitly
+requested by the sender (by an authorized person).
+
+. Sufficient proof of these actions is available in proper logs.
+
+Not even a qualified electronic seal is by itself sufficient to fulfill
+these conditions; an actor will not be required to commit to such
+conditions in order to receive a qualified seal certificate from a
+certification authority in the market.
+
+[.thumb]
+.Figure 11 - ASiC signature by service provider proves association of identified sender and content
+[[fig11]]
+image::sign_service_provider.png[]
+
+The following approaches are possible:
+
+. Use a dedicated PKI where only actors that commit to the
+conditions above can obtain certificates.
+
+. Use some form of trusted list (any mechanism from a local file to
+a mimic of the EU trusted list system using format as specified by <<28>>)
+where actors that commit to the conditions can be listed with their
+certificates.
+
+. Accept a (qualified) seal supported by a certificate from a
+certification authority on the EU trusted list system, assuming that the
+conditions are met even though not guaranteed by the seal.
+
+Alternative 2 can work in the short term with "informal" lists. For
+scaling, a formal system is needed, which implies a new infrastructure
+to issue the specific trusted list and rather cumbersome adaptation of
+trusted list processing in systems; in addition to normal signature
+processing.
+
+Alternative 3 can be viewed as an "optimistic approach" assuming all is
+OK, but carries legal uncertainty in case of errors.
+
+Alternative 1 seems to be the easiest approach, but note that a
+dedicated PKI will probably not issue qualified certificates (partly
+because eIDAS does not apply to closed systems).

@@ -1,0 +1,24 @@
+
+== EU public procurement directives and signatures
+
+The public procurement directive <<5>>, the utilities directive <<6>>, and
+the concession directive <<7>> do not mandate use of AdES signatures.
+Instead, article 22.6.c of the public procurement directive states that
+the decision to require AdES shall be risk based and made either by the
+member state or delegated to the individual CA within an overall
+framework established by the member state.
+
+NOTE: Norway, and some other countries covered by these directives, will
+not emphasise use of AdES. Much of the purpose of the specifications in
+this note is to enable solutions where the EO can submit a tender
+without use of an AdES.
+
+The public procurement directive article 21.6.c further states that
+where AdES is required, signatures at AdES~QC~ level from all member
+states shall be accepted. Thus, AdES~QC~ is the maximum quality level
+that can be requested by a signature policy for public procurement; but
+note that it is likely that some EU member states would still prefer to
+require use of QES.
+
+Furthermore, acceptance of standard AdES signature formats is required,
+see <<AdES formats and minimum requirements for acceptance, 13.5.3>> below.

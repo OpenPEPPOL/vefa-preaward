@@ -1,0 +1,78 @@
+
+= References
+
+[bibliography]
+
+- [[[1]]]	Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC (the eIDAS regulation).
+
+- [[[2]]]	Commission Implementing Decision (EU) 2015/1506 of 8 September 2015 laying down specifications relating to formats of advanced electronic signatures and advanced electronic seals to be recognised by public sector bodies pursuant to Articles 27(5) and 37(5) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market.
+
+- [[[3]]]	Commission Implementing Regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(1) of Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market.
+
+- [[[4]]]	Commission Decision 2011/130/EU of 25 February 2011 establishing minimum requirements for the cross-border processing of documents signed electronically by competent authorities under Directive 2006/123/EC of the European Parliament and of the Council on services in the internal market.
+
+- [[[5]]]	Directive 2014/24/EU of the European Parliament and of the Council of 26 February 2014 on public procurement and repealing Directive 2004/18/EC (the public procurement directive).
+
+- [[[6]]]	Directive 2014/25/EU of the European Parliament and of the Council of 26 February 2014 on procurement by entities operating in the water, energy and postal services sectors and repealing Directive 2004/17/EC (the utilities directive).
+
+- [[[7]]]	Directive 2014/23/EU of the European Parliament and of the Council of 26 February 2014 on the award of concession contracts.
+
+- [[[8]]]	Commission Implementing Regulation (EU) 2016/7 of 5 January 2016 establishing the standard form for the European Single Procurement Document (ESPD).
+
+- [[[9]]]	CEN CWA 16560 Profile BII12: Tendering Simple, December 2012.
+
+- [[[10]]]	CEN CWA 3456 Part 102 Profile 12: Business Interoperability Interfaces for public procurement in Europe – Profile BII12 – Advanced Tendering, July 2014.
+
+- [[[11]]]	CEN CWA 16558: Business Interoperability Interfaces for public procurement in Europe – BII Architecture, Annex I, Messaging envelope, March 2011.
+
+- [[[12]]]	CEN CWA 16558: Business Interoperability Interfaces for public procurement in Europe – BII Architecture, Annex J, Attachment handling, July 2012.
+
+- [[[13]]]	CEN CWA 1234 Part 108: Business Interoperability Interfaces for Public Procurement in Europe — Use of digital signature and other trust services, February 2015.
+
+- [[[14]]]	UN/CEFACT Standard Business Document Header (SBDH) Technical Specification, Version 1.3, June 2004.
+
+- [[[15]]]	AS4 Profile of ebMS 3.0 Version 1.0, OASIS Standard, January 2013.
+
+- [[[16]]]	Message Disposition Notification, RFC 3798, last update October 2015.
+
+- [[[17]]]	MIME-Based Secure Peer-to-Peer Business Data Interchange Using HTTP, Applicability Statement 2 (AS2), RFC 4130, last update October 2015.
+
+- [[[18]]]	Evidence Record Syntax (ERS), RFC 4998, last update October 2015.
+
+- [[[19]]]	Cryptographic Message Syntax (CMS), RFC 5652, last update October 2015.
+
+- [[[20]]]	Cryptographic Message Syntax (CMS) Authenticated Enveloped Data Content Type, RFC 5083, last update October 2015.
+
+- [[[21]]]	XML Signature Syntax and Processing (Second Edition), W3C Recommendation, June 2008.
+
+- [[[22]]]	ETSI EN 319 122-1: Electronic Signatures and Infrastructures (ESI); CAdES digital signatures; Part 1: Building blocks and CAdES baseline signatures,
+Version 1.1.0, April 2016.
+
+- [[[23]]]	ETSI EN 319 132-1: Electronic Signatures and Infrastructures (ESI); XAdES digital signatures; Part 1: Building blocks and XAdES baseline signatures, Version 1.1.0, April 2016.
+
+- [[[24]]]	ETSI EN 319 142-1: Electronic Signatures and Infrastructures (ESI); PAdES digital signatures; Part 1: Building blocks and PAdES baseline signatures, Version 1.1.0, April 2016.
+
+- [[[25]]]	ETSI EN 319 162-1: Electronic Signatures and Infrastructures (ESI); Associated Signature Containers (ASiC); Part 1: Building blocks and ASiC baseline containers, Version 1.1.0, April 2016.
+
+- [[[26]]]	ETSI TS 319 172-1: Electronic Signatures and Infrastructures (ESI); Signature Policies; Part 1: Building blocks and table of contents for human readable signature policy documents, Version 1.1.1, July 2015.
+
+- [[[27]]]	ETSI TS 102 640-2: Electronic Signatures and Infrastructures (ESI); Registered Electronic Mail (REM); Part 2: Data requirements, Formats and Signatures for REM, Version 2.2.1, September 2011.
+
+- [[[28]]]	ETSI TS 119 612: Electronic Signatures and Infrastructures (ESI); Trusted Lists, Version 2.1.1, July 2015.
+
+- [[[29]]]	ETSI EN 319 411-1: Electronic Signatures and Infrastructures (ESI); Policy and security requirements for Trust Service Providers issuing certificates; Part 1: General requirements, Version 1.1.1, February 2016.
+
+- [[[30]]]	ETSI EN 319 412: Electronic Signatures and Infrastructures (ESI); Certificate Profiles (5 parts), Version 1.1.1, February 2016.
+
+- [[[31]]]	ETSI TS 119 312: Electronic Signatures and Infrastructures (ESI); Cryptographic Suites, Version 1.1.1, November 2014.
+
+- [[[32]]]	ISO/IEC 18033-3:2010: Information technology; Security techniques; Encryption algorithms; Part 3: Block ciphers.
+
+
+- [[[33]]]	FIPS PUB 180-4: Secure Hash Standard (SHS), August 2015.
+
+- [[[34]]]	Algorithms, Key Sizes and Parameters Report – 2013 Recommendations, ENISA report, October 2013.
+
+- [[[35]]]	PEPPOL Deliverable D1.3, Demonstrator and Functional Specifications for Cross-Border Use of eSignatures in Public Procurement, Part 3: Signature policies. September 2011.
+
+- [[[36]]]	Jon Ølnes: A practical signature policy framework, proceedings of the ISSE conference, Brussels, October 2013.

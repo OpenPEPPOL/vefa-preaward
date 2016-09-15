@@ -1,0 +1,28 @@
+
+== Do not set too strict timing requirements for business processes
+
+All operations within the receiving access point shall be carried out in
+at most a few seconds. To avoid unnecessary conflicts, the following is
+recommended:
+
+.Requirement 49
+****
+A deadline for a business process, i.e. the time a
+message must be received at the receiver's access point, should allow
+for at least one minute overdue.
+****
+
+This implies that a deadline at 12:00:00 means that the message must be
+recorded as received at the access point before 12:01:00. In this case
+the access point may record the time according to whatever event from
+the list in <<What exactly is time of receiving a message at an access point?, section 15.2.1>>. If granularity at the level of second is
+specified, i.e. the message must be received at 12:00:01, more detailed
+requirements on timing must be imposed on the access points, e.g.
+exactly what internal even at the access point that shall be regarded as
+the time of receiving the message.
+
+An access point is required to have a reasonably correct clock. A high
+granularity for timing of events results in a stricter requirement for
+clock synchronization. Given the timing considerations described in
+<<timVerifying timing of events for the process flow, section 15.2.2>> and the requirement above, there should be no need for
+the access point to obtain an external time-stamp.

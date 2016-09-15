@@ -1,0 +1,27 @@
+
+[[future_signalling]]
+==	Future signalling of encryption information in CEN BII documents
+
+A more flexible, long-term solution has two alternatives:
+
+*	Specification of accepted encryption formats and algorithms (possibly set of allowed alternatives) is done by reference from CEN BII standards.
+*	An XML, possibly also ASN.1, structure is defined to allow the receiver (the actor that shall decrypt) to specify any relevant parameter, including encryption format and algorithm. This is elaborated below.
+
+For the last approach, a structure such as shown in <<ex_1,example 1>> can be defined. This shows inclusion of certificate and optional certificate chain, an OID identifying AES encryption in CBC mode with 256-bit key, allowing addition of alternative encryption algorithms, and including an OID identifying the CMS format. Human readable names accompanied by a code list may be used instead of OIDs.
+
+This structure, or something very similar, shall then replace the reference to “tender encryption key”, which is the only encryption parameter in the {CENBII} call for tender specifications and the corresponding UBL syntax bindings.
+
+[[ex_1]]
+[source, xml]
+.Example 1 - Data structure for mediating encryption instructions
+----
+<cac:TenderPreparation>
+    <cbc:TenderEncryptionCertificate>X509v3 certificate</cbc:TenderEncryptionCertificate>
+    <cbc:TenderEncryptionCertificatePathChain>optional certificate chain</cbc:TenderEncryptionCertificatePathChain>
+    <cac:TenderSymmetricAlgorithm>
+      <cbc:TenderSymmetricAlgorithmOID>2.16.840.1.101.3.4.1.42</cbc:TenderSymmetricAlgorithmOID>
+      <cbc:TenderSymmetricAlgorithmOID>other OID</cbc:TenderSymmetricAlgorithmOID>
+    </cac:TenderSymmetricAlgorithm>
+    <cbc:TenderEncryptionMessageFormat>1.2.840.113549.1.9.16.0.1</cbc:TenderEncryptionMessageFormat>
+</cac:TenderPreparation>
+----

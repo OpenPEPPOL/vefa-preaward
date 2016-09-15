@@ -1,0 +1,93 @@
+= Security and signature requirements for e-tendering systems and services
+:author: Direktoratet for forvaltning og IKT, DIFI
+:revnumber: 1.1
+:revdate: 16-08-2016
+:icons: font
+:toc: left
+:toclevels: 4
+:sectnums:
+:sectlinks:
+:sectanchors:
+:figure-caption!:
+:title-logo-image: e-sens_logo.png
+:source-highlighter: highlight.js
+:sourcedir: .
+:gendoc: ../General
+:imagesdir: ../assets/images
+:leveloffset: +1
+
+include::{gendoc}/Attributes.adoc[]
+include::{sourcedir}/document_history/revision_history.adoc[]
+include::{sourcedir}/document_history/contributors.adoc[]
+include::{sourcedir}/introduction/status_purpose.adoc[]
+include::{sourcedir}/introduction/scope.adoc[]
+include::{sourcedir}/introduction/prerequisites.adoc[]
+include::{sourcedir}/business_protocol/actors.adoc[]
+include::{sourcedir}/business_protocol/service_providers.adoc[]
+include::{sourcedir}/business_protocol/received_message.adoc[]
+include::{sourcedir}/structure_packaging/overall_structure.adoc[]
+include::{sourcedir}/structure_packaging/requirements.adoc[]
+include::{sourcedir}/structure_packaging/sbdh_headers.adoc[]
+include::{sourcedir}/structure_packaging/bii_docs.adoc[]
+include::{sourcedir}/structure_packaging/attachments.adoc[]
+include::{sourcedir}/structure_packaging/asic_packaging.adoc[]
+include::{sourcedir}/process/sending_side.adoc[]
+include::{sourcedir}/process/receiving_side.adoc[]
+include::{sourcedir}/signing/legal_signatures.adoc[]
+include::{sourcedir}/signing/policies.adoc[]
+include::{sourcedir}/signing/simple_signing.adoc[]
+include::{sourcedir}/signing/advanced/current_signing_bii.adoc[]
+include::{sourcedir}/signing/advanced/by_sender.adoc[]
+include::{sourcedir}/signing/advanced/on_attachments.adoc[]
+include::{sourcedir}/signing/advanced/on_bii_docs.adoc[]
+include::{sourcedir}/signing/advanced/on_bii_manifest.adoc[]
+include::{sourcedir}/signing/advanced/on_sbdh_manifest.adoc[]
+include::{sourcedir}/signing/advanced/use_simple.adoc[]
+include::{sourcedir}/signing/advanced_other_parties.adoc[]
+include::{sourcedir}/signing/validation/validation_timing.adoc[]
+include::{sourcedir}/signing/validation/receiving_signature.adoc[]
+include::{sourcedir}/signing/validation/signature_wrong.adoc[]
+include::{sourcedir}/encryption/mediating_info.adoc[]
+include::{sourcedir}/encryption/future_signalling.adoc[]
+include::{sourcedir}/encryption/cert_requirements.adoc[]
+include::{sourcedir}/encryption/individual.adoc[]
+include::{sourcedir}/encryption/future_need.adoc[]
+include::{sourcedir}/asic_packaging/electronic_seal.adoc[]
+include::{sourcedir}/asic_packaging/id_actors/inner_SBDH.adoc[]
+include::{sourcedir}/asic_packaging/id_actors/individual.adoc[]
+include::{sourcedir}/asic_packaging/id_actors/sign_asic_container.adoc[]
+include::{sourcedir}/asic_packaging/sign_attestation.adoc[]
+include::{sourcedir}/asic_packaging/conditions_service_provider.adoc[]
+include::{sourcedir}/asic_packaging/proposed_solution.adoc[]
+include::{sourcedir}/proof_of_delivery/rem_evidence.adoc[]
+include::{sourcedir}/proof_of_delivery/necessary_changes/three_changes.adoc[]
+include::{sourcedir}/proof_of_delivery/necessary_changes/adding_payload.adoc[]
+include::{sourcedir}/proof_of_delivery/necessary_changes/sign_deliver.adoc[]
+include::{sourcedir}/proof_of_delivery/necessary_changes/transport_confirmation.adoc[]
+include::{sourcedir}/proof_of_delivery/internal_processing_req.adoc[]
+include::{sourcedir}/proof_of_delivery/evidence_interoperability.adoc[]
+include::{sourcedir}/proof_of_delivery/error_discovery.adoc[]
+include::{sourcedir}/proof_of_delivery/timing_requirements.adoc[]
+include::{sourcedir}/proof_of_delivery/error_handling.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/legal_vs_technical.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/need_for_signatures.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/policies.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/eu_directives.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/acceptance_eidas/quality_req.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/acceptance_eidas/trusted_list.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/acceptance_eidas/ades_formats.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/missing_eidas/ades_without_qualified_cert.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/missing_eidas/restrict_formats.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/missing_eidas/multiple_signatures.adoc[]
+include::{sourcedir}/extra_material/advanced_signatures/missing_eidas/e_seal_binding.adoc[]
+include::{sourcedir}/extra_material/encryption/certificate.adoc[]
+include::{sourcedir}/extra_material/encryption/container.adoc[]
+include::{sourcedir}/extra_material/encryption/cms/envelopeddata.adoc[]
+include::{sourcedir}/extra_material/encryption/cms/authenvelopeddata.adoc[]
+include::{sourcedir}/extra_material/proof_of_delivery/from_local_ap.adoc[]
+include::{sourcedir}/extra_material/proof_of_delivery/timing/receiving_time.adoc[]
+include::{sourcedir}/extra_material/proof_of_delivery/timing/verifying_events.adoc[]
+include::{sourcedir}/extra_material/proof_of_delivery/interconnecting.adoc[]
+include::{sourcedir}/bibliography.adoc[]
+
+:leveloffset: -1

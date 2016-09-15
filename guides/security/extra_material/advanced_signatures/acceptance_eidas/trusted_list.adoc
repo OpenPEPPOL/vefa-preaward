@@ -1,0 +1,30 @@
+
+=== The trusted list system
+
+All providers of qualified trust services according to {eIDAS} are
+required to be represented in the trusted list of the member state where
+the provider is registered. This means that when use of a qualified
+certificate according to {eIDAS} is required, the certification authority
+is guaranteed to be well known and have a recognized quality level.
+However, the following should be noted:
+
+* Support for the trusted list format <<28>> is limited in
+off-the-shelf software. Integration of special purpose components may be
+necessary to process trusted lists and validate certificates against
+such lists. The only major actor that currently supports EU trusted
+lists is Adobe.
+
+* The trusted list system is limited to the EU/EEA area, i.e. the
+EU internal market. Acceptance of signatures originating from other
+countries, which may be relevant in many public procurement processes,
+is an additional task. A number of other countries use the"qualified"
+term in their legislations; however correspondence of such a qualified
+signature/certificate against an "EU qualified" signature/certificate is
+not guaranteed.
+
+* A trusted list does not necessarily provide full certificate
+path to a (trusted) root-certificate authority. If full path validation
+is required, then the trusted list system is not enough on its own.
+
+This note does not further discuss details of the trusted list system
+and its strengths and weaknesses.

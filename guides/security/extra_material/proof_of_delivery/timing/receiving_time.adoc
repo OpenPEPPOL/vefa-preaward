@@ -1,0 +1,15 @@
+
+==	Timing requirements
+
+===	What exactly is time of receiving a message at an access point?
+
+All operations in an access point from receiving a message to sending a delivery confirmation message should be carried out within at most a few seconds.
+
+NOTE: The access point is assumed to not be heavily overloaded or deliberately delay operations; if the delivery confirmation message is unduly late, the sending access point may raise an exception but this is not specified by this note.
+
+Only if granularity at level of seconds or higher is necessary, the specific event defined to be the time of “received” must be stated. This note does not put any requirement on what the event shall be. Some alternative events are:
+
+*	The time when the last bit of the message is received from the network to the access point.
+*	The time when the message has been transferred to reliable storage at the access point.
+*	The time when the access point has decrypted the message and performed all authenticity and integrity checks.
+*	The time of the access point’s signature on the delivery confirmation message.

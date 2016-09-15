@@ -1,0 +1,6 @@
+
+=== Digital signature on a CEN BII document with manifest
+
+If a manifest structure is used, such as for the {CENBII} profile advanced tendering (see <<Attachments as separate objects, 7.4.4>>), the manifest is created from the clear text parts by including metadata and hash values for each part. The manifest can be digitally signed, and this indirectly signs all parts since the hash values are signed. The entire structure consisting of signed manifest and parts can be stored in a file structure or otherwise with signature validation possible at a later time.
+
+Using a manifest signature as the only signature requires some caution. One can argue that this breaks the WYSIWYS (What You See Is What You Sign) property desired for e.g. a qualified signature. On the other hand, one may also argue that this is OK since for signing a tender, the EO must know the content (what it signs) of the package, and WYSIWYS should be interpreted as knowing what is signed and the implications of signing rather than as having viewed the exact content and appearance of each part signed.

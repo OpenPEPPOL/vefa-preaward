@@ -1,0 +1,69 @@
+
+[[adding_payload]]
+=== Adding payload identification to the transport level confirmation
+
+The format of the transport level confirmation sent from the receiving
+access point to the sending access point depends on the protocol used,
+e.g. it is different for AS2 <<17>>, which is used by PEPPOL eDelivery,
+and AS4 <<15>>, which is recommended by {eDelivery} and by e-SENS. In
+AS2, a Message Disposition Notification (MDN) <<16>> is used. In AS4, an
+eb:Receipt with non-repudiation of receipt is used.
+
+[.thumb]
+.Figure 14 - Adding payload identification to AS2 message delivery notification (MDN)
+image::adding_payload.png[]
+
+In both these cases, the transport level confirmation acknowledges (by
+identification and hash value) the message sent by the other access
+point, i.e. including headers and other information added by this access
+point. This is useless as part of a proof of delivery to sender and
+receiver (the CA or EO). These actors never see the transport level
+packaging with headers and can neither identify a transport level
+message nor compute or verify its hash.
+
+The solution, shown in Figure 15 for AS2, is compliant with the AS2
+specifications:
+
+. At the receiving access point, create an information element
+consisting of:
+
+.. the hash of the payload (the ASiC container in the case of this
+note),
+
+.. the time of reception.
+
+. Add this element as an extension to the transport level
+confirmation, i.e. an extension-field of the AS2 MDN.
+
+The detailed structure of the information element is not included in
+this note but will be specified when/if the necessary change request is
+approved by the PEPPOL Management Board.
+
+For AS4, the message signature applied by the sending
+access point (using WS-Security and XML Signature) specifies the signed
+data using a `ds:SignedInfo` element which includes a list of `ds:Reference`
+elements,  each of which corresponds to a <part identification, part
+hash> pair.  The ASiC container is a separate AS4 message part encoded
+as a MIME part. The `ds:Reference` for that MIME part has a part
+identifier (a MIME content-id) and a MIME part hash.  This and all other
+`ds:Reference` elements can be reused as-is in generating the AS4 receipt
+once the receiving access point has validated the message
+signature. Thus, for AS4 there is no need for changes except for
+specification of the conventions for generating the AS4 receipt.
+
+Since all actors (access points, senders, receivers) are able to compute
+the payload (ASiC container) hash, the hash value can be compared across
+all of them.
+
+[NOTE]
+====
+No actor is strictly required to store the payload (the ASiC
+container) permanently. The requirement is that its hash value must be
+computed and stored in a relationship to the business protocol message
+that is transmitted in the ASiC container. The business protocol message
+can be assumed to be archived.
+
+Since parts of a payload may be encrypted as specified by this
+note, the payload hash is calculated on the encrypted information, which
+cannot necessarily be reconstructed.
+====

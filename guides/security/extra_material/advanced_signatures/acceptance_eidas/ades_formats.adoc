@@ -1,0 +1,47 @@
+
+=== AdES formats and minimum requirements for acceptance
+
+An implementing act <<2>> to {eIDAS} specifies the signature formats that
+shall be accepted by a public sector body cross-border when AdES is
+required. The approach is to give the signer in principle almost
+complete freedom of choice within European standard
+formats, while the receiver gets the burden of being
+obliged to validate and accept all these formats.
+
+Since the public procurement directive was approved before {eIDAS} entered
+into force, this directive formally points at an earlier Commission
+Decision <<4>> originally specified for the Services Directive.
+Furthermore, since the {eIDAS} implementing act was approved before
+publishing of the latest ETSI signature format EN (European Norm)
+standards, the implementing act refers to the previous TS (Technical
+Specification) versions from ETSI.
+
+To clean up this mess, this note assumes a situation in the not so
+distant future where the old Commission Decision is withdrawn in favor
+of the eIDAS implementing act and the {eIDAS} implementing act is updated
+to refer to the proper EN versions of the signature format standards. In
+this case, hopefully one would be obliged to accept only the baseline
+formats defined in parts 1 of CAdES <<22>>, {XAdES} <<23>>, and PAdES <<24>>,
+and baseline ASiC signature containers <<25>>. No referral should be given
+to the "extended signature formats" specified in parts 2 of these format
+standards.
+
+This still means that a public sector body formally is required to
+validate signatures with long-term signature formats incorporating
+time-stamps and certificate status information. A recommendation of this
+note is to limit signature formats for business protocol messages to the
+most basic B-B alternative, leaving the individual actors the freedom to
+augment these signatures locally with time-stamps and certificate status
+information if needed.
+
+If the signer decides to add a time-stamp to a signature before
+submitting the business protocol message, the time-stamp should be from
+a qualified time-stamp authority listed in the EU trusted list system in
+order to ensure that the time-stamp is verifiable at the receiver.
+
+The {eIDAS} implementing act covers minimum requirements. Support for the
+ETSI standard formats is limited in off-the-shelf software, although a
+number of specialized European software vendors offer products. Thus,
+one should consider to additionally accept the basic formats CMS <<19>>,
+XML DSIG <<21>>, and PDF signatures (ISO 32000) upon which the ETSI
+standards are built.

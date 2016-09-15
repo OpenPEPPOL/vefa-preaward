@@ -1,0 +1,42 @@
+
+=== Multiple signatures and modes
+
+The last bullet of the previous section shows that whenever a digital
+signature is used, this may be expanded to use of two or more
+signatures; a signature policy may require multiple signatures, or
+multiple signatures may be allowed. When multiple signatures are used,
+they may relate to one another in three different ways:
+
+Sequential/encompassing:: A digital signature covers the content
+plus previous signatures
+
+Parallel:: A digital signature covers content but not previous
+signatures
+
+Countersignature:: A digital signature covers previous
+signature(s) but not content.
+
+If one wants to complicate matters, one may specify signature policies
+that use these differences to represent different semantics for multiple
+signatures. This is not advisable. User interfaces and functionality of
+signing software are likely to not readily assist the signer in an
+appropriate way to select the correct mode.
+
+Note however that a countersignature may have to be considered
+separately. This can be accepted as a "witness signature" but may not be
+acceptable as a "normal signature" since it only indirectly signs
+content.
+
+Note also that the {eIDAS} implementing act on signature formats <<2>> makes
+no provisions whatsoever regarding multiple signatures and their
+application.
+
+Multiple signatures on the same content may use different signature
+formats as the examples of the previous section shows; e.g. a PDF
+document firstly signed using a PAdES signature with the second
+signature using an enveloping CAdES format.
+
+All in all, this means that almost arbitrarily complex scenarios may be
+constructed. This note does not detail use of multiple signatures
+further. Care must be taken if such requirements are included in a
+signature policy.

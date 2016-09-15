@@ -1,0 +1,21 @@
+
+
+=	Scope
+
+Business requirements exist for signing and encrypting tenders and other e-procurement exchanges, and for obtaining proof of delivery of such exchanges, but e-procurement standards hardly address how such requirements can be answered in technical implementations. The {CENBII} profiles for public procurement have only rudimentary specifications for signing and the need for encryption is stated but with no real information on how to encrypt.
+
+This note is a standards-based and interoperable specification on how to technically apply encryption and digital signatures to {CENBII} documents with a particular aim at covering the needs of tender submission. The intention is to specify a solution with as few options and variants as possible. If needed, the specifications can later be extended.
+
+This note does not cover business or legal requirements for signatures, but the groundwork for this topic is discussed in chapter 11. Such requirements shall be stated in signature policies that are out of scope of this document. A signature policy essentially states what to sign, why, by whom, and how.
+
+The note covers:
+
+*	Creation – from a technical point of view – of electronic signatures on {CENBII} documents, covering both “simple” electronic signatures and advanced/qualified signatures. More briefly, signature validation is also covered.
+* Encryption of parts of a business protocol message, covering:
+**	Mediation from receiver (the actor that shall decrypt) to sender (the actor that encrypts) of a certificate with the public encryption key to use.
+**	Encryption (public key and symmetric encryption and packaging) of individual parts.
+**	More briefly, decryption is also covered.
+*	Packaging of the {CENBII} document and attachments in an {ASIC}[ASiC] container, digital signing of this container, and dispatch of the business document message.
+*	Creation and delivery of {REM} MD evidence <<27>> for time of arrival at the receiver’s access point.
+
+Most of the specifications in this note are already implemented by Difi in Norway and tested and proven to work. It is believed that the specifications yield a solution that is scalable to European level.

@@ -1,0 +1,24 @@
+
+==	Receiving side process – decryption, signature validation, proof
+
+.Requirement 9
+****
+*The process flow for receiving a business protocol message, using a tender as an example, should be as follows:*
+
+. The CA or the tendering service provider fetches the tender message from the access point.
+. A hash value of the {ASIC}[ASiC] container is computed and stored for comparison with a possible future {REM} MD evidence if requested.
+.	Based on the transport level delivery confirmation (see steps 11-12 above), the CA’s access point can produce, sign, and send to the CA (or to the tendering service provider) a {REM} MD evidence message proving time of delivery to the access point; this time is deemed to be the time of delivery of the tender. Note that the {REM} MD evidence may be requested at any time, e.g. if a dispute arises later in the procurement process.
+.	The {ASIC}[ASiC] manifest signature is validated.
+.	If a tender manifest is used, the signature of this manifest may also be validated – note that if objects of the tender are encrypted, only the signature of the tender manifest XML structure can be validated; the hash values referring to the individual parts of the tender cannot be recomputed until decryption is done.
+.	A business protocol level tender confirmation is sent, or alternatively an error message if signature validation or other checks fail.
+.	At the time of tender opening, all encrypted objects are decrypted. Further validation is done, e.g. of signed content that has been encrypted. If a signed tender manifest is used, the whole signature can now be checked, including the hash values of the referenced, unencrypted parts. The resulting unencrypted tender is stored.
+.	In case of errors in decryption, signature validation or other parts of the process, error handling must be initiated.
+****
+
+Note that signature validation includes not only cryptographic checks on signature, certificate and certificate validity, but also checks that signature and certificate are according to signature policy requirements.
+
+An {ASIC}[ASiC] container may be “unpacked” and stored in a file system with signature intact provided that the {ASIC}[ASiC] manifest and the detached signature are also stored. In the case of a tender, this may be of limited value since the {ASIC}[ASiC] manifest may contain hash values of encrypted content, which then has to be stored in encrypted form. Also, the {ASIC}[ASiC] includes the inner {SBDH}[SBDH], which may or may not be stored at the CA side.
+
+Use of a signed tender manifest provides a good option as this manifest refers to the unencrypted tender objects and excludes the {SBDH}[SBDH]; however only a few CEN BII profiles use a manifest structure.
+
+<<<<

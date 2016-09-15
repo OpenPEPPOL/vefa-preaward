@@ -1,0 +1,17 @@
+
+=	Structure and packing of a business protocol message
+
+== Overall structure
+
+A {CENBII} document is an XML document that possibly can have attachments; in the case of a tender, attachments will be the usual situation. For attachment handling, see section 5.4 below.
+
+Some {CENBII} profiles use a manifest structure where other parts (attachments) are referred from the manifest by metadata and a hash value of the attachment; the manifest links the parts together. In particular, the {CENBII} advanced tendering profile <<10>> uses a manifest, see 5.4.4 for details. Most {CENBII} profiles relies on external headers and transport mechanisms to link parts together.
+
+.Figure 2 - Overall business protocol message structure and packaging
+[[structure]]
+image:structure1.png[align="left"]
+image:structure2.png[align="right"]
+
+In the solution described by this note, an {ASIC}[ASiC] container <<25>> is used to pack and thus link all parts of the business protocol message together. An {ASIC}[ASiC] container is a zip-file including a manifest structure identifying all parts inside the container. The manifest is signed using a detached digital signature.
+To route business protocol messages, {SBDH}[SBDH] (Standard Business Document Header) <<14>> is used at two levels. An inner {SBDH}[SBDH] points to the {CENBII} document and is included in the {ASIC}[ASiC] container, and an outer {SBDH}[SBDH] points to the {ASIC}[ASiC] container as transport protocol payload. Use of {SBDH}[SBDH] is described in section 5.3 below.
+Figure 2 shows the resulting overall structure in the two cases of a {CENBII} document without manifest (left-hand side) and with manifest (right-hand side).

@@ -1,0 +1,38 @@
+= Revision history
+
+
+[cols="1,2,2,10a", options="header"]
+.Revision history
+|===
+| Version
+| Date
+| Organization/Author
+| Description
+
+|  0.9
+|  May 2016
+| {author}
+| First version published in WP 5.1
+
+| 1.0
+|
+| {author}
+| * One mistake is corrected, see <<overall_structure, section 7.2>>: Version 0.9 stated that a CEN BII document could be encrypted. This is not the case with one exception: If the CEN BII document contains a manifest structure, and the manifest points to another CEN BII document, then this other CEN BII document may be encrypted.
+* The title of the note is changed to better reflect the purpose. The previous title is kept as subtitle with minor modifications.
+* Terminology for service provider is changed to better reflect the Norwegian terms in use. The service provider serving the CA is now termed “tendering service provider” (changed from “sourcing service provider”). The service provider serving the EO is now termed “submission service provider” (changed from “tendering service provider”). e-SENS has no common terminology for these services, using in some cases “tendering service provider” for both sides.
+* Terminology for the eDelivery infrastructure changed to “CEF eDelivery” (from “OpenPEPPOL transport infrastructure”). In reality, the PEPPOL eDelivery instantiation of CEF eDelivery is assumed.
+
+The following are new sections or sections with noticeable change in content from version 0.9 to version 1.0:
+
+*	Added discussion on current signalling of signature requirements in CEN BII call for tender in new <<current_signing_bii, section 9.4.1>>.
+*	Elaborated on long-term solution to signal encryption requirements in call for tender in a new <<future_signalling, section 10.2>>.
+*	Added discussion on encryption from tendering service provider to submission service provider in new <<future_need,section 10.5>>. This is relevant e.g. for negotiation procedures and when a call for tender contains confidential information, but this is not readily supported by today’s CEN BII specifications.
+*	Added new <<error_discovery, section 12.5>> describing how hash values and ASiC containers can be used to solve discrepancies between sending and receiving side for a business protocol message.
+*	Added new <<error_handling, section 12.7>> containing some discussions on error handling since the 0.9 version only described REM MD evidence for successful delivery.
+*	Some updates to <<interconnecting, section 15.3>> on interconnection of multiple eDelivery infrastructures to show that the REM MD evidence solution specified by this note may be viewed as a shortcut but still can be used in a compatible way with evidences emitted from the final eDelivery system if this is provided.
+
+| {revnumber}
+| {revdate}
+| {author}
+| The only change from version 1.0 to version 1.1 is a clarification of inclusion of payload hash value in transport level confirmations for the AS4 protocol. In this case, no change in specifications is necessary. This is reflected in <<prerequisites, chapter 3>> and <<adding_payload, section 12.2.2>>.
+|===

@@ -1,0 +1,39 @@
+
+== Selected issues not properly covered by eIDAS
+
+=== Requiring AdES without qualified certificate
+
+Requiring a QES or an AdES~QC~ may be considered as "overkill", but
+requiring a lower level of AdES carries some problems. As stated above,
+eIDAS and implementing acts pose no quality requirements to a basic AdES
+and in principle require "any AdES" to be accepted from other member
+states when "AdES" is required at national level.
+
+The AdES level should receive more attention as grouping all signatures
+that are not supported by a qualified certificate at one quality level
+is wrong. This category accommodates anything from "almost qualified"
+(e.g. NCP policy level according to ETSI policy standards <<29>>) to
+"Mickey Mouse level" using self-signed or very low quality certificates.
+
+Signature policies should be allowed to further specify requirements
+when the AdES level is referred, e.g. by referring to levels specified
+by ETSI <<29>>: NCP (Normalized Certificate Policy) and LCP (Lightweight
+Certificate Policy). This note does not discuss this topic
+further. Note the following:
+
+* The certification authority is not necessarily well-known. To
+validate a signature, one needs access to the certification authority's
+own certificate and usually path to a root-certificate, and one needs to
+determine that these certificates are trustworthy. A possible
+requirement is that the root-certificate must be publicly available (see
+also next bullet).
+
+* While a national supervision authority is free to include
+issuers of non-qualified certificates in a national trusted list, this
+is rarely done today. Thus, information on non-qualified, supervised
+certification authorities will not generally be available from the
+trusted list system.
+
+This note does not venture further into discussion of such issues.
+Further work on signature policies for public procurement may need to
+address the issues.

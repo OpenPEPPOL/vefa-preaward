@@ -1,0 +1,42 @@
+
+== Signature policies and the need to avoid complexity
+
+Business and legal requirements for electronic signatures should be
+explicitly stated. As far as all actors are from the same country,
+perhaps they can be expected to "know the rules", but a foreign EO
+wanting to submit a tender may be unaware of the signature requirements
+in force in another country.
+
+A statement of signature requirements is commonly denoted as a signature
+policy. Using a tender as an example, the signature policy stated by the
+CA describes the necessary requirements that the EO must comply with in
+order for the tender's electronic signature to be accepted.
+Non-compliance may imply a right, possibly even a duty, to discard the
+tender. The signature policy specifies "what to sign, by whom, why, and
+how".
+
+A signature policy may state requirements to sign specific documents or
+attachments, and also requirements for quality of each signature (e.g.
+QES). A signature policy may detail technical requirements for signature
+formats, cryptography, certificates and the like. Further signature
+policy requirements may specify the commitments that shall be implied by
+a signature.
+
+A signature policy may be stated by a combination of different means.
+The ETSI standard in the area <<26>> indicates that one separate document
+should be written for all requirements but this is rarely feasible. For
+a tender, signature requirements may typically be stated in-line with
+other tender instructions rather than by reference to a separate
+signature policy document. Note that some countries may define
+"national" signature policy documents that a CA in that country is
+required to refer to for a tendering process.
+
+Signature policies should be kept at a minimum. Allowing flexibility is
+a good rule. State only what is necessary to state. Rules should be
+simple as complexity (see e.g. the issues regarding multiple signatures
+in <<Multiple signatures and modes, 13.6.3>> below) should be avoided. The {PEPPOL} project conducted work on practically useful signature policies for procurement <<35>> <<36>>.
+
+For technical requirements, one should refer to standards or standard
+profiles; perhaps future procurement standards will state requirements
+on how to apply digital signatures to {CENBII} documents based on the
+survey presented in <<13>> and the content of this note.

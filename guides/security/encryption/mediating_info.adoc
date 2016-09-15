@@ -1,0 +1,42 @@
+
+= Encryption
+
+==	Mediating encryption information
+
+Using a tendering process as an example, the CA is required to instruct the EO regarding encryption (see <<Signing and encryption in CEN BII specifications, 7.4.1>>). This can typically be part of a tender instructions message.
+
+.Figure 6 - Mediating encryption instructions from receiver to sender
+[[encrypt]]
+image:encrypt1.png[align="left"]
+image:encrypt2.png[align="right"]
+
+The parties need to agree on the following, as shown in <<encrypt,Figure 6>> above:
+
+*	A public key that shall be used for encryption. This note requires the key to be mediated by use of an X.509 certificate. This is the crucial part of the encryption information. A future extension may be to include more than one certificate to enable encryption to more than one recipient.
+* In addition, the following must be specified and agreed:
+**	Encryption message format (this note specifies a profile of the CMS format <<19>>,
+** Symmetric encryption algorithm with parameters (such as key length, mode of operation etc.), in practice the AES algorithm <<32>> will be used with a suitable key length and mode of operation.
+*	The possibility of including other encryption parameters may be considered, e.g. specific instructions on which parts to encrypt or not.
+
+This note requires the simplest possible approach:
+
+.Requirement 21
+****
+When encryption is needed, the actor that shall decrypt (the receiver) shall send an X.509 certificate containing the public encryption key to the actor that shall encrypt (the sender). If necessary, full certificate chain to a trusted root-certification authority shall be sent
+****
+
+.Requirement 22
+****
+The transmission should be done by including the X.509 certificate or certificate chain in the “documents” part of the call for tender.
+****
+
+.Requirement 23
+****
+The transmission of the X.509 certificate or certificate chain shall be protected against unauthorised replacement of certificate or certificate chain.
+****
+
+The last requirement is needed to protect against the threat where an attacker replaces the certificate in order to gain access to information since encryption will be done by use of the attacker’s public key. Inclusion of the certificate/chain in a business protocol message packed in an ASiC container as specified by this note is assumed to be sufficient to protect the certificate/chain. The requirement is still stated in case the certificate/chain is sent by other means.
+
+Given these requirements only, all other encryption parameters must be set by use of predetermined, default values. This is required as a short-term solution by this note, see sections <<Encryption certificate requirements, 10.3>> and <<Individual encryption of parts of the business protocol message, 10.4>> below.
+
+An observation is that it is the receiver of the encrypted message (the CA in the case of a tender) that determines the strength of the cryptographic protection. The sender (the EO in case of a tender) must accept this level, or, if the EO considers this level to be insufficient, take action out of band to have the CA raise the level. No negotiation mechanism is proposed by this note.

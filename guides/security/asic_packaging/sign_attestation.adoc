@@ -1,0 +1,63 @@
+
+[[sign_attestation]]
+== ASiC signing attesting to sender identity
+
+Possibly in a majority of the situations, the {ASIC}[ASiC] container will be
+signed by a service provider and not by the "real" sender. E.g. for
+Norway it is likely that advanced electronic signatures will not be
+required even on a tender, meaning that the EO does not need to possess
+signing certificates. No part of the tender will be signed (except
+possibly parts signed by other actors than the EO).
+
+Even if the sender has the ability to digitally sign the {ASIC}[ASiC] container,
+the process flow of a service provider may be best implemented in a way
+where a service provider signs the {ASIC}[ASiC] container. In this case, parts
+of the message may or may not be signed by the sender.
+
+In particular, for the case where no part of the message is signed,
+there is no authentication of the sender, only identification by the
+inner SBDH and possibly inside the message. The receiver, e.g. a CA
+receiving a tender, may need proof that the EO submitting the tender has
+been authenticated and that the tender submission is an explicit and
+informed action.
+
+The resulting requirement was stated in section <<simple_signing, 9.3>> and is illustrated
+by <<fig8,Figure 8>>: _The {ASIC}[ASiC] container signature (the actor digitally signing the container) shall attest to the correctness of the identity of the
+sender as identified in the inner SBDH and to the fact that the sender
+has explicitly committed to the sending of the business protocol
+message._
+
+[.thumb]
+.Figure 8 - ASiC container signature confirms association between sending legal entity and document
+[[fig8]]
+image::asic_cont_signature.png[align="left"]
+
+In the case where the sender signs the {ASIC}[ASiC] itself, this proof is
+obvious as shown by <<fig9,Figure 9>> below and as stated in the requirements in sections <<individual,11.2.2>> and <<sign_asic_container,11.2.3>>.
+
+[.thumb]
+.Figure 9 - ASiC signing by the sender and proper correspondence in naming
+[[fig9]]
+image:asic_sign_sender2.png[align="left"]
+image:asic_sign_sender2.png[align="right"]
+
+However, the scenarios shown in <<fig10,Figure 10>> below are a priori not
+acceptable.
+
+[.thumb]
+.Figure 10 - ASiC signatures not showing proper correspondence in naming
+[[fig10]]
+image::asic_error_naming.png[align="left"]
+
+Even if the {ASIC}[ASiC] container signature is fully verifiable, e.g. it is a
+qualified electronic seal, there is no link from the signer to the
+identity of the sender, meaning (left-hand part of Figure 10) that YYY
+may fake a message purporting to be from XXX, or otherwise sign an {ASIC}[ASiC]
+container where the real sender is an attacker and not the identified
+sender.
+
+The right-hand part of Figure 11 shows that where an individual part of
+the message shall be signed by the sender, but is signed by someone
+else, this shall not be accepted regardless of the signature on the {ASIC}[ASiC]
+container. In fact, this illustrates violation of the requirements of
+section <<individual,11.2.2>>.

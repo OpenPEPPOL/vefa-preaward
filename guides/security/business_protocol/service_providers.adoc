@@ -1,0 +1,7 @@
+
+[[service_providers]]
+== Use of service providers
+
+In most cases, the CA and/or the EO will use service providers to carry out the business protocol. This is shown in the right hand side of <<actors,Figure 1>>, showing a situation where both sides use a service provider. One tendering service provider will support many CAs. One submission service provider will support many EOs. The functionality of the service providers and the interface provided to the CAs and EOs are out of scope and will not be standardized. The basic requirements are that a service provider must support the business protocol and interface to an access point.
+
+Signing/validation and encryption/decryption may be parts of the service provided or may be left to the business actors (the CA/EO). The technical specifications in this note are applicable to service providers, if used, but shall as far as possible be independent of which actor that performs a specific function.

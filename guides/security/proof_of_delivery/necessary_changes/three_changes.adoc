@@ -1,0 +1,51 @@
+
+
+== Necessary changes to CEF eDelivery
+
+[[three_changes]]
+=== Three necessary changes that do not break existing models
+
+The need for a proof of delivery of the time a message is received at
+the receiver's access point is described in <<received_message, section 6.3>>. Both sender and
+receiver may need to obtain such a proof. This must by necessity be
+implemented by adding functionality to the access points of
+{eDelivery}. The solution specified by this note requires minimal changes
+and is built on the following goals:
+
+* No business level logic in an access point. All access points
+treat all messages the same way regardless of sender, receiver, and
+content. No inspection of message content is needed.
+
+* No change in the communication patterns of an access point. An
+access point only communicates with other access points and only
+provides a service interface to its customers (CA/EO).
+
+* No change in {eDelivery} communication protocols. But note
+that an additional information element is needed in message
+confirmations.
+
+* No change in existing trust model. A business level actor (CA or
+EO) has one trusted supplier of communication services: its access
+point. A business level actor shall not need to know or trust other
+components (other access points) of {eDelivery}.
+
+Only three changes are necessary in protocols and interfaces for the
+solution specified; these are described in the following sections:
+
+* Payload identification has to be present in the transport level
+message confirmation between the access points. In the case of this
+note, this is identification of the {ASIC}[ASiC] container in the form of a hash
+value; but the solution specified should work with any payload. Payload
+identification is present when AS4 is used but must be added when AS2 is
+used.
+
+* The access points must be required to be able to sign and
+deliver {REM} MD evidences to their customers (CA/EO) over the offered
+service interfaces.
+
+* The transport level confirmation must be included in the REM MD
+evidence.
+
+Requirements are also imposed for changes in internal processing in
+access points and at other actors but this does not affect protocols and
+interfaces.

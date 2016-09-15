@@ -1,0 +1,17 @@
+
+= Signing a business protocol message
+
+==	Applying legal electronic signatures
+
+This note covers how to technical apply signatures. The legal aspects of signing must be specified separately as a signature policy. Background on legal aspects is provided in the informational chapter 11 of this note. Chapter 11 discusses requirements from the {eIDAS} regulation <<1>> and from the public procurement directive <<5>> and specifically how to apply (legal) advanced/qualified electronic signatures. It is important to emphasize that the public procurement directive, the utilities directive <<6>> and the concession directive <<7>> do not mandate use of advanced/qualified signatures.
+
+<<“Legal” electronic signatures versus “technical” digital signatures, Section 13.1>> describes the distinction between the legal term “electronic signature” according to the {eIDAS} regulation and the technical term “digital signature”. An electronic signature is a replacement for a handwritten signature. A basic electronic signature can be realized by different technologies but “advanced” and “qualified” electronic signatures as defined by {eIDAS} today require use of digital signature technology.
+
+The commitment of the sender to the content of a business protocol message may have to be proven. In the case of a tender, this is quite obvious. In a broad sense, a tender has to have a “legal” electronic signature. As stated above, this electronic signature can have two flavors:
+
+*	It is an advanced/qualified signature implemented by requiring the sender (the EO in case of a tender) to digitally sign one or more individual parts of the business protocol message, and assigning a defined legal interpretation (e.g. a commitment) to this digital signature.
+*	It is a “simple” electronic signature where the technology used proves at an appropriate level that the sender (the EO for a tender) commits to the action of sending the specific message.
+
+A core topic of this note is to specify a solution that enables use of “simple” electronic signatures for tenders, relieving the EO from the burden of digitally signing anything, thus lowering the barrier in particular for small and medium enterprises. At the same time, such a solution will enable simpler tendering processes, also reducing complexity and cost for the CA.
+
+Nonetheless, use of advanced/qualified signatures will continue to be important. In many EU member states this must be expected to be mandatory. Thus, application of both “simple” and advanced signatures is described below.

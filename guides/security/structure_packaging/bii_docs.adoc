@@ -1,0 +1,13 @@
+
+==	CEN BII XML document and attachments
+
+===	Signing and encryption in CEN BII specifications
+
+The {CENBII} specifications have only rudimentary specifications for signing. Previous signature specifications refer to a basic use of XML DSIG (XML Digital Signature) <<21>>, not considering the European {XAdES} standard <<23>>. There is a need to develop specifications for signing of {CENBII} documents in alignment with requirements from the {eIDAS} regulation <<1>> and development in digital signature standards as provided by ETSI and CEN in Europe. The {CENBII} workshop has published a study <<13>> as the first step towards this alignment but this is not sufficient to guide implementation. The specifications in this note are compatible with the recommendations of the CEN study and may be useful as input to further standardization work in CEN.
+
+The need for encryption is stated in {CENBII} profiles but with no real information on how to encrypt; e.g. the advanced tendering profile <<10>> states that:
+
+* All tenders shall be encrypted upon submission, and
+*	Encryption keys are provided by the contracting body.
+
+But there is no specification on how the tenders shall be encrypted and how the contracting body (the CA) shall provide the encryption keys. This is similar for other {CENBII} profiles. This note seeks to fill this gap by specification of a workable solution for signing and encryption.

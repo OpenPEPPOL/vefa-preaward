@@ -1,0 +1,29 @@
+
+[[profiles]]
+= Profiles supported by this BIS
+
+This BIS document covers 4 profiles:
+
+Profile BII54::
+This profile consists of two transactions:
+. Submit tender (trdm090)
+. Tender receipt (trdm045)
+
+Profile BII54x::
+This profile consists of three transactions:
+. Submit tender (trdm090)
+. Pre-award catalogue (trdm068)
+. Tender receipt (trdm045)
+
+Profile BII54y::
+This profile consists of three transactions:
+. Submit tender (trdm090)
+. ESPD response
+. Tender receipt (trdm045)
+
+Profile BII54xy::
+This profile consists of 4 transactions:
+. Submit tender (trdm090)
+. Pre-award catalogue (trdm068)
+. ESPD response
+. Tender receipt (trdm045)

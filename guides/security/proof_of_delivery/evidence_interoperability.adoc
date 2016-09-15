@@ -1,0 +1,25 @@
+
+== Requirements to all actors for REM MD evidence interoperability
+
+In order for a {REM} MD evidence to be produced by access points in a
+predetermined way and be useful to the sender and receiver of a business
+protocol message as proof of delivery, the access point must fulfill the
+requirements stated in the previous sections of this chapter.
+Additionally:
+
+.Requirement 46
+****
+The sender, the receiver, and both access points
+shall compute a hash of the payload (the {ASIC}[ASiC] container) and store the
+hash value as reference.
+
+NOTE: The business protocol message (e.g. the tender) sent or received
+will routinely be stored at both sides; the hash value can be stored as
+metadata connected to this.
+****
+
+.Requirement 47
+****
+The hash value shall be calculated by SHA-256 <<33>>
+over the binary representation of the {ASIC}[ASiC] container.
+****

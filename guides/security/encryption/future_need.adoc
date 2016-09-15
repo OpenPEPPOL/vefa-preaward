@@ -1,0 +1,13 @@
+[[future_need]]
+==	Future need for encryption from CA to EO
+
+The CEN BII specifications only envisage encryption of tender, request for participation, and possibly other documents sent from the EO to the CA. There may however be a need for encryption also of documents sent in the opposite direction:
+
+*	The call for tender may contain confidential information;
+*	In a negotiated procedure, confidential information may be sent from the CA.
+
+The situation is in principle symmetric to the one described in the previous sections of this chapter; the only difference is that the EO or the submission service provider mediates the encryption certificate and other parameters, and the CA or the tendering service provider encrypts accordingly.
+
+There is however no specific {CENBII} document sent from the EO that at present can be used to indicate encryption parameters. This topic must be for further study in the successor of the {CENBII} standardisation group.
+
+<<<<

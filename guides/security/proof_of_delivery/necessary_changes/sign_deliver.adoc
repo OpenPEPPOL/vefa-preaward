@@ -1,0 +1,62 @@
+
+=== Signing and delivery of REM MD evidence from an access point
+
+An actor shall receive the {REM} MD evidence from its local access point,
+which is its trusted provider of the reliable communication service (see
+Figure 16 below). Thus, two requirements are added:
+
+* The service interface (which is not standardized) of an access
+point must be extended to deliver {REM} MD evidences, either on demand or
+"automated" for all messages.
+
+* The [REM] MD evidence must be signed by the access point, or by
+the actor in charge of the access point, in such a way that the customer
+of the access point can verify the signature.
+
+Regarding the service interface, its realization is out of scope of this
+note but it is observed that the access point can use one of two modes.
+Either the {REM} MD evidence is delivered routinely to the customer for
+each message acknowledged, or a service is established for the customer
+to request a {REM} MD evidence for an identified message (by hash value)
+on demand. As the expectation is that a {REM} MD evidence will rarely be
+needed, the on demand alternative may be preferred. This provides some
+compatibility if messages are relayed across several eDelivery services,
+see <<Interconnecting multiple eDelivery infrastructures, section 15.3>>.
+
+Regarding signing, the access point today only has a certificate from
+the PEPPOL PKI for its role in communication over {eDelivery}. This
+PKI is "closed" and internal to {eDelivery}. One cannot completely
+rule the alternative of using this access point certificate to sign a
+{REM} MD evidence sent to a business level actor but it is likely that
+this will not be applicable.
+
+This means that an access point in order to sign {REM} MD evidences should
+obtain another certificate from a "well-known" certification authority.
+Alternatively, at a minimum the certification authority can be a "local"
+PKI well known between the access point and its customers.
+
+This note does not pose further requirements on {REM} MD evidence signing
+but recommendations are:
+
+* The {REM} MD evidence should be signed by an e-seal, i.e. a
+signature by a legal person.
+
+* The certificate should identify the legal person in charge of
+the access point. Further attributes may identify the access point role
+of the legal person.
+
+* Use of a qualified e-seal supported by a certification authority
+on the EU trusted list system should be considered.
+
+NOTE: Availability of qualified e-seal certificates will be limited in
+the short term since this is a new role introduced at EU level by eIDAS
+from 1 ^st^ July 2016.
+
+* The signature format should be as specified in ETSI TS 102 640-2
+<<27>> section 6.3. Here, XAdES is recommended for an XML Evidence, CAdES
+for an ASN.1 Evidence, and PAdES for a PDF Evidence. A basic signature
+format without a time-stamp should be sufficient (see next section).
+
+NOTE: The REM specifications may soon be updated by ETSI. In case,
+the recommendations for signature formats should be updated to refer to
+the latest EN versions of the format standards.

@@ -1,0 +1,22 @@
+
+===	Verifying timing of events for the process flow
+
+Actors in a tendering process may be interested in attacks that delay a tender or to forge proofs of delivery to falsely prove that a tender arrived on time or too late. The access points can be targets of such attacks, including bribery or other methods to accomplish insider attacks by an access point operator. As the flow of events below shows, with reasonable timing constraints such attacks are very difficult unless both access points co-operate.
+Using a tender as example, the flow of events from the time the EO sends the tender is as follows:
+
+[horizontal]
+T0:: Tender sent from the EO or its service provider to the local access point.
+T1:: Tender arrives at the EO’s access point.
+T2:: The EO’s access point sends the transport level message containing the tender.
+T3:: The transport level message arrives at the CA’s access point.
+T4:: The CA’s access point sends the message confirmation back to the EO’s access point.
+T5:: The EO’s access point receives the message confirmation.
+T6:: The EO’s access point dispatches a REM MD evidence or other confirmation to the EO.
+
+Note that T3 and T4 may be recorded as the same event depending on the processing at the CA’s access point, see the previous section. In the absence of errors, four observations are noted:
+
+*	The EO trusts its access point, but if processing is delayed, the EO will need a log entry “proving” T0. The access point should provide an SLA (Service Level Agreement) for the reliable messaging service.
+*	All events shall be close in time. A long delay for any event should be noted. Notably a delayed message confirmation.
+*	Time of events shall be increasing, meaning reasonably correct and synchronised clocks.
+
+The EO’s access point sees the times T1, T2, T3 (the time in the other access point’s message confirmation), T5 and T6 and can check for delays and sequence errors. The access point should log these times and raise an alarm to the EO in case of irregularities.

@@ -1,0 +1,18 @@
+
+
+= Prerequisites
+
+== Changes to CEF eDelivery specifications
+
+The specifications in this note require three changes to {eDelivery}, or in the shorter term at least to {PEPPOL} eDelivery. All three are proposed as change requests for {PEPPOL} eDelivery but are at the time of writing not approved by {PEPPOL}’s Management Board. The first two are critical, meaning that the specifications will not work, or be limited to a Norwegian subset of {PEPPOL} eDelivery, unless they are approved:
+
+. Use of {ASIC}[ASiC] container and SBDH to pack business protocol messages.
+. Inclusion of a payload hash value (hash of the {ASIC}[ASiC] container) in transport protocol confirmations in order to enable REM MD evidences to be created in the way specified.
+
+NOTE: While this is critical to {PEPPOL} eDelivery, with use of AS2 <<17>>, no change is necessary when AS4 <<15>> is used. The payload ({ASIC}[ASiC]) hash value is present in AS4 transport level confirmations and the only specification needed is how to use this hash.
+
+The third change is less critical in the short term but is needed in the longer term and for scaling:
+[start="3"]
+. Extension of the {PEPPOL} PKI to issue (legal person) certificates for {ASIC}[ASiC] container sealing, defining the {ASIC}[ASiC] sealing as a separate role, attesting to the identity of the sender of the business protocol message, in particular to support “simple” electronic signatures (see <<1.1.	Future signalling of encryption information in CEN BII documents, section 11.5>>).
+
+The changes are further described in <<Necessary changes to CEF eDelivery, section 11.2>>. If approved by {PEPPOL}’s Management Board, the changes can be further proposed to CEF Digital for the {eDelivery} building block.

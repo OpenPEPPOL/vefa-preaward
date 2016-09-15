@@ -1,0 +1,30 @@
+
+=== Alternative approaches to including attachments in CEN BII documents
+
+{CENBII} profiles specify XML structured documents; for most profiles attachments with arbitrary structured or non-structured format may be included. For a tender, normally one attachment will be an ESPD (European Single Procurement Document) <<8>>, which is a self-declaration of conformance to qualification criteria.
+
+According to the {CENBII} guideline on attachment handling <<12>>, attachments can be incorporated in three different ways:
+
+. Embedded directly into the XML document, yielding one document as result.
+. Using an envelope, meaning the document and attachments are sent as separate objects.
+. Sent separately in different messages to be matched later at the receiving side.
+
+As this note concerns protection of single messages, the third alternative is out of scope, or rather would result in repeated application of the mechanisms specified by this note.
+
+=== Embedded attachments - not recommended
+
+When attachments are embedded, the result is a single XML document. This is not recommended by this note but the approach is used in some countries and the alternative is included for completeness. The main disadvantage is that the final document may become very large, which may be a problem if the transport network has size limitations or for other reasons.
+
+One option for signing and encryption is to apply the mechanisms to the final, single document. This note specifies a solution where individual attachments may be signed and/or encrypted individually. When combined with embedded attachments, this means that individual attachments may be encrypted and/or signed before embedding.
+
+=== Attachments as separate objects
+When attachments are separate objects, it is quite obvious that each attachment may be treated separately regarding signing and encryption. For encryption, the basic solution proposed by this note, as explained later, is to encrypt either none or all attachments; this is however justified by ease of implementation and not because it is not possible to selectively encrypt individual attachments.
+
+For attachments as separate objects, two sub-cases can be identified:
+
+[loweralpha]
+. The {CENBII} XML document itself acts as an envelope by including a manifest structure consisting of metadata and hash value for all attachments. An example is the {CENBII} profile for advanced tendering <<10>> consisting of one transaction (Trdm90) that mainly contains tender metadata and manifest of the attachments, and another transaction (Trdm44) that contains the detailed tender information. Note that the {ASIC}[ASiC] container also links the individual parts.
+
+. There is no manifest structure. An example is the {CENBII} profile for simple tendering <<9>>. In this case, the objects are linked only through the {ASIC}[ASiC] container.
+
+The two alternatives must be examined separately when it comes to encryption and signing of the {CENBII} XML document and attachments.

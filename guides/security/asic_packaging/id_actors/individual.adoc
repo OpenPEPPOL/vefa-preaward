@@ -1,0 +1,48 @@
+
+[[individual]]
+=== Identification and authentication by signing individual parts
+
+If an individual part of a message is digitally signed by the sender,
+e.g. the {CENBII} document (manifest or other) or an attachment such as a
+tender letter, then the signature both identifies and authenticates the
+signer by the name in the certificate used. This
+identification/authentication shall correspond to the identification of
+the sender in the inner {SBDH}[SBDH].
+
+The normal situation is that a signature is by a natural (human) person
+and that the certificate identifies only this person. If a qualified
+signature/certificate is required, then this is what most certification
+authorities on the EU trusted list system will offer.
+
+Alternatively, the certificate may include organizational attributes
+(employee certificate). The signature may also be an e-seal, i.e. the
+certificate identifies a legal person only. Use of a seal as a legally
+binding signature is not guaranteed by {eIDAS}. A seal may at least be
+used for authentication and integrity protection but nothing prohibits
+its use as a legal signature (see <<e_seal_binding,13.6.4>>).
+
+.Requirement 42
+****
+When a digital signature from a natural person
+representing the sender is applied to a part of a message, it should be
+possible to verify that the person represents the legal person
+identified as sender in the inner {SBDH}[SBDH].
+****
+
+.Requirement 43
+****
+When a digital signature by the sender on a part of
+a message is supported by a certificate that identifies both a natural
+person and this person*s organizational affiliation, then the
+organizational attributes of the certificate shall identify the same
+legal person that is identified as sender in the inner {SBDH}[SBDH], and the
+certificate should use the same identification as the inner {SBDH}[SBDH].
+****
+
+.Requirement 44
+****
+When an electronic seal is applied by the sender to
+a part of the message, the certificate shall identify the same legal
+person that is identified as sender in the inner {SBDH}[SBDH], and the
+certificate should use the same identification as the inner {SBDH}[SBDH].
+****

@@ -1,0 +1,26 @@
+
+=== Is it possible to restrict selection of formats beyond "minimum"?
+
+While eIDAS and its implementing act are as a starting point strict on
+the receiver's obligation to recognize different signature formats,
+conditions do exist where this is very impractical, e.g.:
+
+* The business process is based upon automated exchange of signed
+XML documents. Is one still obliged to accept a PAdES signature, which
+implies PDF format? Presumably, one can refer to a requirement for XML
+to discard the PDF format and thus implicitly also the PAdES signature.
+But would one be allowed to require {XAdES} and deny an XML document
+wrapped in CAdES?
+
+* The process uses PDF documents and PAdES and requires signatures
+from both a public sector body and the user (e.g. a contract between a
+CA and an EO). Is the public sector body still required to accept a PDF
+document wrapped in CAdES? In case, it is not possible to add a PAdES
+signature afterwards as this will invalidate the CAdES signature.
+
+Arguably, it should be possible to specify processes where only a subset
+of the "minimum requirement" formats are applicable and correspondingly
+to specify signature policies that make such restrictions. Still, from a
+legal viewpoint, and referring to {eIDAS} and its implementing act, this
+situation is not at all clear. This note does not venture further into
+such discussions.

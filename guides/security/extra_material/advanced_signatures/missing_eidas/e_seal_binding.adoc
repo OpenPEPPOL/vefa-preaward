@@ -1,0 +1,9 @@
+
+[[e_seal_binding]]
+=== Can an e-seal be used as a binding signature?
+
+According to {eIDAS}, a qualified e-seal shall be presumed to guarantee the authenticity and integrity of the sealed content; use as replacement for a handwritten signature is not granted. This does not mean that other use of an e-seal is prohibited.
+
+One may well argue that a tender is committed by a legal person and that a contract is binding between legal persons. The requirement for such documents to be signed by natural persons is a historical remnant from the days of paper documents, when only a natural person could sign (by hand).
+
+In Norway, use of an e-seal to commit a tender has in principle been allowed for several years. Use for contracts has not been discussed. Here, it is just noted that this is an aspect of the signature policy applied, but that the use of e-seals must be consistent with the legislation in force for the transaction.

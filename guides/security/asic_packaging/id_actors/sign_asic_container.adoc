@@ -1,0 +1,30 @@
+
+[[sign_asic_container]]
+=== Identification and authentication by signing the ASiC container
+
+The {ASIC}[ASiC] container must be digitally signed. As stated above, the
+appropriate mechanism is a seal, i.e. a digital signature by a legal
+person. There are two alternatives:
+
+. The {ASIC}[ASiC] container is digitally signed by the sender (the CA or
+EO),
+
+. The {ASIC}[ASiC] container is digitally signed by another actor (a
+service provider).
+
+Regarding the first alternative, one must expect that a majority of
+legal entities will not be able to create and digitally sign an {ASIC}[ASiC]
+archive in the short term. This might change in the future. The first
+case leads to the following requirement:
+
+.Requirement 45
+****
+If the {ASIC}[ASiC] container is digitally signed by a
+certificate identifying the sender of the business protocol message, the
+certificate shall identify the same legal person that is identified as
+sender in the inner SBDH, and the certificate should use the same
+identification as the inner SBDH.
+****
+
+The second case, {ASIC}[ASiC] signing by a service provider, is discussed in the
+next section.

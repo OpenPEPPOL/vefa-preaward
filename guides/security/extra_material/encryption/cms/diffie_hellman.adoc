@@ -1,0 +1,13 @@
+
+===	Adding support for Diffie-Hellman key agreement
+
+For key agreement (Diffie-Hellman), the shared secret key is derived from a combination of the key pairs of the sender and the receiver. Thus, the OriginatorInfo element must be included.
+
+[source]
+----
+OriginatorInfo ::= SEQUENCE {
+  certs [0] IMPLICIT CertificateSet OPTIONAL,
+  crls [1] IMPLICIT RevocationInfoChoices OPTIONAL }
+----
+
+Elliptic curve cryptography requires support for key agreement, i.e. EC DH (elliptic curve Diffie-Hellman). In this case, *both sender and receiver must have certificates for EC DH public keys.* Key agreement may also be used with RSA and other algorithms. This note suggests that this is left for further study, but support for elliptic curve cryptography may become important.

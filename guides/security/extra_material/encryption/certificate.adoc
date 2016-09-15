@@ -1,0 +1,20 @@
+
+= Informative: Extra material on encryption
+
+== Issues regarding encryption certificate
+
+The few, core requirements for the encryption certificate were stated in <<1.1.	Future signalling of encryption information in CEN BII documents
+, section 10.2>>. Note that in theory, a certificate may be replaced by a mechanism providing a pointer, URI, to the location of the certificate but the requirement of this note is to include full certificate (and full path where required). Mediating only a public key, not in the form of a certificate, is also in theory possible but CMS as encryption format requires use of certificates.
+
+An important issue is the availability of useful certificates from public certification authorities. Obtaining a useful certificate may be difficult in some cases.
+
+Firstly, certification authorities on the EU trusted list do not (or rarely) issue encryption certificates. The purpose of the trusted list (TL) system is today strictly to support signing; thus the TLs include certification authorities for signature certificates. In many cases authentication certificates are supplied from the same certification authority, but seldom encryption certificates.
+
+Today’s certification authorities on the TL system almost exclusively issue certificates for natural persons (for signing). This will eventually change when the eIDAS regulation enters into force and (qualified) e-seals are recognized with the TLs containing certification authorities issuing certificates to legal persons. Issuers of e-seal certificates may be more likely to include encryption certificates from the same certification authority – but it is not known that this will happen. For encryption, a legal person certificate may be considered more appropriate than a natural person certificate.
+
+Alternatively, an encryption certificate may be obtained from “international” issuers, e.g. Symantec and the like. These must generally be regarded as lower quality certificates than those issued by qualified certification authorities on the trusted lists but the quality may well be sufficient.
+The approaches above assume that one, or perhaps a few, certificates and public keys will be used for all encryption. As these certificates will probably have a rather long life-time, validation needs to include revocation checking.
+
+As an alternative approach, using tendering as an example, the CA or the tendering service provider may want to use different keys and certificates for different tendering processes, or even for different EOs participating in the same process. These certificates may be short-lived and used only for one tendering process, i.e. a life-time that expires shortly after decryption has taken place. In this case, revocation checking may be skipped, provided that the CA has other means of informing the EOs in the rare event of a key compromise.
+
+Provisioning of such certificates may be part of the service offer from a tendering service provider. Some commercial certification authorities may offer adequate services, or one may set up an internal PKI system, or one may use self-signed certificates. A risk evaluation is necessary to assess whether or not a particular approach is sufficient.

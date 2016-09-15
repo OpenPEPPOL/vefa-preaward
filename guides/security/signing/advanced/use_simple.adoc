@@ -1,0 +1,21 @@
+
+===	Use simple signature formats without time-stamps
+
+Using a tender as example, the time of signing is not that relevant; the crucial issue is that the tender must be received in time. Thus, there should be no requirement for the sender to prove the time of signing of the tender beyond the “claimed signing time” attribute that is mandatory for standard signature formats.
+
+A possible exception is an authority’s signature on an attestation (see next section), where a signature time-stamp may be used to prove the freshness of the attestation.
+
+.Requirement 16
+****
+When an advanced/qualified signature is required, a basic signature format should be used when signing a part of a business protocol message. Long-term signature formats that add time-stamps from external time-stamp authorities should not be used.
+****
+
+A “basic signature format” can be the “B-B” level of CAdES <<22>>, {XAdES} <<23>>, or PAdES <<24>>, or even CMS <<19>>, XML DSIG <<21>>, or PDF signature (ISO/IEC 32000) upon which the ETSI formats are based.
+
+If desired, the receiver may on its own augment the signature to a long-term format at the time of validation.
+
+Note however that the {eIDAS} implementing act on signature formats <<2>> formally requires a public sector body to validate and accept “any” signature format. Thus, the possibility to pose mandatory requirements for specific signature formats in signature policies may be limited. See <<AdES formats and minimum requirements for acceptance, section 13.5.3>> for more information. Also, as explained in <<AdES formats and minimum requirements for acceptance, section 13.5.3>>, the situation is today not entirely consistent between the {eIDAS} implementing act, the public procurement directives, and the latest versions of the ETSI signature format standards.
+
+Requirements on the cryptography used for signing – public key algorithm and key length, and hash algorithm and strength – are not posed by this note. Refer to recommendations from sources such as ENISA <<34>>, ETSI <<31>>, {eIDAS} technical specifications, national authorities etc.
+
+Requirements on the certification authority and the PKI used for the signing certificates are also not posed by this note as these are signature policy issues. Although requirements on certificate profiles are also not stated, use of certificates that conform to the standards of the series ETSI EN 319 412 (parts 1-5) <<30>> should be recommended.

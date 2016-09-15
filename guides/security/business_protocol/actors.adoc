@@ -1,0 +1,25 @@
+
+
+= Business protocol and communication flow, actors
+
+[[actors]]
+== CA, EO, CEF eDelivery
+
+As shown in the left hand side of Figure 1 below, the business protocol, e.g. a tendering protocol, is run between a Contracting Authority (abbreviation CAfootnote:[To avoid confusion with CA for “Certification Authority”, certification authority is always spelled out.] used for the rest of this note) and an Economic Operator (EO from now on).
+
+As the specifications in this note can be generalized to cover any pair of actors, the generic terms “sender” and “receiver” are also used. CA and EO are used in figures and text for readability and to facilitate referral to e-tendering for public procurement as the chosen example of a business protocol.
+
+The business protocol consists of a sequence of messages containing documents according to {CENBII} profiles. The protocol specifies the choreography of the sequence of messages as well as the structure and information content of the documents exchanged in each step of the protocol.
+
+NOTE: The specifications in this note should largely be applicable to any type of business protocol and message format but this has not been investigated.
+
+.Figure 1 - Actors and communication flow with CEF eDelivery
+[[actors]]
+image:actors1.png[align="left"]
+image:actors2.png[align="right"]
+
+While any communication mechanism can in principle be used, this note assumes use of reliable, asynchronous message passing over {eDelivery}. Each actor is connected to an access point used to send and receive messages. The service/interface provided by an access point is not standardized; however, the specifications in this note pose some requirements.
+
+. In reality, use of {PEPPOL} eDelivery will be required in the short term. {PEPPOL} eDelivery is an instantiation of the {eDelivery} Building Block. A similar communications infrastructure could be established by other use of {eDelivery}.
+
+. The specifications in this note are based on the assumption that all communicating actors are directly connected to access points. <<interconnecting, Section 15.3>> provides a short discussion on the topic of interconnection of different eDelivery services.

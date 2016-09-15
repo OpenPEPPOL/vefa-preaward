@@ -1,0 +1,36 @@
+
+=	Overall process flow
+
+== Sending side process – signing, encryption, submission, proof
+
+The process specified in this note for signing, encrypting, and packaging a {CENBII} document with attachments is generic to any {CENBII} document but is exemplified below by the case of a tender submission. The solution specified in chapter 10 for obtaining a proof of delivery ({REM} MD evidence) is even more generic as this will work for any message sent over CEF eDelivery, whether it is a {CENBII} document or an arbitrary other type of message.
+
+.Requirement 8
+****
+*The process flow for sending a business protocol message, using a tender as an example, should be as follows:*
+[number]
+.. The CA provides instructions on how to encrypt and sign a tender. For encryption, this consists of a public encryption key embedded in an X.509 certificate. The encryption message format and algorithm and parameters for symmetric encryption may also be mediated, or these parameters can be predetermined by requirements in this note. For signing, a “signature policy” states how to sign a tender in order to comply with acceptance requirements; specifying “what to sign, by whom, why, and how”.
+.. If attachments to the tender shall be digitally signed, these are signed individually by the correct actor (the EO itself, subcontractor, issuer of attestation etc.) yielding an appropriate signature format.
+.. The {CENBII} XML document is created. If a tender manifest is used (for advanced tendering), the manifest is created from the (possibly signed) unencrypted tender parts by including metadata and hash values.
++
+NOTE: If attachments are embedded in the {CENBII} document (not recommended, see <<Embedded attachments (not recommended), 7.4.3>>), and attachments shall be encrypted, encryption must be prior to creation of the {CENBII} document.
+..	If the {CENBII} document shall be digitally signed, this is done by the correct actor, usually the EO. If the document is a tender manifest, attachments are implicitly signed.
++
+NOTE: If the document has embedded, encrypted attachments, care must be taken as this will sign encrypted content, and a “legal” signature should not be on encrypted data. A possibility is to use a {XAdES} signature and omit encrypted attachments from the signature computation.
+..	All parts of the tender that shall be encrypted, are encrypted individually according to the instructions provided by the CA.
+Note: As stated above, if attachments are embedded in the {CENBII} document, encryption of attachments must be done prior to creation of the {CENBII} document.
+..	The inner {SBDH}[SBDH] is created referring to the {CENBII} document.
+..	All parts of the tender, including the inner {SBDH}[SBDH] and the {CENBII} document, are gathered in an {ASIC}[ASiC] container and the resulting {ASIC}[ASiC] manifest is signed.
++
+NOTE: If parts of the tender are encrypted (assumed to be the usual situation), the {ASIC}[ASiC] manifest will contain hash values and metadata for encrypted content. This means that the {ASIC}[ASiC] signature will implicitly sign encrypted content.
+..	The hash value of the {ASIC}[ASiC] container is computed and stored at the EO or the tendering service provider – needed for comparison with the hash value in a future {REM} MD evidence message if requested (see steps 11 to 13 below). The {ASIC}[ASiC] container itself may also need to be logged.
+..	The outer {SBDH}[SBDH] is created, referring to the {ASIC}[ASiC] container – this may also be done after step 10 by the access point.
+..	The outer {SBDH}[SBDH] and the {ASIC}[ASiC] container is dispatched to the CEF eDelivery access point at the EO side. These become the payload for the transport protocol.
+..	When the access point at the CA side receives the message, a transport level delivery confirmation is created according to CEF eDelivery specifications. The confirmation is signed by the access point and sent back to the sending access point. The confirmation includes the time of delivery and a hash value of the {ASIC}[ASiC] container (in general of the payload excluding the outer {SBDH}[SBDH]).
++
+NOTE: Inclusion of payload hash (hash of the {ASIC}[ASiC] container) is not part of the current CEF eDelivery specifications. A change request to this effect has been submitted to PEPPOL Management Authority to implement the chance in PEPPOL eDelivery. This note assumes that this change request will be accepted and implemented. See <<Adding payload identification to the transport level confirmation, section 12.2.2>>.
+..	The transport level delivery confirmation shall be stored at each access points for the required period of time (not specified by this note).
+..	Based on the transport level delivery confirmation, the EO’s access point can produce, sign, and send to the EO (or to the submission service provider) a {REM} MD evidence message proving time of delivery to the CA’s access point, i.e. the time of delivery of the tender.
+****
+
+The {REM} MD evidence in step 13 may be requested at any time by the EO. The access point may either create and store the {REM} MD evidence at the time of the event, or create the evidence at the time a request arrives from the EO (as long as the base transport level delivery confirmation exists).

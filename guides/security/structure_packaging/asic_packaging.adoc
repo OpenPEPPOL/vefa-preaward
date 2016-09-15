@@ -1,0 +1,12 @@
+
+== ASiC packaging
+
+There is a need to pack all separate parts of a message together in order to achieve a single payload document for the transport network. This note specifies use of an {ASIC}[ASiC]-E container <<25>> (Associated Signature Container Extended) for this purpose. {ASIC}[ASiC] is based on the zip format.
+
+{ASIC}[ASiC]-E includes an {ASIC}[ASiC] manifest that holds metadata, identification of all parts inside the container, and hash values of these parts. Parts in this case are the inner SBDH, the CEN BII document, and all attachments that are included as separate parts.
+
+{ASIC}[ASiC] requires the manifest to be signed by a detached signature. Since the manifest holds hash values of all other parts, these are implicitly also signed. The signature is placed in the {ASIC}[ASiC] container as a separate part.
+
+This packaging allows security to be applied at message level, preserving security properties across asynchronous message passing with temporal storage at intermediate nodes. Authenticity and integrity are ensured by the {ASIC}[ASiC] signature, and confidentiality can be achieved by encrypting relevant parts.
+
+<<<<

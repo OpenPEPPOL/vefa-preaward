@@ -1,0 +1,28 @@
+
+==	Signature policies – specifying signature requirements
+
+As signature requirements for tendering are allowed to vary from member state to member state and even from CA to CA and tender to tender, there is a need to explicitly express the signature requirements. The term signature policy is used to denote such a specification, essentially stating:
+
+*	What to sign (which parts shall/should/may/should not/ shall not be signed)
+*	by whom (the EO or other parties if relevant),
+*	why (the commitment assumed by a signature), and
+*	how (quality level of signature and possibly technical requirements like signature format).
+
+.Requirement 10
+****
+Unless the signature requirements in force can be assumed to be known to all parties, the requirements (the signature policy) shall be explicitly stated.
+****
+
+.Requirement 11
+****
+The signature requirements (the signature policy) should be stated in the call for tender either integral to other tender instructions or as a separate document in human readable form.
+
+NOTE: The last requirement can be considered as a short-term solution. Better signalling means may be developed (see section 7.4.1) and the standardization body ETSI/ESI will carry out work on XML format (possibly also ASN.1 format) for signature policies.
+****
+
+Two possible examples of simple signature policies for tendering can be:
+
+Example 1:: The tender letter (“what”) shall be signed by a personal signature from an authorized person on behalf of the EO (“whom”). The signature attests to the EO’s commitments as stated in the tender letter (“why”). The signature shall be an advanced electronic signature supported by a qualified certificate, and the preferred signature format, given that the tender letter is in PDF format, is PAdES (“how”).
+Example 2:: No advanced electronic signature is needed for any part of the tender provided that the signature of the {ASIC}[ASiC] container gives sufficient assurance of the EO’s identity and commitment (see 7.3).
+
+More elaborate discussions on signature policies are provided in section 11.3.

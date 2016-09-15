@@ -1,0 +1,38 @@
+
+== Minimum requirements for signature acceptance from eIDAS
+
+=== Signature quality requirements
+
+It is important to note that {eIDAS} clearly distinguishes between an
+electronic signature, which is always by a natural (physical) person,
+and an electronic seal, which is always by a legal person. Thus, when a
+requirement in some legal document states "electronic signature", this
+can be interpreted to mean that a natural person must sign.
+
+{eIDAS} specifies (article 25) that a QES shall have the equivalent legal
+effect of a handwritten signature; but also that no electronic signature
+(advanced or not) shall be denied legal effect and admissibility as
+evidence solely on the grounds that it is in electronic form.
+
+[NOTE]
+====
+Frequently, the term "legally binding signature" is used as a
+synonym for QES. This is misleading as any signature can be legally
+binding; a QES is guaranteed to have this effect but the effect is not
+exclusive.
+
+In Norway, where the legal system is based on free form of
+agreements and free admissibility of any evidence in court, the
+admissibility statements of {eIDAS} article 25 may be viewed as evident
+and superfluous. One may also argue that stating a presumption that a
+particular mechanism shall have a certain legal effect is not in
+correspondence with the Norwegian legal tradition.
+====
+
+{eIDAS} (article 27.1 & 27.3) essentially states that when a specific
+quality level for AdES is required for domestic actors for a public
+service, then actors in other member states shall be subject to the same
+quality requirements. Furthermore, a member state is not allowed to
+require a higher level than QES from actors in other member states (for
+public procurement, AdES~QC~ can be regarded as the highest level that
+can be required, see <<EU public procurement directives and signatures, 13.4>> above).

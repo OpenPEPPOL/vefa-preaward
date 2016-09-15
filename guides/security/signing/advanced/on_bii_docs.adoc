@@ -1,0 +1,11 @@
+
+===	Digital signature on the CEN BII XML document
+
+A digital signature can be applied to the {CENBII} XML document itself, including the case of a manifest structure (see next subsection). The document can be signed the same way as any other part (attachment) of the business protocol message as described in the previous subsection.
+
+The only special case occurs when the {CENBII} document embeds attachments (see <<Embedded attachments - not recommended,7.4.3>>); there are two alternatives:
+
+*	The digital signature covers the entire XML document including the embedded attachments.
+*	A {XAdES} signature <<23>> is used, and since XML digital signatures allow signing of only selected parts of an XML document, attachments can be left out of the data to be signed.
+*
+If embedded attachments are encrypted, the last alternative should (probably) be used; otherwise the signature cannot be validated after decryption of the attachments.

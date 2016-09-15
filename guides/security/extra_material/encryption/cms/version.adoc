@@ -1,0 +1,12 @@
+
+===	CMSVersion, mechanisms to convey symmetric key
+
+CMSVersion indicates the mechanism used for mediating the secret, symmetric encryption key to the recipient. Five alternatives are defined:
+
+* Key transport: secret key encrypted by receiver’s public key, mandated in this note, in practice mandates use of RSA public key cryptography.
+* Key agreement: Diffie-Hellman mechanism, not detailed in this note but may be a future extension in particular if support for elliptic curve cryptography is needed (see next section).
+* Key encryption key: secret key encrypted by previously exchanged secret key, not considered.
+* Password: password based encryption of secret key, not considered.
+* Other: placeholder for future or current, non-standard mechanisms, not considered.
+
+CMS in principle requires mandatory support for key transport, key agreement, and key encryption key. The password and other versions are optional. The requirements in this note are more restrictive in only allowing key transport.

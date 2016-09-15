@@ -1,0 +1,11 @@
+
+[[received_message]]
+== A message is received when it reaches the access point
+
+The common interpretation of the requirements of the EU public procurement directive <<5>> annex IV and the corresponding parts of the utilities directive <<6>> and the concession directive <<7>> is that a business protocol message (e.g. a tender) shall be regarded as received when it reaches the receiver’s access point. Strictly speaking, this terminates a business level protocol at a communication network node.
+
+The reasoning is that the interface from the access point to the real endpoint may be asynchronous with no guarantee regarding delay of the delivery; e.g. a CA may fetch or receive messages from its access point at intervals that are not co-ordinated with the deadline for tenders.
+
+This necessitates a solution that can provide proof of delivery at the business protocol level for the time when a message was received at the receiver’s access point. Both sender and receiver may need to obtain such proof. Chapter 10 specifies a solution to this requirement without further breaking protocol layering or existing trust models.
+
+The business protocol run between the actors may require an explicit confirmation to be sent at the business protocol level, e.g. the CA should be required to send a tender receipt confirmation to the EO. If this confirmation shows an “OK” status, then no further proof should be necessary. But if a dispute arises on the timeliness of the tender, this business protocol confirmation will not (or at least cannot guarantee to) provide time of delivery at the receiver’s access point.

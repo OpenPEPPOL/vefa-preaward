@@ -1,0 +1,13 @@
+
+== Why not encrypt a container instead of individual parts?
+
+There are alternatives to encryption of each part individually, notably:
+
+* Build the complete {ASIC}[ASiC] container from the unencrypted parts and then encrypt the container as one object.
+*	Gather all parts into a zip file, encrypt the zip file as one object, then build the {ASIC}[ASiC] container.
+
+Both these approaches can be made to work. The main reason for not recommending them is that one either has to add yet another level of {ASIC}[ASiC] packaging (first alternative) or use different packaging mechanisms (second alternative) depending on whether or not content shall be encrypted. This adds unnecessary complexity to the packaging of the business protocol message.
+
+Both alternatives have the advantage of encrypting only one object with a potential gain in efficiency both for encryption and decryption. The first alternative has the additional advantage that the content of the decrypted {ASIC}[ASiC] can be stored in a file system or otherwise with the {ASIC}[ASiC] manifest signature intact. We weight these advantages less than the advantage of processing encrypted and unencrypted content the same way for {ASIC}[ASiC] packaging.
+
+Also, with alternative encryption schemes one need to ensure that necessary information is available in clear text, such as {SBDH}[SBDH] and {CENBII} documents.

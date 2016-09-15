@@ -1,0 +1,17 @@
+
+==	Signature validation
+
+===	Validation and timing issues
+
+Signature validation includes technical (cryptographic) checks on signature and certificates, checks on certificate validity (not expired or revoked), and adherence to signature policy requirements such as signature and certificate quality. The detailed process is out of scope of this note.
+
+Regarding timing issues, if one assumes that the time between signing and validation (e.g. validation at time of opening of a tender) is short, the risk of a signature becoming invalid (expired or revoked certificate) in the meantime should be acceptable. This is a main reason for the recommendation to use simple signature formats (see <<Digital signature on SBDH with manifest, 9.4.6>>). If the time between signing and validation becomes longer, one may consider if a sending side time-stamp, extending the signature to e.g. B-T level according to the ETSI signature format standards, should be considered.
+
+NOTE: {eIDAS} article 32 states that a signature shall be accepted if the supporting certificate was valid at the time of signing. Performing certificate validation in retrospect against a claimed time of signing is however not technically supported by most solutions, and is also questionable practice unless one is certain that this time can be trusted. Thus, “time of first validation” is usually the reference time for certificate validity.
+
+.Requirement 18
+****
+Signature validation should include collection and storage of sufficient evidence to prove in retrospect that the signature was valid at the time of validation.
+****
+
+One approach is to simply note that the signature was accepted at that time and therefore it must have been valid. If a stronger proof is needed, several mechanisms or services may be used, e.g. use of an independent validation authority that issues a proof of validity, use of a trusted archive storing signed documents and validation metadata, or use of some other mechanism such as ERS (Evidence Record Syntax) <<18>> and so on. Signature validation may also include signature augmentation, i.e. addition of time-stamps, certificate status information etc. to form a long-term signature format as defined by CAdES, {XAdES} and PAdES.

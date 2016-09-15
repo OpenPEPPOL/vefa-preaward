@@ -1,0 +1,26 @@
+
+[[inner_SBDH]]
+== Identification and authentication of actors
+
+[[id_in_inner_SBDH]]
+=== Identification in inner SBDH
+
+The legal entities that are sender and receiver of the message are
+identified in the inner {SBDH}[SBDH]. The {SBDH}[SBDH] provides no authentication; the
+identities given are the claimed identities only.
+
+.Requirement 41
+****
+Identification of sender and receiver in the inner
+{SBDH}[SBDH] shall be by a unique number from a business register or a similar
+identifier.
+
+NOTE: In Norway identification shall be by organisational number from
+Enhetsregisteret (register of business enterprises).
+****
+
+Encoding of the number and identification of the register that is the
+source for the number are not specified in this note. The ETSI
+certificate profile standard <<30>>, part 1, specifies "semantic
+identifiers" that can be used to encode identifiers for both natural and
+legal persons.

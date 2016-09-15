@@ -1,0 +1,20 @@
+
+= Informative: Extra material on proof of delivery
+
+==	The reason why proof of delivery must be from the local access point
+
+In the four corner model of communication shown in the figures of this note, the CA and the EO each has a trusted provider of a reliable communication service, the local access point. They do not know anything about the access point used by the other actor nor anything about the internals of the eDelivery service used.
+
+
+[[fig16]]
+.Figure 16 - Each actor obtains REM MD evidence from its local access point
+image::rem_evidence.png[align="center"]
+
+
+The solution specified by this note ensures that the CA/EO can receive a REM MD evidence message from, i.e. signed by, its local access point. The reasons why the receiving access point cannot directly issue and sign an REM MD evidence message to the sender are:
+
+* The receiver’s access point and the sender have no way today to address one another nor to authenticate one another.
+* The sender does not know this access point. The access point would need to sign by use of a certificate that represents its role as an access point and that is verifiable to the sender. No PKI exists today to properly mediate this, and addition of a new PKI to the system shall only be done if absolutely necessary (see arguments concerning ASiC signing role in <<Proposed solution, section 11.5>>).
+* The access point would be required to support a business level message type (the REM MD evidence) addressed to an actor that is not its customer. This breaks the prerequisite of maintaining protocol layering and to avoid adding business level logic to the access point.
+
+Transmitting a REM MD evidence directly from the receiving access point would imply adding a communication path as indicated by the arrow with a red cross in <<fig16, Figure 16.>> One may tweak a working solution from this communication pattern but it is highly unlikely that the solution can be scalable across a large number of APs and business level actors The proper communication paths are also shown in the figure.

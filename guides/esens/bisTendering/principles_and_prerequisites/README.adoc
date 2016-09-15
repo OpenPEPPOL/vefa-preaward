@@ -1,0 +1,8 @@
+
+= Principles and prerequisites
+
+This chapter describes the principles and assumptions that underlie the use of this Tendering BIS. It is based on the following {CENBII} profiles and {ESPD} documentation:
+
+* Profile 54 Submit Tender
+* Profile 35 Advanced Tender with PreAward Catalogue
+* {ESPD_doc}

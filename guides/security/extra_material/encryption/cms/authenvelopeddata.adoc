@@ -1,0 +1,20 @@
+
+=== Data structure for AuthEnvelopedData
+
+The “Authenticated-Enveloped-Data” content type as specified in RFC 5083 <<20>> extends the CMS specifications in the following way:
+
+[source]
+----
+AuthEnvelopedData ::= SEQUENCE {
+  version CMSVersion,
+  originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
+  recipientInfos RecipientInfos,
+  authEncryptedContentInfo EncryptedContentInfo,
+  authAttrs [1] IMPLICIT AuthAttributes OPTIONAL,
+  mac MessageAuthenticationCode,
+  unauthAttrs [2] IMPLICIT UnauthAttributes OPTIONAL }
+----
+
+A MAC (Message Authentication Code) is added, and the structure indicates which attributes that are covered by adding “auth” in front of the name. Notably, the encrypted content is covered. Unprotected attributes are separated into authenticated and non-authenticated. Identification of the sender should be one of the authenticated attributes. The MAC is a keyed checksum applied in the same way as for the CMS AuthenticatedDat̄a content type. The MAC provides integrity protection of the encrypted content and the additional authenticated attributes. The key used for the MAC is encrypted for each recipient in RecipientInfos just as the symmetric key used for encryption.
+
+With the specifications in this note, the encrypted content is authenticated by the ASiC container signature. Thus, use of AuthEnvelopedDate is considered superfluous.

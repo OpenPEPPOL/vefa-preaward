@@ -1,0 +1,19 @@
+
+
+== The CMS EnvelopedData and AuthEnvelopedData formats
+
+=== Data structure for EnvelopedData
+
+The encryption shall yield as result a CMS “Enveloped-Data” content type as specified in RFC 5652 <<19>> chapter 6. The EnvelopedData is part of the core CMS specification and looks like this:
+
+[source]
+----
+EnvelopedData ::= SEQUENCE {
+  version CMSVersion,
+  originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
+  recipientInfos RecipientInfos,
+  encryptedContentInfo EncryptedContentInfo,
+  unprotectedAttrs [1] IMPLICIT UnprotectedAttributes OPTIONAL }
+----
+
+CMSVersion is discussed in <<CMSVersion, mechanisms to convey symmetric key, 14.3.3>> below. originatorInfo is only used with Diffie-Hellman key agreement (see <<Adding support for Diffie-Hellman key agreement, 14.3.4>> below). The RecipientInfos mediate one secret, symmetric key encrypted for one or more recipients. This has five variants, one for each of the CMSVersion alternatives; this is not detailed here.

@@ -1,0 +1,28 @@
+
+[[error_handling]]
+== Error handling and possible REM MD evidences in case of errors
+
+The process described above only covers evidence for a successful
+delivery. There is clearly a need to specify also reporting of errors
+but this is largely left for further study by this note.
+
+At {eDelivery} level, errors will be reported between access points in
+the form of the AS2 specified use of MDN <<16>>. Similarly, errors for AS4
+will be reported between access points as specified for ebMS <<15>>.
+
+Additionally, the sending access point may detect that the receiving
+access point is unreachable, or it may experience addressing errors or
+other errors that prevents it from sending.
+
+This note does not pose any requirement for translation of such errors
+into REM MD evidence format with appropriate error codes. The need to
+produce a signed evidence of the error must firstly be investigated. The
+non-standardized service interface of an access point must be assumed to
+include error reporting. A crucial issue in the example of tender
+submission is that the EO (and/or the submission service) must be warned
+as early as possible. This is a task for internal processing in the
+access point and its service interface. If the access point decides to
+just silently retain the message in an error situation for a later
+retry, then a deadline may pass before the retransmission is done.
+
+<<<<

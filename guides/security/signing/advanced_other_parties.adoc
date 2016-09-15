@@ -1,0 +1,13 @@
+
+== Advanced signatures by other parties than the sender
+
+Using a tender as example, a tender may be submitted by a consortium where the EO is the leader, and the tender may need to be backed by attestations and qualification statements. Examples of tender documents that may need to be digitally signed by other parties than the EO are:
+
+* Commitment from a subcontractor, e.g. a signed letter stating that the subcontractor is backing the tender and has committed resources.
+* Attestations; signing of ESPD (European Single Procurement Document) or VCD (Virtual Company Dossier), tax and VAT attestations and similar documents may be required.
+* Other references and statements, e.g. from previous customers.
+Requirement 1.	When digital signatures from other parties than the sender of the business protocol message are required, the requirements should be stated in the signature policy in force.
+
+Note that requirements for such signatures may exist even in cases where the tender itself does not have to be digitally signed by the EO.
+
+Such signatures will be applied to individual parts that will be attachments to the CEN BII document. The part itself may (as in the case of VCD) actually be a package/container consisting of several parts, which in turn may be independently signed.
