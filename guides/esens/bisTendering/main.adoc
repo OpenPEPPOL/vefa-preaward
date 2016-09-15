@@ -1,4 +1,4 @@
-= openPEPPOL BIS54a - Tendering
+= image:peppol.png[] openPEPPOL BIS54a - Tendering
 :author: Direktoratet for forvaltning og IKT, DIFI
 :revnumber: 0.9
 :revdate: 30-08-2016
@@ -12,7 +12,6 @@
 :gendoc: ../../General
 :imagesdir: ../../../assets/images
 
-image::peppol.png[align="center"]
 
 
 :leveloffset: +1
