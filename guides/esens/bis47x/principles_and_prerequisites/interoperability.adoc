@@ -41,11 +41,10 @@ It applies the Framework as follows:
     **   Binding to {SBDH}[SBDH] v1.3
     **   {ASIC}[ASIC-E] container with {CAdES}[CAdES] signature.
     **   Binding to {UBL}[UBL 2.1]:
-    *** CWA3456 Part 212 UBL SIG - Trdm083 Call for Tenders.docx
-    ***   #ESPD request binding from commision#
+    *** CWA 17027-212 UBL binding - Trdm083 Call for Tenders.docx
+    ** {ESPD_github}
     **   Validation:
-    #Add rules from commision for ESPD request#
         *** BIIRULES-UBL-T83.sch
         *** UBL-T83-eSENS.sch
         *** {CfT_xsd}[UBL-Tender-2.1.xsd]
-        *** #ESPD xsd link#
+        *** {ESPD_github}

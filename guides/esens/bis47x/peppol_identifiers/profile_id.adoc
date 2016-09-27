@@ -1,17 +1,22 @@
 == Profile ID
 
+The profile ID identifies the process that the business document is part of. This Tendering BIS uses the identification system according to {CENBII}.
 
-The ProfileID identifies the process that the business document is part of {eSENS} eTendering BIS uses the identification system according to {CENBII}.
+IMPORTANT: As this BIS is covering different profiles, please make sure that you use the correct profile according to the processes (and transactions) covered in the profile.
 
-As an example the following process identifier is used for {CENBII} Profile 47 – Call for Tenders:
+This BIS document is covering the following profiles, which is identified with the stated profile ID in the element `cbc:ProfileID`:
 
-.ProfileID:
+Profile BII47::
 `urn:www.cenbii.eu:profile:bii47:ver3.0`
+
+Profile BII47x::
+`urn:www.cenbii.eu:profile:bii47x:ver3.0`
+
 
 .Example:
 [source, xml]
 ----
-<cbc:ProfileID>urn:www.cenbii.eu:profile:bii47:ver3.0</cbc:ProfileID>
+include::../{gendoc}/examples/Trdm083.xml[tags=profile]
 ----
 
 IMPORTANT: Please note that process identifiers in the document instance MUST correspond to the SMP process identifier.

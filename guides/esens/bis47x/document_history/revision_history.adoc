@@ -10,9 +10,9 @@
 | Organization
 | Description
 
-| 0.1
-| 01-06-2016
+| 0.9
+| 27-09-2016
 | Siw Midtgård Meckelborg
 | DIFI/Edisys
-| First draft for review
+| Draft for review
 |===

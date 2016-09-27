@@ -1,7 +1,7 @@
 
 = Principles and prerequisites
 
-This chapter describes the principles and assumptions that underlie the use of the {eSENS} eTendering BIS. It is based on the {CENBII} profiles:
+This chapter describes the principles and assumptions that underlie the use of the {eSENS} eTendering BIS. It is based on the {CENBII} profiles and {ESPD} Documentation:
 
 * Profile 47 Call for Tenders
-* Profile 41 European Single Procurement Document
+* {ESPD_model} 

@@ -1,4 +1,4 @@
 
 == Non-functional requirements
 
-For the {eSENS} eTendering BIS all {eSENS} non-functional requirements are applicable as mentioned in CWA3456 Part 112 Profile 47 - Call for Tenders and CWA3456 Part 110 Profile 41 - European Single Procurement Document. When adopting the {eSENS} eTendering BIS implementers must comply to these requirements.
+For the {eSENS} eTendering BIS all {eSENS} non-functional requirements are applicable as mentioned in CWA 17027-112 Profile 47 - Call for Tenders and {ESPD_model}. When adopting the {eSENS} eTendering BIS implementers must comply to these requirements.

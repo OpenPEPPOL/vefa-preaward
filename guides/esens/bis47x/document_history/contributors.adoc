@@ -7,7 +7,7 @@
 |===
 | Country
 | Name
-| Organization (= Beneficiary – Organization in national consortium – Subcontractor)
+| Organization
 
 | NO |Siw Midtgård Meckelborg | DIFI/Edisys
 | NO |Jan Mærøe | DIFI

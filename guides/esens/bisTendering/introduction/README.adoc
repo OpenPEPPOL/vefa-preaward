@@ -10,11 +10,11 @@ This BIS provides a set of specifications for implementing a business process. T
 ====
 These CEN WS/BII3 <<profiles, profiles>>, and the corresponding UBL binding documents, as well as the {ESPD_doc} are the basis for this work:
 
-* CEN WS/BII3 Profile 54 Submit Tender
-* CEN WS/BII3 Profile 35 Advanced Tender with Pre-award Catalogue
-*** CWA3456 Part 218 UBL SIG - Trdm090 Tender
-*** CWA3456 Part 205 UBL SIG - Trdm045 Tender Reception Notification
-*** CWA 4567 part 213 UBL Trdm068 Pre-award catalogue
+* CWA 17027-119 Profile 54 Tendering
+* CWA 17027-105 Profile 35 Advanced Tendering with Pre-award Catalogue
+* CWA 17027-218 UBL binding document - Trdm090 Submit Tender
+* CWA 17027-205 UBL binding document - Trdm045 Tender Reception Notification
+* CWA 17027-213 UBL binding document - Trdm068 Pre-award catalogue
 * European commission documentation for ESPD
 
 *And it is important that implementers are well known with the content of these documents to ensure implementations that are valid and of high quality.*

@@ -1,15 +1,18 @@
 = eSENS Business interoperability specification 47x - Call for Tender with ESPD
+:author: Direktoratet for forvaltning og IKT, DIFI
+:revnumber: 0.9
+:revdate: 26-09-2016
 :icons: font
 :toc: left
 :toclevels: 4
+:sectnums:
+:sectlinks:
 :source-highlighter: coderay
 :sourcedir: .
 :gendoc: ../../General
 :imagesdir: ../../../assets/images
 
 
-Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
-v0.1: First draft for review
 
 :leveloffset: +1
 
@@ -28,11 +31,15 @@ include::{sourcedir}/process/business_process.adoc[]
 include::{sourcedir}/codes_rules/README.adoc[]
 include::{sourcedir}/codes_rules/code_lists.adoc[]
 include::{sourcedir}/codes_rules/business_rules.adoc[]
+include::{gendoc}\espd.adoc[]
+include::{sourcedir}\descriptions\README.adoc[]
 include::{gendoc}/Peppol_policy.adoc[]
 include::{gendoc}/party_identifiers.adoc[]
 include::{gendoc}/version_id.adoc[]
-include::{sourcedir}/peppol_identifiers/profile_id.adoc[]
-include::{sourcedir}/peppol_identifiers/customization_id.adoc[]
+include::{sourcedir}\profiles\profiles.adoc[]
+include::{sourcedir}\peppol_identifiers\profile_id.adoc[]
+include::{sourcedir}\peppol_identifiers\customization_id.adoc[]
+include::{sourcedir}\peppol_identifiers\combination.adoc[]
 include::{sourcedir}/annex/README.adoc[]
 
 :leveloffset: -1

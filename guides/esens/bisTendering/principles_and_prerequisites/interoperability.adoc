@@ -41,9 +41,10 @@ It applies the Framework as follows:
     **   Binding to {SBDH}[SBDH] v1.3
     **   {ASIC}[ASIC-E] container with {CAdES}[CAdES] signature.
     **   Binding to {UBL}[UBL 2.1]:
-    *** CWA3456 Part 218 UBL SIG - Trdm090 Tender
-    *** CWA3456 Part 205 UBL SIG - Trdm045 Tender Reception Notification
-    *** CWA 4567 part 213 UBL Trdm068 Pre-award catalogue
+    *** CWA 17027-218 UBL binding - Trdm090 Tender
+    *** CWA 17027-205 UBL binding - Trdm045 Tender Reception Notification
+    *** CWA 17027-213 UBL binding - Trdm068 Pre-award catalogue
+    ** {ESPD_github}
     **   Validation:
         *** BIIRULES-UBL-T90.sch
         *** BIIRULES-UBL-T45.sch
@@ -54,3 +55,4 @@ It applies the Framework as follows:
         *** {Tender_xsd}[UBL-Tender-2.1.xsd]
         *** {Tender_Rec_xsd}[UBL-TenderReceipt-2.1.xsd]
       *** {Catalogue_xsd}[UBL-Catalogue-2.1.xsd]
+      *** {ESPD_github}
