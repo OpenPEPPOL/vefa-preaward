@@ -13,7 +13,7 @@
 :source-highlighter: highlight.js
 :sourcedir: .
 :gendoc: ../General
-:imagesdir: ../assets/images
+:imagesdir: ../../../assets/images
 :leveloffset: +1
 
 include::{gendoc}/Attributes.adoc[]
