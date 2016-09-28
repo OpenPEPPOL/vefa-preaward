@@ -15,7 +15,7 @@ NOTE: The specifications in this note should largely be applicable to any type o
 
 .Figure 1 - Actors and communication flow with CEF eDelivery
 [[actors]]
-image:actors1.png[align="left"]
+image:Actors1.png[align="left"]
 image:actors2.png[align="right"]
 
 While any communication mechanism can in principle be used, this note assumes use of reliable, asynchronous message passing over {eDelivery}. Each actor is connected to an access point used to send and receive messages. The service/interface provided by an access point is not standardized; however, the specifications in this note pose some requirements.
